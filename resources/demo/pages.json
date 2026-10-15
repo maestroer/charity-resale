@@ -1,0 +1,899 @@
+{
+    "/": {
+        "component": "Home",
+        "props": {
+            "errors": [],
+            "site": {
+                "name": "[НАЗВАНИЕ ПРОЕКТА]",
+                "actress": "[ИМЯ АКТРИСЫ]",
+                "fund_name": "[НАЗВАНИЕ ФОНДА]",
+                "domain": "[домен]",
+                "drop_label": "ДРОП 01 · «ЖИТЬ ЖИЗНЬ»"
+            },
+            "items": [
+                {
+                    "slug": "sumka-off-white",
+                    "title": "Сумка Off-White",
+                    "brand": "Off-White",
+                    "size": null,
+                    "project": {
+                        "slug": "proekt-sumki",
+                        "title": "[ЗАПОЛНИТЬ: проект сумки]"
+                    },
+                    "price_rub": 123400,
+                    "fund_rub": 37020,
+                    "sold": false,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "plate-namelazz-xs",
+                    "title": "Платье Namelazz",
+                    "brand": "Namelazz",
+                    "size": "XS",
+                    "project": {
+                        "slug": "zhit-zhizn",
+                        "title": "«Жить жизнь»"
+                    },
+                    "price_rub": 43100,
+                    "fund_rub": 12930,
+                    "sold": false,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "veshch-03",
+                    "title": "[ЗАПОЛНИТЬ: вещь 03]",
+                    "brand": null,
+                    "size": null,
+                    "project": {
+                        "slug": "zhit-zhizn",
+                        "title": "«Жить жизнь»"
+                    },
+                    "price_rub": null,
+                    "fund_rub": null,
+                    "sold": false,
+                    "draft": true,
+                    "available": false,
+                    "photos": []
+                },
+                {
+                    "slug": "veshch-04",
+                    "title": "[ЗАПОЛНИТЬ: вещь 04]",
+                    "brand": null,
+                    "size": null,
+                    "project": {
+                        "slug": "zhit-zhizn",
+                        "title": "«Жить жизнь»"
+                    },
+                    "price_rub": null,
+                    "fund_rub": null,
+                    "sold": false,
+                    "draft": true,
+                    "available": false,
+                    "photos": []
+                },
+                {
+                    "slug": "veshch-05",
+                    "title": "[ЗАПОЛНИТЬ: вещь 05]",
+                    "brand": null,
+                    "size": null,
+                    "project": {
+                        "slug": "zhit-zhizn",
+                        "title": "«Жить жизнь»"
+                    },
+                    "price_rub": null,
+                    "fund_rub": null,
+                    "sold": false,
+                    "draft": true,
+                    "available": false,
+                    "photos": []
+                }
+            ],
+            "projects": [
+                {
+                    "slug": "zhit-zhizn",
+                    "title": "«Жить жизнь»"
+                },
+                {
+                    "slug": "proekt-sumki",
+                    "title": "[ЗАПОЛНИТЬ: проект сумки]"
+                }
+            ],
+            "stats": {
+                "items_count": 5,
+                "sold_count": 0,
+                "fund_total_rub": 0
+            },
+            "item": null
+        }
+    },
+    "/fond": {
+        "component": "Fond",
+        "props": {
+            "errors": [],
+            "site": {
+                "name": "[НАЗВАНИЕ ПРОЕКТА]",
+                "actress": "[ИМЯ АКТРИСЫ]",
+                "fund_name": "[НАЗВАНИЕ ФОНДА]",
+                "domain": "[домен]",
+                "drop_label": "ДРОП 01 · «ЖИТЬ ЖИЗНЬ»"
+            },
+            "total_rub": 0,
+            "sold_count": 0,
+            "transfers": []
+        }
+    },
+    "/oferta": {
+        "component": "Legal",
+        "props": {
+            "errors": [],
+            "site": {
+                "name": "[НАЗВАНИЕ ПРОЕКТА]",
+                "actress": "[ИМЯ АКТРИСЫ]",
+                "fund_name": "[НАЗВАНИЕ ФОНДА]",
+                "domain": "[домен]",
+                "drop_label": "ДРОП 01 · «ЖИТЬ ЖИЗНЬ»"
+            },
+            "title": "Публичная оферта",
+            "html": "<p>[ЗАПОЛНИТЬ: текст публичной оферты. Его готовит юрист после того, как определится продавец — ИП или ООО.]</p>\n<h2>1. Продавец</h2>\n<p>[ЗАПОЛНИТЬ: наименование, ИНН, ОГРН или ОГРНИП, адрес, контактный email и телефон]</p>\n<h2>2. Предмет договора</h2>\n<p>[ЗАПОЛНИТЬ: продажа вещей из каталога; каждая вещь существует в единственном экземпляре]</p>\n<h2>3. Цена и оплата</h2>\n<p>[ЗАПОЛНИТЬ: цена указана на странице вещи; оплата картой или через СБП; 30% цены продавец перечисляет в благотворительный фонд по договору пожертвования]</p>\n<h2>4. Доставка</h2>\n<p>[ЗАПОЛНИТЬ: ссылка на условия доставки]</p>\n<h2>5. Возврат</h2>\n<p>[ЗАПОЛНИТЬ: порядок и сроки возврата]</p>\n<h2>6. Ответственность сторон и порядок разрешения споров</h2>\n<p>[ЗАПОЛНИТЬ]</p>\n"
+        }
+    },
+    "/privacy": {
+        "component": "Legal",
+        "props": {
+            "errors": [],
+            "site": {
+                "name": "[НАЗВАНИЕ ПРОЕКТА]",
+                "actress": "[ИМЯ АКТРИСЫ]",
+                "fund_name": "[НАЗВАНИЕ ФОНДА]",
+                "domain": "[домен]",
+                "drop_label": "ДРОП 01 · «ЖИТЬ ЖИЗНЬ»"
+            },
+            "title": "Политика обработки персональных данных",
+            "html": "<p>[ЗАПОЛНИТЬ: текст политики. Его готовит юрист после того, как определится оператор персональных данных.]</p>\n<h2>1. Оператор</h2>\n<p>[ЗАПОЛНИТЬ: наименование, ИНН, адрес, контакт для обращений по персональным данным]</p>\n<h2>2. Какие данные мы обрабатываем</h2>\n<p>При оформлении заказа: имя, email, телефон и адрес доставки. При посещении сайта: UTM-метки первого визита и данные Яндекс Метрики.</p>\n<p>[ЗАПОЛНИТЬ: уточнить перечень у юриста]</p>\n<h2>3. Зачем</h2>\n<p>[ЗАПОЛНИТЬ: исполнение договора купли-продажи, доставка, связь по заказу, аналитика]</p>\n<h2>4. Где хранятся данные</h2>\n<p>Персональные данные покупателей хранятся на серверах в России.</p>\n<p>[ЗАПОЛНИТЬ: провайдер хостинга]</p>\n<h2>5. Кому передаются</h2>\n<p>[ЗАПОЛНИТЬ: платёжный сервис ЮKassa, служба доставки]</p>\n<h2>6. Сроки хранения и права субъекта данных</h2>\n<p>[ЗАПОЛНИТЬ]</p>\n"
+        }
+    },
+    "/dostavka-i-vozvrat": {
+        "component": "Legal",
+        "props": {
+            "errors": [],
+            "site": {
+                "name": "[НАЗВАНИЕ ПРОЕКТА]",
+                "actress": "[ИМЯ АКТРИСЫ]",
+                "fund_name": "[НАЗВАНИЕ ФОНДА]",
+                "domain": "[домен]",
+                "drop_label": "ДРОП 01 · «ЖИТЬ ЖИЗНЬ»"
+            },
+            "title": "Доставка и возврат",
+            "html": "<h2>Доставка</h2>\n<p>[ЗАПОЛНИТЬ: служба доставки, сроки, стоимость для покупателя, регионы]</p>\n<p>Каждая вещь отправляется в фирменной упаковке.</p>\n<h2>Возврат</h2>\n<p>[ЗАПОЛНИТЬ: срок, в течение которого можно вернуть вещь; в каком состоянии; кто оплачивает обратную доставку; как вернутся деньги]</p>\n<h2>Как связаться</h2>\n<p>[ЗАПОЛНИТЬ: email и телефон для вопросов по заказу]</p>\n"
+        }
+    },
+    "/veshi/sumka-off-white": {
+        "component": "Home",
+        "props": {
+            "errors": [],
+            "site": {
+                "name": "[НАЗВАНИЕ ПРОЕКТА]",
+                "actress": "[ИМЯ АКТРИСЫ]",
+                "fund_name": "[НАЗВАНИЕ ФОНДА]",
+                "domain": "[домен]",
+                "drop_label": "ДРОП 01 · «ЖИТЬ ЖИЗНЬ»"
+            },
+            "items": [
+                {
+                    "slug": "sumka-off-white",
+                    "title": "Сумка Off-White",
+                    "brand": "Off-White",
+                    "size": null,
+                    "project": {
+                        "slug": "proekt-sumki",
+                        "title": "[ЗАПОЛНИТЬ: проект сумки]"
+                    },
+                    "price_rub": 123400,
+                    "fund_rub": 37020,
+                    "sold": false,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "plate-namelazz-xs",
+                    "title": "Платье Namelazz",
+                    "brand": "Namelazz",
+                    "size": "XS",
+                    "project": {
+                        "slug": "zhit-zhizn",
+                        "title": "«Жить жизнь»"
+                    },
+                    "price_rub": 43100,
+                    "fund_rub": 12930,
+                    "sold": false,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "veshch-03",
+                    "title": "[ЗАПОЛНИТЬ: вещь 03]",
+                    "brand": null,
+                    "size": null,
+                    "project": {
+                        "slug": "zhit-zhizn",
+                        "title": "«Жить жизнь»"
+                    },
+                    "price_rub": null,
+                    "fund_rub": null,
+                    "sold": false,
+                    "draft": true,
+                    "available": false,
+                    "photos": []
+                },
+                {
+                    "slug": "veshch-04",
+                    "title": "[ЗАПОЛНИТЬ: вещь 04]",
+                    "brand": null,
+                    "size": null,
+                    "project": {
+                        "slug": "zhit-zhizn",
+                        "title": "«Жить жизнь»"
+                    },
+                    "price_rub": null,
+                    "fund_rub": null,
+                    "sold": false,
+                    "draft": true,
+                    "available": false,
+                    "photos": []
+                },
+                {
+                    "slug": "veshch-05",
+                    "title": "[ЗАПОЛНИТЬ: вещь 05]",
+                    "brand": null,
+                    "size": null,
+                    "project": {
+                        "slug": "zhit-zhizn",
+                        "title": "«Жить жизнь»"
+                    },
+                    "price_rub": null,
+                    "fund_rub": null,
+                    "sold": false,
+                    "draft": true,
+                    "available": false,
+                    "photos": []
+                }
+            ],
+            "projects": [
+                {
+                    "slug": "zhit-zhizn",
+                    "title": "«Жить жизнь»"
+                },
+                {
+                    "slug": "proekt-sumki",
+                    "title": "[ЗАПОЛНИТЬ: проект сумки]"
+                }
+            ],
+            "stats": {
+                "items_count": 5,
+                "sold_count": 0,
+                "fund_total_rub": 0
+            },
+            "item": {
+                "slug": "sumka-off-white",
+                "title": "Сумка Off-White",
+                "brand": "Off-White",
+                "size": null,
+                "project": {
+                    "slug": "proekt-sumki",
+                    "title": "[ЗАПОЛНИТЬ: проект сумки]"
+                },
+                "price_rub": 123400,
+                "fund_rub": 37020,
+                "sold": false,
+                "draft": false,
+                "available": true,
+                "photos": [],
+                "item_type": "сумка",
+                "condition": null,
+                "measurements": null,
+                "scene": null,
+                "look": null,
+                "story": "[ЗАПОЛНИТЬ: в каком проекте, сцене и образе была сумка]",
+                "video_url": null
+            }
+        }
+    },
+    "/checkout?item=sumka-off-white": {
+        "component": "Checkout",
+        "props": {
+            "errors": [],
+            "site": {
+                "name": "[НАЗВАНИЕ ПРОЕКТА]",
+                "actress": "[ИМЯ АКТРИСЫ]",
+                "fund_name": "[НАЗВАНИЕ ФОНДА]",
+                "domain": "[домен]",
+                "drop_label": "ДРОП 01 · «ЖИТЬ ЖИЗНЬ»"
+            },
+            "item": {
+                "slug": "sumka-off-white",
+                "title": "Сумка Off-White",
+                "brand": "Off-White",
+                "size": null,
+                "project": {
+                    "slug": "proekt-sumki",
+                    "title": "[ЗАПОЛНИТЬ: проект сумки]"
+                },
+                "price_rub": 123400,
+                "fund_rub": 37020,
+                "sold": false,
+                "draft": false,
+                "available": true,
+                "photos": []
+            },
+            "test_mode": true
+        }
+    },
+    "/veshi/plate-namelazz-xs": {
+        "component": "Home",
+        "props": {
+            "errors": [],
+            "site": {
+                "name": "[НАЗВАНИЕ ПРОЕКТА]",
+                "actress": "[ИМЯ АКТРИСЫ]",
+                "fund_name": "[НАЗВАНИЕ ФОНДА]",
+                "domain": "[домен]",
+                "drop_label": "ДРОП 01 · «ЖИТЬ ЖИЗНЬ»"
+            },
+            "items": [
+                {
+                    "slug": "sumka-off-white",
+                    "title": "Сумка Off-White",
+                    "brand": "Off-White",
+                    "size": null,
+                    "project": {
+                        "slug": "proekt-sumki",
+                        "title": "[ЗАПОЛНИТЬ: проект сумки]"
+                    },
+                    "price_rub": 123400,
+                    "fund_rub": 37020,
+                    "sold": false,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "plate-namelazz-xs",
+                    "title": "Платье Namelazz",
+                    "brand": "Namelazz",
+                    "size": "XS",
+                    "project": {
+                        "slug": "zhit-zhizn",
+                        "title": "«Жить жизнь»"
+                    },
+                    "price_rub": 43100,
+                    "fund_rub": 12930,
+                    "sold": false,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "veshch-03",
+                    "title": "[ЗАПОЛНИТЬ: вещь 03]",
+                    "brand": null,
+                    "size": null,
+                    "project": {
+                        "slug": "zhit-zhizn",
+                        "title": "«Жить жизнь»"
+                    },
+                    "price_rub": null,
+                    "fund_rub": null,
+                    "sold": false,
+                    "draft": true,
+                    "available": false,
+                    "photos": []
+                },
+                {
+                    "slug": "veshch-04",
+                    "title": "[ЗАПОЛНИТЬ: вещь 04]",
+                    "brand": null,
+                    "size": null,
+                    "project": {
+                        "slug": "zhit-zhizn",
+                        "title": "«Жить жизнь»"
+                    },
+                    "price_rub": null,
+                    "fund_rub": null,
+                    "sold": false,
+                    "draft": true,
+                    "available": false,
+                    "photos": []
+                },
+                {
+                    "slug": "veshch-05",
+                    "title": "[ЗАПОЛНИТЬ: вещь 05]",
+                    "brand": null,
+                    "size": null,
+                    "project": {
+                        "slug": "zhit-zhizn",
+                        "title": "«Жить жизнь»"
+                    },
+                    "price_rub": null,
+                    "fund_rub": null,
+                    "sold": false,
+                    "draft": true,
+                    "available": false,
+                    "photos": []
+                }
+            ],
+            "projects": [
+                {
+                    "slug": "zhit-zhizn",
+                    "title": "«Жить жизнь»"
+                },
+                {
+                    "slug": "proekt-sumki",
+                    "title": "[ЗАПОЛНИТЬ: проект сумки]"
+                }
+            ],
+            "stats": {
+                "items_count": 5,
+                "sold_count": 0,
+                "fund_total_rub": 0
+            },
+            "item": {
+                "slug": "plate-namelazz-xs",
+                "title": "Платье Namelazz",
+                "brand": "Namelazz",
+                "size": "XS",
+                "project": {
+                    "slug": "zhit-zhizn",
+                    "title": "«Жить жизнь»"
+                },
+                "price_rub": 43100,
+                "fund_rub": 12930,
+                "sold": false,
+                "draft": false,
+                "available": true,
+                "photos": [],
+                "item_type": "платье",
+                "condition": null,
+                "measurements": null,
+                "scene": null,
+                "look": null,
+                "story": "[ЗАПОЛНИТЬ: в какой сцене и образе было платье]",
+                "video_url": null
+            }
+        }
+    },
+    "/checkout?item=plate-namelazz-xs": {
+        "component": "Checkout",
+        "props": {
+            "errors": [],
+            "site": {
+                "name": "[НАЗВАНИЕ ПРОЕКТА]",
+                "actress": "[ИМЯ АКТРИСЫ]",
+                "fund_name": "[НАЗВАНИЕ ФОНДА]",
+                "domain": "[домен]",
+                "drop_label": "ДРОП 01 · «ЖИТЬ ЖИЗНЬ»"
+            },
+            "item": {
+                "slug": "plate-namelazz-xs",
+                "title": "Платье Namelazz",
+                "brand": "Namelazz",
+                "size": "XS",
+                "project": {
+                    "slug": "zhit-zhizn",
+                    "title": "«Жить жизнь»"
+                },
+                "price_rub": 43100,
+                "fund_rub": 12930,
+                "sold": false,
+                "draft": false,
+                "available": true,
+                "photos": []
+            },
+            "test_mode": true
+        }
+    },
+    "/veshi/veshch-03": {
+        "component": "Home",
+        "props": {
+            "errors": [],
+            "site": {
+                "name": "[НАЗВАНИЕ ПРОЕКТА]",
+                "actress": "[ИМЯ АКТРИСЫ]",
+                "fund_name": "[НАЗВАНИЕ ФОНДА]",
+                "domain": "[домен]",
+                "drop_label": "ДРОП 01 · «ЖИТЬ ЖИЗНЬ»"
+            },
+            "items": [
+                {
+                    "slug": "sumka-off-white",
+                    "title": "Сумка Off-White",
+                    "brand": "Off-White",
+                    "size": null,
+                    "project": {
+                        "slug": "proekt-sumki",
+                        "title": "[ЗАПОЛНИТЬ: проект сумки]"
+                    },
+                    "price_rub": 123400,
+                    "fund_rub": 37020,
+                    "sold": false,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "plate-namelazz-xs",
+                    "title": "Платье Namelazz",
+                    "brand": "Namelazz",
+                    "size": "XS",
+                    "project": {
+                        "slug": "zhit-zhizn",
+                        "title": "«Жить жизнь»"
+                    },
+                    "price_rub": 43100,
+                    "fund_rub": 12930,
+                    "sold": false,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "veshch-03",
+                    "title": "[ЗАПОЛНИТЬ: вещь 03]",
+                    "brand": null,
+                    "size": null,
+                    "project": {
+                        "slug": "zhit-zhizn",
+                        "title": "«Жить жизнь»"
+                    },
+                    "price_rub": null,
+                    "fund_rub": null,
+                    "sold": false,
+                    "draft": true,
+                    "available": false,
+                    "photos": []
+                },
+                {
+                    "slug": "veshch-04",
+                    "title": "[ЗАПОЛНИТЬ: вещь 04]",
+                    "brand": null,
+                    "size": null,
+                    "project": {
+                        "slug": "zhit-zhizn",
+                        "title": "«Жить жизнь»"
+                    },
+                    "price_rub": null,
+                    "fund_rub": null,
+                    "sold": false,
+                    "draft": true,
+                    "available": false,
+                    "photos": []
+                },
+                {
+                    "slug": "veshch-05",
+                    "title": "[ЗАПОЛНИТЬ: вещь 05]",
+                    "brand": null,
+                    "size": null,
+                    "project": {
+                        "slug": "zhit-zhizn",
+                        "title": "«Жить жизнь»"
+                    },
+                    "price_rub": null,
+                    "fund_rub": null,
+                    "sold": false,
+                    "draft": true,
+                    "available": false,
+                    "photos": []
+                }
+            ],
+            "projects": [
+                {
+                    "slug": "zhit-zhizn",
+                    "title": "«Жить жизнь»"
+                },
+                {
+                    "slug": "proekt-sumki",
+                    "title": "[ЗАПОЛНИТЬ: проект сумки]"
+                }
+            ],
+            "stats": {
+                "items_count": 5,
+                "sold_count": 0,
+                "fund_total_rub": 0
+            },
+            "item": {
+                "slug": "veshch-03",
+                "title": "[ЗАПОЛНИТЬ: вещь 03]",
+                "brand": null,
+                "size": null,
+                "project": {
+                    "slug": "zhit-zhizn",
+                    "title": "«Жить жизнь»"
+                },
+                "price_rub": null,
+                "fund_rub": null,
+                "sold": false,
+                "draft": true,
+                "available": false,
+                "photos": [],
+                "item_type": null,
+                "condition": null,
+                "measurements": null,
+                "scene": null,
+                "look": null,
+                "story": null,
+                "video_url": null
+            }
+        }
+    },
+    "/veshi/veshch-04": {
+        "component": "Home",
+        "props": {
+            "errors": [],
+            "site": {
+                "name": "[НАЗВАНИЕ ПРОЕКТА]",
+                "actress": "[ИМЯ АКТРИСЫ]",
+                "fund_name": "[НАЗВАНИЕ ФОНДА]",
+                "domain": "[домен]",
+                "drop_label": "ДРОП 01 · «ЖИТЬ ЖИЗНЬ»"
+            },
+            "items": [
+                {
+                    "slug": "sumka-off-white",
+                    "title": "Сумка Off-White",
+                    "brand": "Off-White",
+                    "size": null,
+                    "project": {
+                        "slug": "proekt-sumki",
+                        "title": "[ЗАПОЛНИТЬ: проект сумки]"
+                    },
+                    "price_rub": 123400,
+                    "fund_rub": 37020,
+                    "sold": false,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "plate-namelazz-xs",
+                    "title": "Платье Namelazz",
+                    "brand": "Namelazz",
+                    "size": "XS",
+                    "project": {
+                        "slug": "zhit-zhizn",
+                        "title": "«Жить жизнь»"
+                    },
+                    "price_rub": 43100,
+                    "fund_rub": 12930,
+                    "sold": false,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "veshch-03",
+                    "title": "[ЗАПОЛНИТЬ: вещь 03]",
+                    "brand": null,
+                    "size": null,
+                    "project": {
+                        "slug": "zhit-zhizn",
+                        "title": "«Жить жизнь»"
+                    },
+                    "price_rub": null,
+                    "fund_rub": null,
+                    "sold": false,
+                    "draft": true,
+                    "available": false,
+                    "photos": []
+                },
+                {
+                    "slug": "veshch-04",
+                    "title": "[ЗАПОЛНИТЬ: вещь 04]",
+                    "brand": null,
+                    "size": null,
+                    "project": {
+                        "slug": "zhit-zhizn",
+                        "title": "«Жить жизнь»"
+                    },
+                    "price_rub": null,
+                    "fund_rub": null,
+                    "sold": false,
+                    "draft": true,
+                    "available": false,
+                    "photos": []
+                },
+                {
+                    "slug": "veshch-05",
+                    "title": "[ЗАПОЛНИТЬ: вещь 05]",
+                    "brand": null,
+                    "size": null,
+                    "project": {
+                        "slug": "zhit-zhizn",
+                        "title": "«Жить жизнь»"
+                    },
+                    "price_rub": null,
+                    "fund_rub": null,
+                    "sold": false,
+                    "draft": true,
+                    "available": false,
+                    "photos": []
+                }
+            ],
+            "projects": [
+                {
+                    "slug": "zhit-zhizn",
+                    "title": "«Жить жизнь»"
+                },
+                {
+                    "slug": "proekt-sumki",
+                    "title": "[ЗАПОЛНИТЬ: проект сумки]"
+                }
+            ],
+            "stats": {
+                "items_count": 5,
+                "sold_count": 0,
+                "fund_total_rub": 0
+            },
+            "item": {
+                "slug": "veshch-04",
+                "title": "[ЗАПОЛНИТЬ: вещь 04]",
+                "brand": null,
+                "size": null,
+                "project": {
+                    "slug": "zhit-zhizn",
+                    "title": "«Жить жизнь»"
+                },
+                "price_rub": null,
+                "fund_rub": null,
+                "sold": false,
+                "draft": true,
+                "available": false,
+                "photos": [],
+                "item_type": null,
+                "condition": null,
+                "measurements": null,
+                "scene": null,
+                "look": null,
+                "story": null,
+                "video_url": null
+            }
+        }
+    },
+    "/veshi/veshch-05": {
+        "component": "Home",
+        "props": {
+            "errors": [],
+            "site": {
+                "name": "[НАЗВАНИЕ ПРОЕКТА]",
+                "actress": "[ИМЯ АКТРИСЫ]",
+                "fund_name": "[НАЗВАНИЕ ФОНДА]",
+                "domain": "[домен]",
+                "drop_label": "ДРОП 01 · «ЖИТЬ ЖИЗНЬ»"
+            },
+            "items": [
+                {
+                    "slug": "sumka-off-white",
+                    "title": "Сумка Off-White",
+                    "brand": "Off-White",
+                    "size": null,
+                    "project": {
+                        "slug": "proekt-sumki",
+                        "title": "[ЗАПОЛНИТЬ: проект сумки]"
+                    },
+                    "price_rub": 123400,
+                    "fund_rub": 37020,
+                    "sold": false,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "plate-namelazz-xs",
+                    "title": "Платье Namelazz",
+                    "brand": "Namelazz",
+                    "size": "XS",
+                    "project": {
+                        "slug": "zhit-zhizn",
+                        "title": "«Жить жизнь»"
+                    },
+                    "price_rub": 43100,
+                    "fund_rub": 12930,
+                    "sold": false,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "veshch-03",
+                    "title": "[ЗАПОЛНИТЬ: вещь 03]",
+                    "brand": null,
+                    "size": null,
+                    "project": {
+                        "slug": "zhit-zhizn",
+                        "title": "«Жить жизнь»"
+                    },
+                    "price_rub": null,
+                    "fund_rub": null,
+                    "sold": false,
+                    "draft": true,
+                    "available": false,
+                    "photos": []
+                },
+                {
+                    "slug": "veshch-04",
+                    "title": "[ЗАПОЛНИТЬ: вещь 04]",
+                    "brand": null,
+                    "size": null,
+                    "project": {
+                        "slug": "zhit-zhizn",
+                        "title": "«Жить жизнь»"
+                    },
+                    "price_rub": null,
+                    "fund_rub": null,
+                    "sold": false,
+                    "draft": true,
+                    "available": false,
+                    "photos": []
+                },
+                {
+                    "slug": "veshch-05",
+                    "title": "[ЗАПОЛНИТЬ: вещь 05]",
+                    "brand": null,
+                    "size": null,
+                    "project": {
+                        "slug": "zhit-zhizn",
+                        "title": "«Жить жизнь»"
+                    },
+                    "price_rub": null,
+                    "fund_rub": null,
+                    "sold": false,
+                    "draft": true,
+                    "available": false,
+                    "photos": []
+                }
+            ],
+            "projects": [
+                {
+                    "slug": "zhit-zhizn",
+                    "title": "«Жить жизнь»"
+                },
+                {
+                    "slug": "proekt-sumki",
+                    "title": "[ЗАПОЛНИТЬ: проект сумки]"
+                }
+            ],
+            "stats": {
+                "items_count": 5,
+                "sold_count": 0,
+                "fund_total_rub": 0
+            },
+            "item": {
+                "slug": "veshch-05",
+                "title": "[ЗАПОЛНИТЬ: вещь 05]",
+                "brand": null,
+                "size": null,
+                "project": {
+                    "slug": "zhit-zhizn",
+                    "title": "«Жить жизнь»"
+                },
+                "price_rub": null,
+                "fund_rub": null,
+                "sold": false,
+                "draft": true,
+                "available": false,
+                "photos": [],
+                "item_type": null,
+                "condition": null,
+                "measurements": null,
+                "scene": null,
+                "look": null,
+                "story": null,
+                "video_url": null
+            }
+        }
+    }
+}

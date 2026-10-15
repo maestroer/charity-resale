@@ -1,0 +1,931 @@
+@import 'tailwindcss';
+
+@source '../**/*.blade.php';
+@source '../**/*.tsx';
+
+@theme {
+    --color-paper: #ffffff;
+    /* Исходный #2080D6 даёт с --ink контраст 3.7:1. Осветлён до 4.7:1, чтобы текст проходил WCAG AA. */
+    --color-blue: #3d93e3;
+    --color-yellow: #ffd720;
+    --color-pink: #f4b6a9;
+    --color-teal: #4bb5ab;
+    --color-ink: #1d253e;
+    --color-mist: #f5f6f6;
+
+    --font-sans: 'Onest Variable', ui-sans-serif, system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono Variable', ui-monospace, 'SFMono-Regular', monospace;
+
+    --ease-main: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-micro: cubic-bezier(0.2, 0.65, 0.3, 0.9);
+}
+
+:root {
+    --pad: clamp(16px, 2.8vw, 40px);
+    --letter: clamp(36px, 3.9vw, 56px);
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: #000;
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.375;
+    -webkit-font-smoothing: antialiased;
+}
+
+.meta {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    line-height: 1.5;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* ---------- Сетка ---------- */
+
+.stage {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
+.block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 34vh;
+    overflow: hidden;
+}
+
+.block-v { background: var(--color-paper); }
+.block-i { background: var(--color-blue); }
+.block-s { background: var(--color-yellow); }
+.block-f { background: var(--color-pink); }
+.block-t { background: var(--color-teal); order: -1; min-height: 0; }
+.block-d { background: var(--color-ink); color: var(--color-paper); min-height: 0; }
+
+@media (min-width: 768px) {
+    /* Сетка занимает ровно экран и не скроллится. Обычные страницы (заказ, фонд) скроллятся как всегда. */
+    body:has(.stage) {
+        overflow: hidden;
+    }
+
+    /* Модуль — 1/8 ширины и 1/5 высоты. Позиции заданы линиями, а не именованными областями:
+       тёмный блок лежит поверх жёлтого, а области пересекаться не могут. */
+    .stage {
+        display: grid;
+        grid-template-columns: repeat(8, minmax(0, 1fr));
+        grid-template-rows: repeat(5, minmax(0, 1fr));
+        width: 100%;
+        max-width: calc(100dvh * 2.4);
+        height: 100dvh;
+        margin-inline: auto;
+    }
+
+    .block {
+        min-height: 0;
+    }
+
+    .block-t { order: 0; }
+    .block-d { z-index: 3; }
+
+    /* grid-area: ряд / колонка / ряд-конец / колонка-конец */
+    .block-v { grid-area: 1 / 1 / 5 / 4; }
+    .block-i { grid-area: 1 / 4 / 3 / 9; }
+    .block-s { grid-area: 3 / 4 / 6 / 6; }
+    .block-d { grid-area: 5 / 4 / 6 / 5; }
+    .block-f { grid-area: 3 / 6 / 6 / 9; }
+    .block-t { grid-area: 5 / 1 / 6 / 4; }
+
+    /* Раскрытый блок наезжает на жёлтый, а соседи сжимаются так, что их края едут вместе с его краем:
+       между блоками не появляется ни щелей, ни чёрного фона. */
+    [data-open='veshi'] .block-v { grid-area: 1 / 1 / 5 / 6; }
+    [data-open='veshi'] .block-i { grid-area: 1 / 6 / 3 / 9; }
+
+    [data-open='istoriya'] .block-i { grid-area: 1 / 4 / 5 / 9; }
+    [data-open='istoriya'] .block-f { grid-area: 5 / 6 / 6 / 9; }
+
+    [data-open='fond'] .block-f { grid-area: 2 / 4 / 6 / 9; }
+
+    [data-lift='veshi'] .block-v,
+    [data-lift='istoriya'] .block-i { z-index: 2; }
+    [data-lift='fond'] .block-f { z-index: 4; }
+}
+
+/* ---------- Буквенный блок ---------- */
+
+.block-head {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: var(--pad);
+    text-align: left;
+    cursor: pointer;
+}
+
+.block-head:focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: -6px;
+}
+
+.block[data-expanded] .block-head {
+    position: static;
+    flex: none;
+}
+
+.word {
+    font-size: var(--letter);
+    line-height: 1;
+    white-space: nowrap;
+}
+
+/* Буква раскрывается в слово: буквы проявляются слева направо, схлопываются в обратном порядке. */
+.word span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateX(-4px);
+    transition:
+        opacity 180ms var(--ease-micro),
+        transform 180ms var(--ease-micro);
+    transition-delay: calc((var(--n) - 1 - var(--i)) * 25ms);
+}
+
+.block-head:hover .word span,
+.block-head:focus-visible .word span,
+.block[data-expanded] .word span {
+    opacity: 1;
+    transform: none;
+    transition-delay: calc(var(--i) * 25ms);
+}
+
+.block-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    line-height: 1.5;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: opacity 150ms var(--ease-main);
+}
+
+.block[data-expanded] .block-meta {
+    display: none;
+}
+
+/* Свёрнутые в полоску блоки показывают только букву. */
+.stage:not([data-open='']) .block-meta {
+    opacity: 0;
+}
+
+/* ---------- Панель раскрытого блока ---------- */
+
+.panel {
+    flex: 1;
+    min-height: 0;
+    padding: 0 var(--pad) var(--pad);
+    overflow-y: auto;
+    outline: none;
+}
+
+:where(button, a, input):focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 2px;
+}
+
+/* Пока блок едет, содержимое скрыто. При закрытии оно гаснет за 150 мс до старта геометрии. */
+.panel > *,
+.panel .card,
+.block-aside {
+    opacity: 0;
+    transform: translateY(12px);
+    transition:
+        opacity 150ms var(--ease-main),
+        transform 0s 150ms;
+}
+
+.block[data-ready] .panel > *,
+.block[data-ready] .panel .card,
+.block[data-ready] .block-aside {
+    opacity: 1;
+    transform: none;
+    transition:
+        opacity 400ms var(--ease-main),
+        transform 400ms var(--ease-main);
+    transition-delay: calc(var(--i, 0) * 60ms);
+}
+
+/* Контейнеры сами не анимируются: поднимаются карточки и плитки внутри них. */
+.panel > .cards,
+.panel > .mosaic {
+    opacity: 1;
+    transform: none;
+}
+
+.lead {
+    max-width: 44em;
+    margin-bottom: 0.75em;
+}
+
+/* ---------- Кнопки и чипы ---------- */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: 1px solid var(--color-ink);
+    border-radius: 2px;
+    color: var(--color-ink);
+    font-size: 18px;
+    line-height: 1.2;
+    cursor: pointer;
+    transition:
+        transform 150ms var(--ease-micro),
+        background 150ms var(--ease-micro),
+        box-shadow 150ms var(--ease-micro);
+}
+
+.btn-primary { background: var(--color-teal); }
+.btn-secondary { background: var(--color-paper); }
+
+.btn:hover,
+.btn:focus-visible {
+    transform: translate(-2px, -2px);
+    box-shadow: 2px 2px 0 var(--color-ink);
+}
+
+.btn:active {
+    transform: none;
+    box-shadow: none;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.chip {
+    padding: 2px 8px;
+    border: 1px solid var(--color-ink);
+    border-radius: 2px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    line-height: 1.6;
+    cursor: pointer;
+    transition:
+        transform 120ms var(--ease-micro),
+        box-shadow 120ms var(--ease-micro);
+}
+
+.chip:hover:not(:disabled),
+.chip:focus-visible {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 0 var(--color-ink);
+}
+
+.chip:disabled {
+    cursor: default;
+    opacity: 0.6;
+}
+
+.chip[aria-pressed='true'] {
+    background: var(--color-ink);
+    color: var(--color-paper);
+}
+
+.filter {
+    margin-top: 12px;
+}
+
+/* ---------- «Вещи»: ленты и карточки ---------- */
+
+.block-aside {
+    min-height: 0;
+    padding: 0 16px;
+}
+
+.ribbons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ribbon {
+    overflow: hidden;
+}
+
+.ribbon-track {
+    display: flex;
+    width: max-content;
+    animation: ribbon-x 40s linear infinite;
+}
+
+.ribbon-down .ribbon-track {
+    animation-direction: reverse;
+}
+
+.ribbon:hover .ribbon-track {
+    animation-play-state: paused;
+}
+
+/* Отступ вместо gap: так половина ленты равна ровно −50% и цикл не дёргается. */
+.ribbon-tile {
+    display: grid;
+    flex: none;
+    place-items: center;
+    width: 72px;
+    height: 72px;
+    margin-right: 8px;
+    padding: 6px;
+    overflow: hidden;
+    background: var(--color-mist);
+    font-family: var(--font-mono);
+    font-size: 9px;
+    line-height: 1.3;
+    letter-spacing: 0.06em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.ribbon-tile[data-kind='project'] {
+    background: var(--color-ink);
+    color: var(--color-paper);
+}
+
+.ribbon-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes ribbon-x {
+    from { transform: translateX(-50%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes ribbon-up {
+    from { transform: translateY(0); }
+    to { transform: translateY(-50%); }
+}
+
+@keyframes ribbon-down {
+    from { transform: translateY(-50%); }
+    to { transform: translateY(0); }
+}
+
+@media (min-width: 768px) {
+    /* Слово остаётся на месте, ленты встают слева под ним, каталог — справа. */
+    .block[data-expanded][data-has-aside] {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        grid-template-rows: auto minmax(0, 1fr);
+    }
+
+    .block[data-expanded][data-has-aside] .block-head {
+        grid-column: 1 / -1;
+    }
+
+    .block-aside {
+        padding: 0 0 0 var(--pad);
+    }
+
+    .block[data-has-aside] .panel {
+        padding-left: 24px;
+    }
+
+    .ribbons {
+        flex-direction: row;
+        height: 100%;
+    }
+
+    .ribbon-track {
+        flex-direction: column;
+        width: auto;
+        animation-name: ribbon-up;
+    }
+
+    .ribbon-down .ribbon-track {
+        animation-name: ribbon-down;
+        animation-direction: normal;
+    }
+
+    .ribbon-tile {
+        width: 88px;
+        height: 88px;
+        margin: 0 0 8px;
+    }
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 24px 16px;
+    margin-top: 16px;
+}
+
+.card-photo {
+    position: relative;
+    display: grid;
+    place-items: center;
+    aspect-ratio: 1;
+    margin-bottom: 12px;
+    overflow: hidden;
+    background: var(--color-mist);
+}
+
+.card-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-photo-second {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 300ms var(--ease-main);
+}
+
+.card:hover .card-photo-second {
+    opacity: 1;
+}
+
+.card[data-sold] .card-photo::after {
+    position: absolute;
+    inset: 0;
+    background: rgb(29 37 62 / 0.4);
+    content: '';
+}
+
+.card-sold {
+    position: absolute;
+    z-index: 1;
+    padding: 4px 8px;
+    background: var(--color-ink);
+    color: var(--color-paper);
+}
+
+.card-title {
+    font-size: 18px;
+    line-height: 1.25;
+}
+
+.card-details {
+    font-size: 14px;
+    opacity: 0.75;
+}
+
+.card-price {
+    margin-top: 8px;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.card-fund {
+    margin-top: 6px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+}
+
+/* ---------- «История» ---------- */
+
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    max-width: 780px;
+    margin-top: 20px;
+}
+
+.info-card {
+    padding: 24px;
+    background: var(--color-paper);
+    box-shadow: 0 4px 0 rgb(29 37 62 / 0.15);
+    font-size: 16px;
+}
+
+.info-card h3 {
+    margin-bottom: 16px;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.info-card ol {
+    display: grid;
+    gap: 6px;
+    padding-left: 1.3em;
+    list-style: decimal;
+}
+
+/* ---------- «Фонд»: мозаика ---------- */
+
+.panel-fond {
+    position: relative;
+    min-height: 70vh;
+    padding: 0;
+    overflow: hidden;
+}
+
+.mosaic {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: repeat(var(--cols), 1fr);
+    align-content: start;
+}
+
+.mosaic-tile {
+    aspect-ratio: 1;
+    overflow: hidden;
+    opacity: 0;
+    filter: grayscale(1);
+    transform: scale(0.96);
+    transition:
+        opacity 150ms var(--ease-main),
+        transform 0s 150ms,
+        filter 200ms var(--ease-micro);
+}
+
+/* Волна от центра: 20 мс на каждый шаг расстояния. */
+.block[data-ready] .mosaic-tile {
+    opacity: 1;
+    transform: none;
+    transition:
+        opacity 300ms var(--ease-main) calc(var(--d) * 20ms),
+        transform 300ms var(--ease-main) calc(var(--d) * 20ms),
+        filter 200ms var(--ease-micro);
+}
+
+.mosaic-tile:hover {
+    filter: grayscale(0);
+}
+
+.mosaic-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mosaic-logo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    opacity: 0;
+    transition: opacity 150ms var(--ease-main);
+}
+
+.block[data-ready] .mosaic-logo {
+    opacity: 1;
+    transition-duration: 300ms;
+}
+
+.mosaic-logo span {
+    display: grid;
+    place-items: center;
+    aspect-ratio: 1;
+    font-size: clamp(18px, 2vw, 28px);
+    line-height: 1;
+}
+
+.fund-card {
+    position: absolute;
+    bottom: var(--pad);
+    left: var(--pad);
+    width: min(420px, calc(100% - 2 * var(--pad)));
+    padding: 24px;
+    background: var(--color-paper);
+    box-shadow: 0 4px 0 rgb(29 37 62 / 0.15);
+}
+
+.fund-label {
+    margin-top: 16px;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.fund-total {
+    margin: 8px 0 16px;
+    font-size: clamp(36px, 3.6vw, 51px);
+    font-variant-numeric: tabular-nums;
+    line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+    .panel-fond {
+        min-height: 0;
+    }
+}
+
+/* ---------- Терминал ---------- */
+
+.terminal {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 0;
+    padding: clamp(16px, 1.7vw, 24px);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.terminal-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 8px;
+    min-height: 0;
+    transition: opacity 150ms var(--ease-main);
+}
+
+.terminal-log {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 2px;
+    min-height: 1.6em;
+    max-height: 30vh;
+    overflow-y: auto;
+    overflow-wrap: anywhere;
+}
+
+.terminal-caret {
+    display: inline-block;
+    width: 0.6em;
+    height: 1.1em;
+    margin-left: 1px;
+    background: var(--color-ink);
+    vertical-align: text-bottom;
+}
+
+.terminal-dots::after {
+    content: '.';
+    animation: terminal-dots 1.5s steps(1) infinite;
+}
+
+@keyframes terminal-dots {
+    0% { content: '.'; }
+    33% { content: '..'; }
+    66% { content: '...'; }
+}
+
+.terminal-input {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    border-bottom: 1px solid var(--color-ink);
+}
+
+.terminal-input input {
+    flex: 1;
+    min-width: 0;
+    padding: 2px 0;
+    background: transparent;
+    outline: none;
+}
+
+.terminal-input input::placeholder {
+    color: var(--color-ink);
+    opacity: 0.6;
+}
+
+.terminal-input:focus-within {
+    box-shadow: 0 1px 0 var(--color-ink);
+}
+
+@media (min-width: 768px) {
+    /* Терминал занимает два верхних модуля жёлтого блока: нижний левый закрыт тёмным. */
+    .terminal {
+        height: 40dvh;
+    }
+
+    .terminal-log {
+        max-height: none;
+    }
+
+    /* При раскрытом блоке от жёлтого остаётся полоска: содержимое терминала прячем. */
+    .stage:not([data-open='']) .terminal-body {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+/* ---------- Слоган, название, меню ---------- */
+
+.block-d {
+    justify-content: flex-end;
+    padding: clamp(12px, 1.4vw, 20px);
+}
+
+.slogan {
+    display: flex;
+    flex-direction: column;
+    font-size: clamp(14px, 1.25vw, 18px);
+    line-height: 1.25;
+}
+
+.block-t {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: var(--pad);
+}
+
+.site-name {
+    font-size: clamp(20px, 1.7vw, 24px);
+    line-height: 1;
+}
+
+.burger {
+    display: grid;
+    flex: none;
+    gap: 6px;
+    align-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.burger i {
+    height: 2px;
+    background: var(--color-ink);
+    transition: transform 150ms var(--ease-micro);
+}
+
+.burger:hover i:nth-child(2) {
+    transform: translateX(4px);
+}
+
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    visibility: hidden;
+    background: rgb(29 37 62 / 0.35);
+    opacity: 0;
+    transition:
+        opacity 400ms var(--ease-main),
+        visibility 0s 400ms;
+}
+
+.menu-overlay[data-open] {
+    visibility: visible;
+    opacity: 1;
+    transition:
+        opacity 400ms var(--ease-main) 300ms,
+        visibility 0s;
+}
+
+.menu {
+    position: fixed;
+    inset: 0 auto 0 0;
+    z-index: 50;
+    width: min(100vw, max(320px, 37.5vw));
+    overflow-y: auto;
+    visibility: hidden;
+    background: var(--color-paper);
+    transform: translateX(-100%);
+    transition:
+        transform 1s var(--ease-main),
+        visibility 0s 1s;
+}
+
+.menu[data-open] {
+    visibility: visible;
+    transform: none;
+    transition:
+        transform 1s var(--ease-main) 300ms,
+        visibility 0s;
+}
+
+.menu-head {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: var(--pad);
+    background: var(--color-paper);
+    font-size: clamp(20px, 1.7vw, 24px);
+    line-height: 1;
+}
+
+.menu-close {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.menu-links {
+    display: grid;
+    gap: 24px;
+    padding: 8px var(--pad) var(--pad) max(var(--pad), 40px);
+    font-size: 24px;
+    line-height: 1;
+}
+
+.menu-links a {
+    position: relative;
+    display: inline-block;
+    transition: transform 200ms var(--ease-micro);
+}
+
+.menu-links a::before {
+    position: absolute;
+    left: -1.2em;
+    content: '→';
+    opacity: 0;
+    transition: opacity 200ms var(--ease-micro);
+}
+
+.menu-links a:hover,
+.menu-links a:focus-visible {
+    transform: translateX(8px);
+}
+
+.menu-links a:hover::before,
+.menu-links a:focus-visible::before {
+    opacity: 1;
+}
+
+/* ---------- Мобильная стопка ---------- */
+
+@media (max-width: 767px) {
+    .word span {
+        opacity: 1;
+        transform: none;
+    }
+
+    .block[data-expanded] {
+        min-height: 60vh;
+    }
+
+    .block-aside {
+        margin-bottom: 16px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .block-d {
+        padding: 16px;
+    }
+
+    .slogan {
+        flex-direction: row;
+        gap: 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .word span,
+    .panel > *,
+    .panel .card,
+    .block-aside,
+    .mosaic-tile,
+    .block[data-ready] .panel > *,
+    .block[data-ready] .panel .card,
+    .block[data-ready] .block-aside,
+    .block[data-ready] .mosaic-tile {
+        transform: none;
+        transition: opacity 150ms linear;
+        transition-delay: 0s;
+    }
+
+    .ribbon-track,
+    .terminal-dots::after {
+        animation: none;
+    }
+
+    .menu,
+    .menu[data-open],
+    .menu-overlay,
+    .menu-overlay[data-open],
+    .menu-links a,
+    .btn,
+    .chip {
+        transition: none;
+    }
+}
