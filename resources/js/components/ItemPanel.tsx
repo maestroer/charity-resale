@@ -71,7 +71,7 @@ export function ItemPanel({ item }: { item: ItemDetail | null }) {
         <>
             {item && <Head title={item.title} />}
             <div className="item-overlay" data-open={open || undefined} onClick={close} />
-            <aside
+            <div
                 className="item-panel"
                 data-open={open || undefined}
                 inert={!open}
@@ -150,7 +150,7 @@ export function ItemPanel({ item }: { item: ItemDetail | null }) {
                         </div>
                     </div>
                 )}
-            </aside>
+            </div>
         </>
     );
 }
