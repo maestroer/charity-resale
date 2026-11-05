@@ -1,4 +1,5 @@
 import { Link } from '@inertiajs/react';
+import { FounderCard } from '@/components/FounderCard';
 import { useEffect, useRef, useState, type CSSProperties } from 'react';
 import { plural, rub } from '@/lib/format';
 import { useCountUp } from '@/lib/useCountUp';
@@ -47,9 +48,9 @@ export function FondPanel({ site, stats, active, photos = [] }: Props) {
     }, []);
 
     const { cols, rows, visibleRows } = grid;
-    // Значок проекта — мини-сетка 2×2 — занимает четыре ячейки в центре видимой части мозаики.
-    const logoCol = Math.floor((cols - 2) / 2);
-    const logoRow = Math.floor((visibleRows - 2) / 2);
+    // Значок проекта — мини-сетка 2×2 — стоит в верхнем левом углу мозаики: низ закрывают карточки фонда и автора.
+    const logoCol = Math.min(1, cols - 2);
+    const logoRow = 0;
     const tiles: { col: number; row: number }[] = [];
 
     for (let row = 0; row < rows; row++) {
@@ -65,7 +66,7 @@ export function FondPanel({ site, stats, active, photos = [] }: Props) {
         <>
             <div ref={mosaic} className="mosaic" style={{ '--cols': cols || 1 } as CSSProperties}>
                 {tiles.map(({ col, row }, index) => {
-                    // Волна от центра: задержка растёт с расстоянием до значка.
+                    // Волна расходится от значка: задержка растёт с расстоянием до него.
                     const distance = Math.round(Math.hypot(col - (logoCol + 0.5), row - (logoRow + 0.5)));
                     const photo = photos.length ? photos[index % photos.length] : null;
 
@@ -97,6 +98,7 @@ export function FondPanel({ site, stats, active, photos = [] }: Props) {
                     </div>
                 )}
             </div>
+            <div className="fund-cards">
             <div className="fund-card">
                 <p className="meta">{site.fund_name}</p>
                 <p className="fund-label">Уже собрано</p>
@@ -107,6 +109,8 @@ export function FondPanel({ site, stats, active, photos = [] }: Props) {
                 <Link href={to('/fond')} className="btn btn-primary fund-card-action">
                     Все отчёты
                 </Link>
+            </div>
+            <FounderCard />
             </div>
         </>
     );
