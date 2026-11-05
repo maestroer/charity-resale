@@ -605,14 +605,102 @@ body {
     line-height: 1;
 }
 
-.fund-card {
+/* Карточки поверх мозаики: фонд и автор проекта. Где не помещаются рядом, встают друг под другом. */
+.fund-cards {
     position: absolute;
+    right: var(--pad);
     bottom: var(--pad);
     left: var(--pad);
-    width: min(420px, calc(100% - 2 * var(--pad)));
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: flex-end;
+    max-height: calc(100% - 2 * var(--pad));
+    overflow-y: auto;
+    pointer-events: none;
+}
+
+/* Между карточками мозаика остаётся живой: плитки по-прежнему цветнеют при наведении. */
+.fund-cards > * {
+    pointer-events: auto;
+}
+
+.fund-card,
+.founder-card {
+    flex: 1 1 300px;
+    max-width: 420px;
     padding: 24px;
     background: var(--color-paper);
     box-shadow: 0 4px 0 rgb(29 37 62 / 0.15);
+}
+
+.founder-head {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    margin: 12px 0 4px;
+}
+
+.founder-avatar {
+    display: grid;
+    flex: none;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    background: var(--color-teal);
+    font-size: 20px;
+    line-height: 1;
+}
+
+.founder-name {
+    font-size: 24px;
+    line-height: 1.1;
+}
+
+.founder-role {
+    margin-top: 4px;
+    font-size: 14px;
+    opacity: 0.75;
+}
+
+.founder-why {
+    margin-top: 8px;
+    font-size: 15px;
+    line-height: 1.45;
+}
+
+.founder-facts {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid var(--color-ink);
+}
+
+.founder-facts dt {
+    font-size: 24px;
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+}
+
+.founder-facts dd {
+    margin-top: 6px;
+    font-size: 10px;
+}
+
+.founder-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    margin-top: 14px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+}
+
+.founder-links a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 .fund-label {
@@ -883,6 +971,33 @@ body {
 
     .block-aside {
         margin-bottom: 16px;
+    }
+
+    /* На телефоне мозаика — полоса сверху, карточки фонда и автора идут под ней. */
+    .panel-fond {
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+    }
+
+    .panel-fond .mosaic {
+        position: relative;
+        height: 56vw;
+        overflow: hidden;
+    }
+
+    .fund-cards {
+        position: static;
+        flex-direction: column;
+        align-items: stretch;
+        max-height: none;
+        padding: 16px;
+    }
+
+    .fund-card,
+    .founder-card {
+        flex: none;
+        max-width: none;
     }
 
     .cards {
