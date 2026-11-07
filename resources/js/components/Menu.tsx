@@ -53,15 +53,17 @@ export function Menu({ siteName, onGo }: Props) {
             <button
                 ref={burger}
                 type="button"
-                className="burger"
-                aria-label="Меню"
+                className="menu-toggle"
                 aria-expanded={open}
                 aria-controls="menu"
                 onClick={() => setOpen(true)}
             >
-                <i />
-                <i />
-                <i />
+                <span className="menu-toggle-label">Меню</span>
+                <span className="burger" aria-hidden="true">
+                    <i />
+                    <i />
+                    <i />
+                </span>
             </button>
             {/* Портал в body: блоки сетки обрезают содержимое и получают transform на время анимации. */}
             {createPortal(

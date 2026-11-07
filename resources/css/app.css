@@ -112,7 +112,8 @@ body {
     [data-open='istoriya'] .block-i { grid-area: 1 / 4 / 5 / 9; }
     [data-open='istoriya'] .block-f { grid-area: 5 / 6 / 6 / 9; }
 
-    [data-open='fond'] .block-f { grid-area: 2 / 4 / 6 / 9; }
+    /* «Фонд» растёт вверх поверх правой части «Истории»: жёлтый терминал остаётся открытым и рабочим. */
+    [data-open='fond'] .block-f { grid-area: 1 / 6 / 6 / 9; }
 
     [data-lift='veshi'] .block-v,
     [data-lift='istoriya'] .block-i { z-index: 2; }
@@ -641,52 +642,29 @@ body {
     margin: 12px 0 4px;
 }
 
-.founder-avatar {
-    display: grid;
+.founder-photo {
     flex: none;
-    place-items: center;
-    width: 52px;
-    height: 52px;
-    background: var(--color-teal);
-    font-size: 20px;
-    line-height: 1;
+    width: 96px;
+    height: 128px;
+    object-fit: cover;
+    object-position: center 30%;
+    background: var(--color-ink);
 }
 
 .founder-name {
-    font-size: 24px;
+    font-size: 28px;
     line-height: 1.1;
 }
 
 .founder-role {
+    margin-top: 6px;
+    font-size: 16px;
+}
+
+.founder-background {
     margin-top: 4px;
     font-size: 14px;
     opacity: 0.75;
-}
-
-.founder-why {
-    margin-top: 8px;
-    font-size: 15px;
-    line-height: 1.45;
-}
-
-.founder-facts {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 8px;
-    margin-top: 16px;
-    padding-top: 12px;
-    border-top: 1px solid var(--color-ink);
-}
-
-.founder-facts dt {
-    font-size: 24px;
-    font-variant-numeric: tabular-nums;
-    line-height: 1;
-}
-
-.founder-facts dd {
-    margin-top: 6px;
-    font-size: 10px;
 }
 
 .founder-links {
@@ -809,11 +787,45 @@ body {
         max-height: none;
     }
 
-    /* При раскрытом блоке от жёлтого остаётся полоска: содержимое терминала прячем. */
-    .stage:not([data-open='']) .terminal-body {
+    /* «Вещи» и «История» закрывают верх жёлтого блока: прячем терминал, а на видимом крае показываем кнопку
+       «Спросить» — она закрывает раскрытый блок и ставит курсор в терминал. При раскрытом «Фонде» терминал виден целиком. */
+    [data-open='veshi'] .terminal-body,
+    [data-open='istoriya'] .terminal-body {
         visibility: hidden;
         opacity: 0;
     }
+
+    .terminal-strip {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        height: calc(100% / 3);
+        cursor: pointer;
+        transition: background 150ms var(--ease-micro);
+    }
+
+    .terminal-strip::after {
+        content: ' →';
+    }
+
+    .terminal-strip:hover,
+    .terminal-strip:focus-visible {
+        background: rgb(29 37 62 / 0.08);
+    }
+
+    [data-open='veshi'] .terminal-strip,
+    [data-open='istoriya'] .terminal-strip {
+        display: flex;
+    }
+}
+
+.terminal-strip {
+    display: none;
 }
 
 /* ---------- Слоган, название, меню ---------- */
@@ -832,10 +844,24 @@ body {
 
 .block-t {
     flex-direction: row;
+}
+
+/* Весь зелёный блок — одна кнопка «Меню». */
+.menu-toggle {
+    display: flex;
+    flex: 1;
+    gap: 16px;
     align-items: center;
     justify-content: space-between;
-    gap: 16px;
     padding: var(--pad);
+    font-size: var(--letter);
+    line-height: 1;
+    text-align: left;
+    cursor: pointer;
+}
+
+.menu-toggle:focus-visible {
+    outline-offset: -6px;
 }
 
 .site-name {
@@ -860,7 +886,7 @@ body {
     transition: transform 150ms var(--ease-micro);
 }
 
-.burger:hover i:nth-child(2) {
+.menu-toggle:hover .burger i:nth-child(2) {
     transform: translateX(4px);
 }
 

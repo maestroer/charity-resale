@@ -7,6 +7,7 @@ export type Project = {
 export type Item = {
     slug: string;
     title: string;
+    owner: { name: string | null; category: string | null; category_label: string | null };
     brand: string | null;
     size: string | null;
     project: Project | null;

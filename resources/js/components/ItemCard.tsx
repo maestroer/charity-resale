@@ -6,7 +6,7 @@ import { to } from '@/lib/url';
 
 export function ItemCard({ item, index }: { item: Item; index: number }) {
     const [photo, second] = item.photos;
-    const details = [item.project?.title, item.size].filter(Boolean).join(' · ');
+    const details = [item.owner.name, item.owner.category_label, item.size].filter(Boolean).join(' · ');
 
     return (
         <Link

@@ -11,20 +11,29 @@ import { Terminal } from '@/components/Terminal';
 import { VeshiPanel } from '@/components/VeshiPanel';
 import { plural, rub } from '@/lib/format';
 import { useGridState } from '@/lib/useGridState';
-import type { Item, ItemDetail, Project, SharedProps, Stats } from '@/types';
+import type { Item, ItemDetail, SharedProps, Stats } from '@/types';
 
 type Props = {
     items: Item[];
-    projects: Project[];
     stats: Stats;
     item: ItemDetail | null;
 };
 
-export default function Home({ items, projects, stats, item }: Props) {
+/** Сколько ждать, пока сетка закроется, прежде чем поставить курсор в терминал. */
+const GRID_CLOSE_MS = 1400;
+
+export default function Home({ items, stats, item }: Props) {
     const { site } = usePage<SharedProps>().props;
     const stage = useRef<HTMLElement>(null);
     const { open, ready, lift, toggle, go } = useGridState(stage);
     const onSale = items.filter((item) => !item.draft && !item.sold);
+
+    // Жёлтый блок закрыт раскрытыми «Вещами» или «Историей»: по клику на видимый край закрываем их и открываем терминал.
+    const openTerminal = () => {
+        go(null);
+        const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        setTimeout(() => stage.current?.querySelector<HTMLInputElement>('.terminal-input input')?.focus(), reduced ? 50 : GRID_CLOSE_MS);
+    };
 
     return (
         <>
@@ -37,7 +46,7 @@ export default function Home({ items, projects, stats, item }: Props) {
                     open={open}
                     ready={ready}
                     onToggle={toggle}
-                    aside={<Ribbons items={items} projects={projects} />}
+                    aside={<Ribbons items={items} />}
                     meta={
                         <>
                             {onSale.slice(0, 3).map((item) => (
@@ -51,7 +60,7 @@ export default function Home({ items, projects, stats, item }: Props) {
                         </>
                     }
                 >
-                    <VeshiPanel items={items} projects={projects} dropLabel={site.drop_label} />
+                    <VeshiPanel items={items} dropLabel={site.drop_label} />
                 </LetterBlock>
 
                 <LetterBlock
@@ -68,6 +77,9 @@ export default function Home({ items, projects, stats, item }: Props) {
 
                 <section data-block="sprosit" className="block block-s" aria-label="Спросить о вещах">
                     <Terminal context={{ items, stats, site }} />
+                    <button type="button" className="terminal-strip meta" onClick={openTerminal}>
+                        Спросить
+                    </button>
                 </section>
 
                 <div data-block="slogan" className="block block-d">
@@ -97,7 +109,6 @@ export default function Home({ items, projects, stats, item }: Props) {
                 </LetterBlock>
 
                 <header data-block="title" className="block block-t">
-                    <p className="site-name">{site.name}</p>
                     <Menu siteName={site.name} onGo={go} />
                 </header>
             </main>

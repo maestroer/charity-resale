@@ -428,8 +428,9 @@
     [data-open='veshi'] .block-v { grid-area: 1 / 1 / 5 / 4; }
     [data-open='veshi'] .block-i { grid-area: 1 / 4 / 3 / 5; }
 
-    [data-open='istoriya'] .block-i { grid-area: 1 / 3 / 6 / 5; }
-    [data-open='istoriya'] .block-f { grid-area: 6 / 4 / 7 / 5; }
+    /* «История» оставляет открытым нижний модуль жёлтого блока, как и «Вещи»: там кнопка «Спросить». */
+    [data-open='istoriya'] .block-i { grid-area: 1 / 3 / 5 / 5; }
+    [data-open='istoriya'] .block-f { grid-area: 5 / 4 / 7 / 5; }
 
     [data-open='fond'] .block-f { grid-area: 2 / 3 / 7 / 5; }
 
@@ -440,9 +441,17 @@
         font-size: 11px;
     }
 
-    .block-t {
+    .menu-toggle {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    /* На планшете от жёлтого блока под раскрытыми «Вещами» и «Историей» видна третья четверть. */
+    .terminal-strip {
+        top: 50%;
+        bottom: auto;
+        width: 100%;
+        height: 25%;
     }
 
     .ribbon-down {

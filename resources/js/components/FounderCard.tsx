@@ -1,34 +1,20 @@
 import { FOUNDER } from '@/content/founder';
 
-/** Кто стоит за проектом: у фонда появляется лицо, а у инвестора — ответ на вопрос «почему вы». */
+/** Руководитель проекта: у фонда появляется лицо, а у инвестора — понимание, кто за этим стоит. */
 export function FounderCard() {
     return (
         <section className="founder-card" aria-labelledby="founder-name">
-            <p className="meta">Кто за проектом</p>
+            <p className="meta">{FOUNDER.heading}</p>
             <div className="founder-head">
-                <span className="founder-avatar" aria-hidden="true">
-                    {FOUNDER.initials}
-                </span>
+                <img className="founder-photo" src={FOUNDER.photo} alt={FOUNDER.name} width="96" height="128" loading="lazy" />
                 <div>
                     <h3 id="founder-name" className="founder-name">
                         {FOUNDER.name}
                     </h3>
                     <p className="founder-role">{FOUNDER.role}</p>
+                    <p className="founder-background">{FOUNDER.background}</p>
                 </div>
             </div>
-            {FOUNDER.why.map((text) => (
-                <p key={text} className="founder-why">
-                    {text}
-                </p>
-            ))}
-            <dl className="founder-facts">
-                {FOUNDER.facts.map(({ value, label }) => (
-                    <div key={label}>
-                        <dt>{value}</dt>
-                        <dd className="meta">{label}</dd>
-                    </div>
-                ))}
-            </dl>
             <p className="founder-links">
                 {FOUNDER.links.map(({ label, href }) => (
                     <a key={href} href={href} target="_blank" rel="noopener">

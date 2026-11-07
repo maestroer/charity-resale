@@ -1,6 +1,6 @@
-import type { Item, Project } from '@/types';
+import type { Item } from '@/types';
 
-type Tile = { key: string; kind: 'item'; item: Item } | { key: string; kind: 'project'; project: Project };
+type Tile = { key: string; item: Item };
 
 const MIN_TILES = 8;
 
@@ -27,10 +27,8 @@ function Track({ tiles, direction }: { tiles: Tile[]; direction: 'up' | 'down' }
             {/* Содержимое продублировано: сдвиг на −50% возвращает ленту в исходную точку без шва. */}
             <ul className="ribbon-track">
                 {[...filled, ...filled].map((tile, index) => (
-                    <li key={`${tile.key}-${index}`} className="ribbon-tile" data-kind={tile.kind}>
-                        {tile.kind === 'project' ? (
-                            <span>{tile.project.title}</span>
-                        ) : tile.item.photos[0] ? (
+                    <li key={`${tile.key}-${index}`} className="ribbon-tile">
+                        {tile.item.photos[0] ? (
                             <img src={tile.item.photos[0].thumb} alt="" loading="lazy" />
                         ) : (
                             <span>{tile.item.brand ?? tile.item.title}</span>
@@ -42,19 +40,18 @@ function Track({ tiles, direction }: { tiles: Tile[]; direction: 'up' | 'down' }
     );
 }
 
-/** Две бесконечные ленты: превью вещей едут вверх, вперемешку с проектами — вниз. */
-export function Ribbons({ items, projects }: { items: Item[]; projects: Project[] }) {
-    const itemTiles: Tile[] = items.map((item) => ({ key: item.slug, kind: 'item', item }));
-    const mixed: Tile[] = [...itemTiles].reverse().flatMap((tile, index) => {
-        const project = projects[index % Math.max(projects.length, 1)];
-
-        return project ? [{ key: `p-${project.slug}-${index}`, kind: 'project', project } as Tile, tile] : [tile];
-    });
+/**
+ * Две бесконечные ленты из вещей, которые можно купить прямо сейчас: одна едет вверх, другая вниз.
+ * Пока таких вещей нет, ленты показывают весь каталог, чтобы блок не пустовал.
+ */
+export function Ribbons({ items }: { items: Item[] }) {
+    const forSale = items.filter((item) => !item.draft && !item.sold && item.price_rub !== null);
+    const tiles: Tile[] = (forSale.length > 0 ? forSale : items).map((item) => ({ key: item.slug, item }));
 
     return (
         <div className="ribbons">
-            <Track tiles={itemTiles} direction="up" />
-            <Track tiles={mixed} direction="down" />
+            <Track tiles={tiles} direction="up" />
+            <Track tiles={[...tiles].reverse()} direction="down" />
         </div>
     );
 }

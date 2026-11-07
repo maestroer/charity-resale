@@ -4,22 +4,24 @@
         "props": {
             "errors": [],
             "site": {
-                "name": "[НАЗВАНИЕ ПРОЕКТА]",
+                "name": "ВИФ",
                 "actress": "[ИМЯ АКТРИСЫ]",
                 "fund_name": "[НАЗВАНИЕ ФОНДА]",
                 "domain": "[домен]",
-                "drop_label": "ДРОП 01 · «ЖИТЬ ЖИЗНЬ»"
+                "drop_label": "ВСЕ ВЕЩИ ПРОЕКТА"
             },
             "items": [
                 {
                     "slug": "sumka-off-white",
                     "title": "Сумка Off-White",
+                    "owner": {
+                        "name": "[ЗАПОЛНИТЬ: чья вещь]",
+                        "category": "bloggers",
+                        "category_label": "Блогеры"
+                    },
                     "brand": "Off-White",
                     "size": null,
-                    "project": {
-                        "slug": "proekt-sumki",
-                        "title": "[ЗАПОЛНИТЬ: проект сумки]"
-                    },
+                    "project": null,
                     "price_rub": 123400,
                     "fund_rub": 37020,
                     "sold": false,
@@ -30,6 +32,11 @@
                 {
                     "slug": "plate-namelazz-xs",
                     "title": "Платье Namelazz",
+                    "owner": {
+                        "name": "[ЗАПОЛНИТЬ: чья вещь]",
+                        "category": "actors",
+                        "category_label": "Актёры"
+                    },
                     "brand": "Namelazz",
                     "size": "XS",
                     "project": {
@@ -45,13 +52,15 @@
                 },
                 {
                     "slug": "veshch-03",
-                    "title": "[ЗАПОЛНИТЬ: вещь 03]",
+                    "title": "[ЗАПОЛНИТЬ: вещь певца]",
+                    "owner": {
+                        "name": "[ЗАПОЛНИТЬ: имя]",
+                        "category": "singers",
+                        "category_label": "Певцы"
+                    },
                     "brand": null,
                     "size": null,
-                    "project": {
-                        "slug": "zhit-zhizn",
-                        "title": "«Жить жизнь»"
-                    },
+                    "project": null,
                     "price_rub": null,
                     "fund_rub": null,
                     "sold": false,
@@ -61,13 +70,15 @@
                 },
                 {
                     "slug": "veshch-04",
-                    "title": "[ЗАПОЛНИТЬ: вещь 04]",
+                    "title": "[ЗАПОЛНИТЬ: вещь инфлюенсера]",
+                    "owner": {
+                        "name": "[ЗАПОЛНИТЬ: имя]",
+                        "category": "influencers",
+                        "category_label": "Инфлюенсеры"
+                    },
                     "brand": null,
                     "size": null,
-                    "project": {
-                        "slug": "zhit-zhizn",
-                        "title": "«Жить жизнь»"
-                    },
+                    "project": null,
                     "price_rub": null,
                     "fund_rub": null,
                     "sold": false,
@@ -77,29 +88,21 @@
                 },
                 {
                     "slug": "veshch-05",
-                    "title": "[ЗАПОЛНИТЬ: вещь 05]",
+                    "title": "[ЗАПОЛНИТЬ: вещь артиста]",
+                    "owner": {
+                        "name": "[ЗАПОЛНИТЬ: имя]",
+                        "category": "artists",
+                        "category_label": "Артисты"
+                    },
                     "brand": null,
                     "size": null,
-                    "project": {
-                        "slug": "zhit-zhizn",
-                        "title": "«Жить жизнь»"
-                    },
+                    "project": null,
                     "price_rub": null,
                     "fund_rub": null,
                     "sold": false,
                     "draft": true,
                     "available": false,
                     "photos": []
-                }
-            ],
-            "projects": [
-                {
-                    "slug": "zhit-zhizn",
-                    "title": "«Жить жизнь»"
-                },
-                {
-                    "slug": "proekt-sumki",
-                    "title": "[ЗАПОЛНИТЬ: проект сумки]"
                 }
             ],
             "stats": {
@@ -115,11 +118,11 @@
         "props": {
             "errors": [],
             "site": {
-                "name": "[НАЗВАНИЕ ПРОЕКТА]",
+                "name": "ВИФ",
                 "actress": "[ИМЯ АКТРИСЫ]",
                 "fund_name": "[НАЗВАНИЕ ФОНДА]",
                 "domain": "[домен]",
-                "drop_label": "ДРОП 01 · «ЖИТЬ ЖИЗНЬ»"
+                "drop_label": "ВСЕ ВЕЩИ ПРОЕКТА"
             },
             "total_rub": 0,
             "sold_count": 0,
@@ -131,11 +134,11 @@
         "props": {
             "errors": [],
             "site": {
-                "name": "[НАЗВАНИЕ ПРОЕКТА]",
+                "name": "ВИФ",
                 "actress": "[ИМЯ АКТРИСЫ]",
                 "fund_name": "[НАЗВАНИЕ ФОНДА]",
                 "domain": "[домен]",
-                "drop_label": "ДРОП 01 · «ЖИТЬ ЖИЗНЬ»"
+                "drop_label": "ВСЕ ВЕЩИ ПРОЕКТА"
             },
             "title": "Публичная оферта",
             "html": "<p>[ЗАПОЛНИТЬ: текст публичной оферты. Его готовит юрист после того, как определится продавец — ИП или ООО.]</p>\n<h2>1. Продавец</h2>\n<p>[ЗАПОЛНИТЬ: наименование, ИНН, ОГРН или ОГРНИП, адрес, контактный email и телефон]</p>\n<h2>2. Предмет договора</h2>\n<p>[ЗАПОЛНИТЬ: продажа вещей из каталога; каждая вещь существует в единственном экземпляре]</p>\n<h2>3. Цена и оплата</h2>\n<p>[ЗАПОЛНИТЬ: цена указана на странице вещи; оплата картой или через СБП; 30% цены продавец перечисляет в благотворительный фонд по договору пожертвования]</p>\n<h2>4. Доставка</h2>\n<p>[ЗАПОЛНИТЬ: ссылка на условия доставки]</p>\n<h2>5. Возврат</h2>\n<p>[ЗАПОЛНИТЬ: порядок и сроки возврата]</p>\n<h2>6. Ответственность сторон и порядок разрешения споров</h2>\n<p>[ЗАПОЛНИТЬ]</p>\n"
@@ -146,11 +149,11 @@
         "props": {
             "errors": [],
             "site": {
-                "name": "[НАЗВАНИЕ ПРОЕКТА]",
+                "name": "ВИФ",
                 "actress": "[ИМЯ АКТРИСЫ]",
                 "fund_name": "[НАЗВАНИЕ ФОНДА]",
                 "domain": "[домен]",
-                "drop_label": "ДРОП 01 · «ЖИТЬ ЖИЗНЬ»"
+                "drop_label": "ВСЕ ВЕЩИ ПРОЕКТА"
             },
             "title": "Политика обработки персональных данных",
             "html": "<p>[ЗАПОЛНИТЬ: текст политики. Его готовит юрист после того, как определится оператор персональных данных.]</p>\n<h2>1. Оператор</h2>\n<p>[ЗАПОЛНИТЬ: наименование, ИНН, адрес, контакт для обращений по персональным данным]</p>\n<h2>2. Какие данные мы обрабатываем</h2>\n<p>При оформлении заказа: имя, email, телефон и адрес доставки. При посещении сайта: UTM-метки первого визита и данные Яндекс Метрики.</p>\n<p>[ЗАПОЛНИТЬ: уточнить перечень у юриста]</p>\n<h2>3. Зачем</h2>\n<p>[ЗАПОЛНИТЬ: исполнение договора купли-продажи, доставка, связь по заказу, аналитика]</p>\n<h2>4. Где хранятся данные</h2>\n<p>Персональные данные покупателей хранятся на серверах в России.</p>\n<p>[ЗАПОЛНИТЬ: провайдер хостинга]</p>\n<h2>5. Кому передаются</h2>\n<p>[ЗАПОЛНИТЬ: платёжный сервис ЮKassa, служба доставки]</p>\n<h2>6. Сроки хранения и права субъекта данных</h2>\n<p>[ЗАПОЛНИТЬ]</p>\n"
@@ -161,11 +164,11 @@
         "props": {
             "errors": [],
             "site": {
-                "name": "[НАЗВАНИЕ ПРОЕКТА]",
+                "name": "ВИФ",
                 "actress": "[ИМЯ АКТРИСЫ]",
                 "fund_name": "[НАЗВАНИЕ ФОНДА]",
                 "domain": "[домен]",
-                "drop_label": "ДРОП 01 · «ЖИТЬ ЖИЗНЬ»"
+                "drop_label": "ВСЕ ВЕЩИ ПРОЕКТА"
             },
             "title": "Доставка и возврат",
             "html": "<h2>Доставка</h2>\n<p>[ЗАПОЛНИТЬ: служба доставки, сроки, стоимость для покупателя, регионы]</p>\n<p>Каждая вещь отправляется в фирменной упаковке.</p>\n<h2>Возврат</h2>\n<p>[ЗАПОЛНИТЬ: срок, в течение которого можно вернуть вещь; в каком состоянии; кто оплачивает обратную доставку; как вернутся деньги]</p>\n<h2>Как связаться</h2>\n<p>[ЗАПОЛНИТЬ: email и телефон для вопросов по заказу]</p>\n"
@@ -176,22 +179,24 @@
         "props": {
             "errors": [],
             "site": {
-                "name": "[НАЗВАНИЕ ПРОЕКТА]",
+                "name": "ВИФ",
                 "actress": "[ИМЯ АКТРИСЫ]",
                 "fund_name": "[НАЗВАНИЕ ФОНДА]",
                 "domain": "[домен]",
-                "drop_label": "ДРОП 01 · «ЖИТЬ ЖИЗНЬ»"
+                "drop_label": "ВСЕ ВЕЩИ ПРОЕКТА"
             },
             "items": [
                 {
                     "slug": "sumka-off-white",
                     "title": "Сумка Off-White",
+                    "owner": {
+                        "name": "[ЗАПОЛНИТЬ: чья вещь]",
+                        "category": "bloggers",
+                        "category_label": "Блогеры"
+                    },
                     "brand": "Off-White",
                     "size": null,
-                    "project": {
-                        "slug": "proekt-sumki",
-                        "title": "[ЗАПОЛНИТЬ: проект сумки]"
-                    },
+                    "project": null,
                     "price_rub": 123400,
                     "fund_rub": 37020,
                     "sold": false,
@@ -202,6 +207,11 @@
                 {
                     "slug": "plate-namelazz-xs",
                     "title": "Платье Namelazz",
+                    "owner": {
+                        "name": "[ЗАПОЛНИТЬ: чья вещь]",
+                        "category": "actors",
+                        "category_label": "Актёры"
+                    },
                     "brand": "Namelazz",
                     "size": "XS",
                     "project": {
@@ -217,13 +227,15 @@
                 },
                 {
                     "slug": "veshch-03",
-                    "title": "[ЗАПОЛНИТЬ: вещь 03]",
+                    "title": "[ЗАПОЛНИТЬ: вещь певца]",
+                    "owner": {
+                        "name": "[ЗАПОЛНИТЬ: имя]",
+                        "category": "singers",
+                        "category_label": "Певцы"
+                    },
                     "brand": null,
                     "size": null,
-                    "project": {
-                        "slug": "zhit-zhizn",
-                        "title": "«Жить жизнь»"
-                    },
+                    "project": null,
                     "price_rub": null,
                     "fund_rub": null,
                     "sold": false,
@@ -233,13 +245,15 @@
                 },
                 {
                     "slug": "veshch-04",
-                    "title": "[ЗАПОЛНИТЬ: вещь 04]",
+                    "title": "[ЗАПОЛНИТЬ: вещь инфлюенсера]",
+                    "owner": {
+                        "name": "[ЗАПОЛНИТЬ: имя]",
+                        "category": "influencers",
+                        "category_label": "Инфлюенсеры"
+                    },
                     "brand": null,
                     "size": null,
-                    "project": {
-                        "slug": "zhit-zhizn",
-                        "title": "«Жить жизнь»"
-                    },
+                    "project": null,
                     "price_rub": null,
                     "fund_rub": null,
                     "sold": false,
@@ -249,29 +263,21 @@
                 },
                 {
                     "slug": "veshch-05",
-                    "title": "[ЗАПОЛНИТЬ: вещь 05]",
+                    "title": "[ЗАПОЛНИТЬ: вещь артиста]",
+                    "owner": {
+                        "name": "[ЗАПОЛНИТЬ: имя]",
+                        "category": "artists",
+                        "category_label": "Артисты"
+                    },
                     "brand": null,
                     "size": null,
-                    "project": {
-                        "slug": "zhit-zhizn",
-                        "title": "«Жить жизнь»"
-                    },
+                    "project": null,
                     "price_rub": null,
                     "fund_rub": null,
                     "sold": false,
                     "draft": true,
                     "available": false,
                     "photos": []
-                }
-            ],
-            "projects": [
-                {
-                    "slug": "zhit-zhizn",
-                    "title": "«Жить жизнь»"
-                },
-                {
-                    "slug": "proekt-sumki",
-                    "title": "[ЗАПОЛНИТЬ: проект сумки]"
                 }
             ],
             "stats": {
@@ -282,12 +288,14 @@
             "item": {
                 "slug": "sumka-off-white",
                 "title": "Сумка Off-White",
+                "owner": {
+                    "name": "[ЗАПОЛНИТЬ: чья вещь]",
+                    "category": "bloggers",
+                    "category_label": "Блогеры"
+                },
                 "brand": "Off-White",
                 "size": null,
-                "project": {
-                    "slug": "proekt-sumki",
-                    "title": "[ЗАПОЛНИТЬ: проект сумки]"
-                },
+                "project": null,
                 "price_rub": 123400,
                 "fund_rub": 37020,
                 "sold": false,
@@ -299,7 +307,7 @@
                 "measurements": null,
                 "scene": null,
                 "look": null,
-                "story": "[ЗАПОЛНИТЬ: в каком проекте, сцене и образе была сумка]",
+                "story": "[ЗАПОЛНИТЬ: где и когда владелец носил сумку]",
                 "video_url": null
             }
         }
@@ -309,21 +317,23 @@
         "props": {
             "errors": [],
             "site": {
-                "name": "[НАЗВАНИЕ ПРОЕКТА]",
+                "name": "ВИФ",
                 "actress": "[ИМЯ АКТРИСЫ]",
                 "fund_name": "[НАЗВАНИЕ ФОНДА]",
                 "domain": "[домен]",
-                "drop_label": "ДРОП 01 · «ЖИТЬ ЖИЗНЬ»"
+                "drop_label": "ВСЕ ВЕЩИ ПРОЕКТА"
             },
             "item": {
                 "slug": "sumka-off-white",
                 "title": "Сумка Off-White",
+                "owner": {
+                    "name": "[ЗАПОЛНИТЬ: чья вещь]",
+                    "category": "bloggers",
+                    "category_label": "Блогеры"
+                },
                 "brand": "Off-White",
                 "size": null,
-                "project": {
-                    "slug": "proekt-sumki",
-                    "title": "[ЗАПОЛНИТЬ: проект сумки]"
-                },
+                "project": null,
                 "price_rub": 123400,
                 "fund_rub": 37020,
                 "sold": false,
@@ -339,22 +349,24 @@
         "props": {
             "errors": [],
             "site": {
-                "name": "[НАЗВАНИЕ ПРОЕКТА]",
+                "name": "ВИФ",
                 "actress": "[ИМЯ АКТРИСЫ]",
                 "fund_name": "[НАЗВАНИЕ ФОНДА]",
                 "domain": "[домен]",
-                "drop_label": "ДРОП 01 · «ЖИТЬ ЖИЗНЬ»"
+                "drop_label": "ВСЕ ВЕЩИ ПРОЕКТА"
             },
             "items": [
                 {
                     "slug": "sumka-off-white",
                     "title": "Сумка Off-White",
+                    "owner": {
+                        "name": "[ЗАПОЛНИТЬ: чья вещь]",
+                        "category": "bloggers",
+                        "category_label": "Блогеры"
+                    },
                     "brand": "Off-White",
                     "size": null,
-                    "project": {
-                        "slug": "proekt-sumki",
-                        "title": "[ЗАПОЛНИТЬ: проект сумки]"
-                    },
+                    "project": null,
                     "price_rub": 123400,
                     "fund_rub": 37020,
                     "sold": false,
@@ -365,6 +377,11 @@
                 {
                     "slug": "plate-namelazz-xs",
                     "title": "Платье Namelazz",
+                    "owner": {
+                        "name": "[ЗАПОЛНИТЬ: чья вещь]",
+                        "category": "actors",
+                        "category_label": "Актёры"
+                    },
                     "brand": "Namelazz",
                     "size": "XS",
                     "project": {
@@ -380,13 +397,15 @@
                 },
                 {
                     "slug": "veshch-03",
-                    "title": "[ЗАПОЛНИТЬ: вещь 03]",
+                    "title": "[ЗАПОЛНИТЬ: вещь певца]",
+                    "owner": {
+                        "name": "[ЗАПОЛНИТЬ: имя]",
+                        "category": "singers",
+                        "category_label": "Певцы"
+                    },
                     "brand": null,
                     "size": null,
-                    "project": {
-                        "slug": "zhit-zhizn",
-                        "title": "«Жить жизнь»"
-                    },
+                    "project": null,
                     "price_rub": null,
                     "fund_rub": null,
                     "sold": false,
@@ -396,13 +415,15 @@
                 },
                 {
                     "slug": "veshch-04",
-                    "title": "[ЗАПОЛНИТЬ: вещь 04]",
+                    "title": "[ЗАПОЛНИТЬ: вещь инфлюенсера]",
+                    "owner": {
+                        "name": "[ЗАПОЛНИТЬ: имя]",
+                        "category": "influencers",
+                        "category_label": "Инфлюенсеры"
+                    },
                     "brand": null,
                     "size": null,
-                    "project": {
-                        "slug": "zhit-zhizn",
-                        "title": "«Жить жизнь»"
-                    },
+                    "project": null,
                     "price_rub": null,
                     "fund_rub": null,
                     "sold": false,
@@ -412,29 +433,21 @@
                 },
                 {
                     "slug": "veshch-05",
-                    "title": "[ЗАПОЛНИТЬ: вещь 05]",
+                    "title": "[ЗАПОЛНИТЬ: вещь артиста]",
+                    "owner": {
+                        "name": "[ЗАПОЛНИТЬ: имя]",
+                        "category": "artists",
+                        "category_label": "Артисты"
+                    },
                     "brand": null,
                     "size": null,
-                    "project": {
-                        "slug": "zhit-zhizn",
-                        "title": "«Жить жизнь»"
-                    },
+                    "project": null,
                     "price_rub": null,
                     "fund_rub": null,
                     "sold": false,
                     "draft": true,
                     "available": false,
                     "photos": []
-                }
-            ],
-            "projects": [
-                {
-                    "slug": "zhit-zhizn",
-                    "title": "«Жить жизнь»"
-                },
-                {
-                    "slug": "proekt-sumki",
-                    "title": "[ЗАПОЛНИТЬ: проект сумки]"
                 }
             ],
             "stats": {
@@ -445,6 +458,11 @@
             "item": {
                 "slug": "plate-namelazz-xs",
                 "title": "Платье Namelazz",
+                "owner": {
+                    "name": "[ЗАПОЛНИТЬ: чья вещь]",
+                    "category": "actors",
+                    "category_label": "Актёры"
+                },
                 "brand": "Namelazz",
                 "size": "XS",
                 "project": {
@@ -472,15 +490,20 @@
         "props": {
             "errors": [],
             "site": {
-                "name": "[НАЗВАНИЕ ПРОЕКТА]",
+                "name": "ВИФ",
                 "actress": "[ИМЯ АКТРИСЫ]",
                 "fund_name": "[НАЗВАНИЕ ФОНДА]",
                 "domain": "[домен]",
-                "drop_label": "ДРОП 01 · «ЖИТЬ ЖИЗНЬ»"
+                "drop_label": "ВСЕ ВЕЩИ ПРОЕКТА"
             },
             "item": {
                 "slug": "plate-namelazz-xs",
                 "title": "Платье Namelazz",
+                "owner": {
+                    "name": "[ЗАПОЛНИТЬ: чья вещь]",
+                    "category": "actors",
+                    "category_label": "Актёры"
+                },
                 "brand": "Namelazz",
                 "size": "XS",
                 "project": {
@@ -502,22 +525,24 @@
         "props": {
             "errors": [],
             "site": {
-                "name": "[НАЗВАНИЕ ПРОЕКТА]",
+                "name": "ВИФ",
                 "actress": "[ИМЯ АКТРИСЫ]",
                 "fund_name": "[НАЗВАНИЕ ФОНДА]",
                 "domain": "[домен]",
-                "drop_label": "ДРОП 01 · «ЖИТЬ ЖИЗНЬ»"
+                "drop_label": "ВСЕ ВЕЩИ ПРОЕКТА"
             },
             "items": [
                 {
                     "slug": "sumka-off-white",
                     "title": "Сумка Off-White",
+                    "owner": {
+                        "name": "[ЗАПОЛНИТЬ: чья вещь]",
+                        "category": "bloggers",
+                        "category_label": "Блогеры"
+                    },
                     "brand": "Off-White",
                     "size": null,
-                    "project": {
-                        "slug": "proekt-sumki",
-                        "title": "[ЗАПОЛНИТЬ: проект сумки]"
-                    },
+                    "project": null,
                     "price_rub": 123400,
                     "fund_rub": 37020,
                     "sold": false,
@@ -528,6 +553,11 @@
                 {
                     "slug": "plate-namelazz-xs",
                     "title": "Платье Namelazz",
+                    "owner": {
+                        "name": "[ЗАПОЛНИТЬ: чья вещь]",
+                        "category": "actors",
+                        "category_label": "Актёры"
+                    },
                     "brand": "Namelazz",
                     "size": "XS",
                     "project": {
@@ -543,13 +573,15 @@
                 },
                 {
                     "slug": "veshch-03",
-                    "title": "[ЗАПОЛНИТЬ: вещь 03]",
+                    "title": "[ЗАПОЛНИТЬ: вещь певца]",
+                    "owner": {
+                        "name": "[ЗАПОЛНИТЬ: имя]",
+                        "category": "singers",
+                        "category_label": "Певцы"
+                    },
                     "brand": null,
                     "size": null,
-                    "project": {
-                        "slug": "zhit-zhizn",
-                        "title": "«Жить жизнь»"
-                    },
+                    "project": null,
                     "price_rub": null,
                     "fund_rub": null,
                     "sold": false,
@@ -559,13 +591,15 @@
                 },
                 {
                     "slug": "veshch-04",
-                    "title": "[ЗАПОЛНИТЬ: вещь 04]",
+                    "title": "[ЗАПОЛНИТЬ: вещь инфлюенсера]",
+                    "owner": {
+                        "name": "[ЗАПОЛНИТЬ: имя]",
+                        "category": "influencers",
+                        "category_label": "Инфлюенсеры"
+                    },
                     "brand": null,
                     "size": null,
-                    "project": {
-                        "slug": "zhit-zhizn",
-                        "title": "«Жить жизнь»"
-                    },
+                    "project": null,
                     "price_rub": null,
                     "fund_rub": null,
                     "sold": false,
@@ -575,29 +609,21 @@
                 },
                 {
                     "slug": "veshch-05",
-                    "title": "[ЗАПОЛНИТЬ: вещь 05]",
+                    "title": "[ЗАПОЛНИТЬ: вещь артиста]",
+                    "owner": {
+                        "name": "[ЗАПОЛНИТЬ: имя]",
+                        "category": "artists",
+                        "category_label": "Артисты"
+                    },
                     "brand": null,
                     "size": null,
-                    "project": {
-                        "slug": "zhit-zhizn",
-                        "title": "«Жить жизнь»"
-                    },
+                    "project": null,
                     "price_rub": null,
                     "fund_rub": null,
                     "sold": false,
                     "draft": true,
                     "available": false,
                     "photos": []
-                }
-            ],
-            "projects": [
-                {
-                    "slug": "zhit-zhizn",
-                    "title": "«Жить жизнь»"
-                },
-                {
-                    "slug": "proekt-sumki",
-                    "title": "[ЗАПОЛНИТЬ: проект сумки]"
                 }
             ],
             "stats": {
@@ -607,13 +633,15 @@
             },
             "item": {
                 "slug": "veshch-03",
-                "title": "[ЗАПОЛНИТЬ: вещь 03]",
+                "title": "[ЗАПОЛНИТЬ: вещь певца]",
+                "owner": {
+                    "name": "[ЗАПОЛНИТЬ: имя]",
+                    "category": "singers",
+                    "category_label": "Певцы"
+                },
                 "brand": null,
                 "size": null,
-                "project": {
-                    "slug": "zhit-zhizn",
-                    "title": "«Жить жизнь»"
-                },
+                "project": null,
                 "price_rub": null,
                 "fund_rub": null,
                 "sold": false,
@@ -635,22 +663,24 @@
         "props": {
             "errors": [],
             "site": {
-                "name": "[НАЗВАНИЕ ПРОЕКТА]",
+                "name": "ВИФ",
                 "actress": "[ИМЯ АКТРИСЫ]",
                 "fund_name": "[НАЗВАНИЕ ФОНДА]",
                 "domain": "[домен]",
-                "drop_label": "ДРОП 01 · «ЖИТЬ ЖИЗНЬ»"
+                "drop_label": "ВСЕ ВЕЩИ ПРОЕКТА"
             },
             "items": [
                 {
                     "slug": "sumka-off-white",
                     "title": "Сумка Off-White",
+                    "owner": {
+                        "name": "[ЗАПОЛНИТЬ: чья вещь]",
+                        "category": "bloggers",
+                        "category_label": "Блогеры"
+                    },
                     "brand": "Off-White",
                     "size": null,
-                    "project": {
-                        "slug": "proekt-sumki",
-                        "title": "[ЗАПОЛНИТЬ: проект сумки]"
-                    },
+                    "project": null,
                     "price_rub": 123400,
                     "fund_rub": 37020,
                     "sold": false,
@@ -661,6 +691,11 @@
                 {
                     "slug": "plate-namelazz-xs",
                     "title": "Платье Namelazz",
+                    "owner": {
+                        "name": "[ЗАПОЛНИТЬ: чья вещь]",
+                        "category": "actors",
+                        "category_label": "Актёры"
+                    },
                     "brand": "Namelazz",
                     "size": "XS",
                     "project": {
@@ -676,13 +711,15 @@
                 },
                 {
                     "slug": "veshch-03",
-                    "title": "[ЗАПОЛНИТЬ: вещь 03]",
+                    "title": "[ЗАПОЛНИТЬ: вещь певца]",
+                    "owner": {
+                        "name": "[ЗАПОЛНИТЬ: имя]",
+                        "category": "singers",
+                        "category_label": "Певцы"
+                    },
                     "brand": null,
                     "size": null,
-                    "project": {
-                        "slug": "zhit-zhizn",
-                        "title": "«Жить жизнь»"
-                    },
+                    "project": null,
                     "price_rub": null,
                     "fund_rub": null,
                     "sold": false,
@@ -692,13 +729,15 @@
                 },
                 {
                     "slug": "veshch-04",
-                    "title": "[ЗАПОЛНИТЬ: вещь 04]",
+                    "title": "[ЗАПОЛНИТЬ: вещь инфлюенсера]",
+                    "owner": {
+                        "name": "[ЗАПОЛНИТЬ: имя]",
+                        "category": "influencers",
+                        "category_label": "Инфлюенсеры"
+                    },
                     "brand": null,
                     "size": null,
-                    "project": {
-                        "slug": "zhit-zhizn",
-                        "title": "«Жить жизнь»"
-                    },
+                    "project": null,
                     "price_rub": null,
                     "fund_rub": null,
                     "sold": false,
@@ -708,29 +747,21 @@
                 },
                 {
                     "slug": "veshch-05",
-                    "title": "[ЗАПОЛНИТЬ: вещь 05]",
+                    "title": "[ЗАПОЛНИТЬ: вещь артиста]",
+                    "owner": {
+                        "name": "[ЗАПОЛНИТЬ: имя]",
+                        "category": "artists",
+                        "category_label": "Артисты"
+                    },
                     "brand": null,
                     "size": null,
-                    "project": {
-                        "slug": "zhit-zhizn",
-                        "title": "«Жить жизнь»"
-                    },
+                    "project": null,
                     "price_rub": null,
                     "fund_rub": null,
                     "sold": false,
                     "draft": true,
                     "available": false,
                     "photos": []
-                }
-            ],
-            "projects": [
-                {
-                    "slug": "zhit-zhizn",
-                    "title": "«Жить жизнь»"
-                },
-                {
-                    "slug": "proekt-sumki",
-                    "title": "[ЗАПОЛНИТЬ: проект сумки]"
                 }
             ],
             "stats": {
@@ -740,13 +771,15 @@
             },
             "item": {
                 "slug": "veshch-04",
-                "title": "[ЗАПОЛНИТЬ: вещь 04]",
+                "title": "[ЗАПОЛНИТЬ: вещь инфлюенсера]",
+                "owner": {
+                    "name": "[ЗАПОЛНИТЬ: имя]",
+                    "category": "influencers",
+                    "category_label": "Инфлюенсеры"
+                },
                 "brand": null,
                 "size": null,
-                "project": {
-                    "slug": "zhit-zhizn",
-                    "title": "«Жить жизнь»"
-                },
+                "project": null,
                 "price_rub": null,
                 "fund_rub": null,
                 "sold": false,
@@ -768,22 +801,24 @@
         "props": {
             "errors": [],
             "site": {
-                "name": "[НАЗВАНИЕ ПРОЕКТА]",
+                "name": "ВИФ",
                 "actress": "[ИМЯ АКТРИСЫ]",
                 "fund_name": "[НАЗВАНИЕ ФОНДА]",
                 "domain": "[домен]",
-                "drop_label": "ДРОП 01 · «ЖИТЬ ЖИЗНЬ»"
+                "drop_label": "ВСЕ ВЕЩИ ПРОЕКТА"
             },
             "items": [
                 {
                     "slug": "sumka-off-white",
                     "title": "Сумка Off-White",
+                    "owner": {
+                        "name": "[ЗАПОЛНИТЬ: чья вещь]",
+                        "category": "bloggers",
+                        "category_label": "Блогеры"
+                    },
                     "brand": "Off-White",
                     "size": null,
-                    "project": {
-                        "slug": "proekt-sumki",
-                        "title": "[ЗАПОЛНИТЬ: проект сумки]"
-                    },
+                    "project": null,
                     "price_rub": 123400,
                     "fund_rub": 37020,
                     "sold": false,
@@ -794,6 +829,11 @@
                 {
                     "slug": "plate-namelazz-xs",
                     "title": "Платье Namelazz",
+                    "owner": {
+                        "name": "[ЗАПОЛНИТЬ: чья вещь]",
+                        "category": "actors",
+                        "category_label": "Актёры"
+                    },
                     "brand": "Namelazz",
                     "size": "XS",
                     "project": {
@@ -809,13 +849,15 @@
                 },
                 {
                     "slug": "veshch-03",
-                    "title": "[ЗАПОЛНИТЬ: вещь 03]",
+                    "title": "[ЗАПОЛНИТЬ: вещь певца]",
+                    "owner": {
+                        "name": "[ЗАПОЛНИТЬ: имя]",
+                        "category": "singers",
+                        "category_label": "Певцы"
+                    },
                     "brand": null,
                     "size": null,
-                    "project": {
-                        "slug": "zhit-zhizn",
-                        "title": "«Жить жизнь»"
-                    },
+                    "project": null,
                     "price_rub": null,
                     "fund_rub": null,
                     "sold": false,
@@ -825,13 +867,15 @@
                 },
                 {
                     "slug": "veshch-04",
-                    "title": "[ЗАПОЛНИТЬ: вещь 04]",
+                    "title": "[ЗАПОЛНИТЬ: вещь инфлюенсера]",
+                    "owner": {
+                        "name": "[ЗАПОЛНИТЬ: имя]",
+                        "category": "influencers",
+                        "category_label": "Инфлюенсеры"
+                    },
                     "brand": null,
                     "size": null,
-                    "project": {
-                        "slug": "zhit-zhizn",
-                        "title": "«Жить жизнь»"
-                    },
+                    "project": null,
                     "price_rub": null,
                     "fund_rub": null,
                     "sold": false,
@@ -841,29 +885,21 @@
                 },
                 {
                     "slug": "veshch-05",
-                    "title": "[ЗАПОЛНИТЬ: вещь 05]",
+                    "title": "[ЗАПОЛНИТЬ: вещь артиста]",
+                    "owner": {
+                        "name": "[ЗАПОЛНИТЬ: имя]",
+                        "category": "artists",
+                        "category_label": "Артисты"
+                    },
                     "brand": null,
                     "size": null,
-                    "project": {
-                        "slug": "zhit-zhizn",
-                        "title": "«Жить жизнь»"
-                    },
+                    "project": null,
                     "price_rub": null,
                     "fund_rub": null,
                     "sold": false,
                     "draft": true,
                     "available": false,
                     "photos": []
-                }
-            ],
-            "projects": [
-                {
-                    "slug": "zhit-zhizn",
-                    "title": "«Жить жизнь»"
-                },
-                {
-                    "slug": "proekt-sumki",
-                    "title": "[ЗАПОЛНИТЬ: проект сумки]"
                 }
             ],
             "stats": {
@@ -873,13 +909,15 @@
             },
             "item": {
                 "slug": "veshch-05",
-                "title": "[ЗАПОЛНИТЬ: вещь 05]",
+                "title": "[ЗАПОЛНИТЬ: вещь артиста]",
+                "owner": {
+                    "name": "[ЗАПОЛНИТЬ: имя]",
+                    "category": "artists",
+                    "category_label": "Артисты"
+                },
                 "brand": null,
                 "size": null,
-                "project": {
-                    "slug": "zhit-zhizn",
-                    "title": "«Жить жизнь»"
-                },
+                "project": null,
                 "price_rub": null,
                 "fund_rub": null,
                 "sold": false,

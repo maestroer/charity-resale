@@ -58,6 +58,7 @@ export function ItemPanel({ item }: { item: ItemDetail | null }) {
     const photo = shown?.photos[photoIndex] ?? shown?.photos[0];
     const facts = shown
         ? [
+              ['Чья вещь', [shown.owner.name, shown.owner.category_label].filter(Boolean).join(' · ')],
               ['Проект', shown.project?.title],
               ['Сцена', shown.scene],
               ['Образ', shown.look],
