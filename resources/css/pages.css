@@ -406,7 +406,10 @@
     margin-bottom: 12px;
 }
 
-.fund-card-action {
+.fund-card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
     margin-top: 16px;
 }
 
@@ -685,4 +688,99 @@
     .auction-rows > div:first-child {
         grid-column: 1 / -1;
     }
+}
+/* ---------- Окно «Поддержать проект» ---------- */
+
+.donate {
+    width: min(560px, calc(100vw - 32px));
+    max-height: calc(100dvh - 32px);
+    margin: auto;
+    padding: 0;
+    border: 0;
+    background: var(--color-paper);
+    color: var(--color-ink);
+    box-shadow: 0 6px 0 rgb(29 37 62 / 0.2);
+}
+
+.donate::backdrop {
+    background: rgb(29 37 62 / 0.55);
+}
+
+.donate-body {
+    padding: 24px;
+}
+
+.donate-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.donate-head h2 {
+    font-size: 28px;
+    line-height: 1.1;
+}
+
+.donate-lead {
+    margin: 10px 0 18px;
+    font-size: 15px;
+}
+
+.donate-group {
+    margin: 16px 0 8px;
+}
+
+.donate-list {
+    display: grid;
+    gap: 8px;
+}
+
+.donate-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4px 12px;
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--color-ink);
+    background: var(--color-paper);
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: copy;
+    transition: background 0.15s;
+}
+
+.donate-row:hover,
+.donate-row:focus-visible {
+    background: var(--color-mist);
+}
+
+.donate-row[data-copied] {
+    background: var(--color-teal);
+}
+
+.donate-label {
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+}
+
+.donate-value {
+    grid-column: 1 / -1;
+    font-family: var(--font-mono);
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+
+.donate-action {
+    grid-row: 1;
+    grid-column: 2;
+    white-space: nowrap;
+}
+
+.donate-warning {
+    margin-top: 14px;
+    font-size: 13px;
+    opacity: 0.75;
 }

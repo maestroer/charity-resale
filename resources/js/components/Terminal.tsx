@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, type FormEvent } from 'react';
+import { copyText } from '@/lib/clipboard';
 import { TERMINAL_ANSWERS, TERMINAL_TOPICS, unknownAnswer, type AnswerLine, type TerminalContext } from '@/content/terminal';
 
 type Line = { id: number; kind: 'command' | 'answer'; text: string; copy?: string };
@@ -11,24 +12,6 @@ const MAX_LINES = 40;
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const normalize = (text: string) => text.trim().toLowerCase().replace(/ё/g, 'е');
-
-/** Копирует текст; старые браузеры и http без clipboard API получают запасной путь через выделение. */
-async function copyText(text: string): Promise<boolean> {
-    try {
-        await navigator.clipboard.writeText(text);
-        return true;
-    } catch {
-        const area = document.createElement('textarea');
-        area.value = text;
-        area.style.position = 'fixed';
-        area.style.opacity = '0';
-        document.body.append(area);
-        area.select();
-        const ok = document.execCommand('copy');
-        area.remove();
-        return ok;
-    }
-}
 
 function CopyLine({ text, copy }: { text: string; copy: string }) {
     const [done, setDone] = useState(false);

@@ -1,4 +1,5 @@
 import { Link } from '@inertiajs/react';
+import { DonateButton } from '@/components/DonateDialog';
 import { FounderCard } from '@/components/FounderCard';
 import { useEffect, useRef, useState, type CSSProperties } from 'react';
 import { plural, rub } from '@/lib/format';
@@ -106,9 +107,12 @@ export function FondPanel({ site, stats, active, photos = [] }: Props) {
                 <p className="meta">
                     Продано: {stats.sold_count} {plural(stats.sold_count, ['вещь', 'вещи', 'вещей'])}
                 </p>
-                <Link href={to('/fond')} className="btn btn-primary fund-card-action">
-                    Все отчёты
-                </Link>
+                <div className="fund-card-actions">
+                    <DonateButton className="btn btn-primary" />
+                    <Link href={to('/fond')} className="btn btn-secondary">
+                        Все отчёты
+                    </Link>
+                </div>
             </div>
             <FounderCard />
             </div>
