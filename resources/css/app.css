@@ -1118,32 +1118,94 @@ body {
         display: none;
     }
 
-    /* Мозаика — полоса сверху, карточки фонда и автора идут под ней; листается весь блок. */
+    /* Как на dvc.ai: мозаика занимает весь блок, а «Уже собрано» и руководитель — две компактные плитки
+       внизу поверх неё, в одну строку. */
     .panel-fond {
-        display: flex;
-        flex-direction: column;
         min-height: 0;
-        overflow-y: auto;
-    }
-
-    .panel-fond .mosaic {
-        position: relative;
-        height: 56vw;
-        overflow: hidden;
     }
 
     .fund-cards {
-        position: static;
-        flex-direction: column;
+        right: 12px;
+        bottom: 12px;
+        left: 12px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
         align-items: stretch;
-        max-height: none;
-        padding: 16px;
     }
 
     .fund-card,
     .founder-card {
-        flex: none;
+        display: flex;
+        flex-direction: column;
         max-width: none;
+        padding: 12px;
+        box-shadow: 0 3px 0 rgb(29 37 62 / 0.15);
+    }
+
+    .fund-card > .meta:first-child,
+    .founder-card > .meta:first-child {
+        font-size: 9px;
+    }
+
+    .fund-label {
+        margin-top: 6px;
+        font-size: 14px;
+    }
+
+    .fund-total {
+        margin: 4px 0 6px;
+        font-size: 26px;
+    }
+
+    .fund-card .meta {
+        font-size: 9px;
+    }
+
+    .fund-card .fund-card-actions {
+        flex-direction: column;
+        gap: 6px;
+        margin-top: auto;
+        padding-top: 10px;
+    }
+
+    .fund-card .fund-card-actions .btn {
+        justify-content: center;
+        padding: 6px 8px;
+        font-size: 13px;
+    }
+
+    .founder-head {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+        margin: 8px 0 0;
+    }
+
+    .founder-photo {
+        width: 56px;
+        height: 72px;
+    }
+
+    .founder-name {
+        font-size: 18px;
+    }
+
+    .founder-role {
+        margin-top: 2px;
+        font-size: 12px;
+    }
+
+    .founder-background {
+        font-size: 11px;
+    }
+
+    .founder-links {
+        flex-direction: column;
+        gap: 4px;
+        margin-top: auto;
+        padding-top: 8px;
+        font-size: 10px;
     }
 
     .cards {
