@@ -107,8 +107,13 @@ export default function Home({ items, stats, item }: Props) {
                     <FondPanel site={site} stats={stats} active={ready === 'fond'} />
                 </LetterBlock>
 
-                <header data-block="title" className="block block-t">
-                    <Menu siteName={site.name} onGo={go} />
+                <header
+                    data-block="title"
+                    className="block block-t"
+                    data-expanded={open === 'menu' || undefined}
+                    data-ready={ready === 'menu' || undefined}
+                >
+                    <Menu open={open} ready={ready} onGo={go} />
                 </header>
             </main>
             <ItemPanel item={item} />

@@ -10,7 +10,7 @@ gsap.registerPlugin(Flip, CustomEase);
 // cubic-bezier(0.4, 0, 0.2, 1) — общая кривая крупного движения.
 CustomEase.create('main', 'M0,0 C0.4,0 0.2,1 1,1');
 
-const BLOCK_IDS: BlockId[] = ['veshi', 'istoriya', 'fond'];
+const BLOCK_IDS: BlockId[] = ['veshi', 'istoriya', 'fond', 'menu'];
 const CONTENT_FADE_MS = 150;
 
 function parseOpen(url: string): BlockId | null {

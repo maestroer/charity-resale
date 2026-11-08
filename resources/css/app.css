@@ -118,6 +118,14 @@ body {
     [data-lift='veshi'] .block-v,
     [data-lift='istoriya'] .block-i { z-index: 2; }
     [data-lift='fond'] .block-f { z-index: 4; }
+
+    /* Меню, как на dvc.ai: бирюзовый блок растёт вверх и вправо, «Вещи» и «Инвестиции» сжимаются в верхнюю полосу. */
+    [data-open='menu'] .block-v { grid-area: 1 / 1 / 3 / 4; }
+    [data-open='menu'] .block-i { grid-area: 1 / 4 / 3 / 9; }
+    [data-open='menu'] .block-t { grid-area: 3 / 1 / 6 / 5; }
+    [data-open='menu'] .block-s { grid-area: 3 / 5 / 6 / 7; }
+    [data-open='menu'] .block-d { grid-area: 5 / 5 / 6 / 6; }
+    [data-open='menu'] .block-f { grid-area: 3 / 7 / 6 / 9; }
 }
 
 /* ---------- Буквенный блок ---------- */
@@ -890,84 +898,61 @@ body {
     transform: translateX(4px);
 }
 
-.menu-overlay {
-    position: fixed;
-    inset: 0;
-    z-index: 40;
-    visibility: hidden;
-    background: rgb(29 37 62 / 0.35);
-    opacity: 0;
-    transition:
-        opacity 400ms var(--ease-main),
-        visibility 0s 400ms;
+/* Как на dvc.ai: меню — не отдельная панель, а сам бирюзовый блок, раскрытый в сетке (/?open=menu). */
+.stage[data-lift='menu'] .block-t {
+    z-index: 4;
 }
 
-.menu-overlay[data-open] {
-    visibility: visible;
-    opacity: 1;
-    transition:
-        opacity 400ms var(--ease-main) 300ms,
-        visibility 0s;
+.block-t[data-expanded] {
+    flex-direction: column;
 }
 
-.menu {
-    position: fixed;
-    inset: 0 auto 0 0;
-    z-index: 50;
-    width: min(100vw, max(320px, 37.5vw));
-    overflow-y: auto;
-    visibility: hidden;
-    background: var(--color-paper);
-    transform: translateX(-100%);
-    transition:
-        transform 1s var(--ease-main),
-        visibility 0s 1s;
-}
-
-.menu[data-open] {
-    visibility: visible;
-    transform: none;
-    transition:
-        transform 1s var(--ease-main) 300ms,
-        visibility 0s;
-}
-
-.menu-head {
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    display: flex;
+.block-t[data-expanded] .menu-toggle {
+    flex: none;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    padding: var(--pad);
-    background: var(--color-paper);
-    font-size: clamp(20px, 1.7vw, 24px);
-    line-height: 1;
 }
 
-.menu-close {
-    padding: 8px;
-    cursor: pointer;
+/* Бургер превращается в крестик. */
+.block-t[data-expanded] .burger i:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.block-t[data-expanded] .burger i:nth-child(2) {
+    opacity: 0;
+}
+
+.block-t[data-expanded] .burger i:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.menu-nav {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 0;
+    padding: 0 var(--pad) var(--pad);
+    overflow-y: auto;
+    outline: none;
 }
 
 .menu-links {
     display: grid;
-    gap: 24px;
-    padding: 8px var(--pad) var(--pad) max(var(--pad), 40px);
-    font-size: 24px;
-    line-height: 1;
+    gap: 2px;
+    font-size: clamp(22px, 2vw, 32px);
+    line-height: 1.15;
 }
 
 .menu-links a {
     position: relative;
     display: inline-block;
+    padding: 4px 0;
     transition: transform 200ms var(--ease-micro);
 }
 
 .menu-links a::before {
     position: absolute;
-    left: -1.2em;
+    left: -1em;
     content: '→';
     opacity: 0;
     transition: opacity 200ms var(--ease-micro);
@@ -975,12 +960,50 @@ body {
 
 .menu-links a:hover,
 .menu-links a:focus-visible {
-    transform: translateX(8px);
+    transform: translateX(1.1em);
 }
 
 .menu-links a:hover::before,
 .menu-links a:focus-visible::before {
     opacity: 1;
+}
+
+.menu-contacts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 20px;
+    margin-top: auto;
+    padding-top: 16px;
+}
+
+.menu-contacts a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* Ссылки проявляются по очереди, когда блок встал; при закрытии гаснут до того, как поедет геометрия. */
+.menu-links li,
+.menu-contacts {
+    opacity: 0;
+    transform: translateY(12px);
+    transition:
+        opacity 150ms var(--ease-main),
+        transform 0s 150ms;
+}
+
+.block-t[data-ready] .menu-links li,
+.block-t[data-ready] .menu-contacts {
+    opacity: 1;
+    transform: none;
+    transition:
+        opacity 400ms var(--ease-main),
+        transform 400ms var(--ease-main);
+    transition-delay: calc(var(--i, 0) * 40ms);
+}
+
+.menu-close {
+    padding: 8px;
+    cursor: pointer;
 }
 
 /* ---------- Телефон: та же мозаика блоков на весь экран, сетка 5×11 ---------- */
@@ -1034,6 +1057,13 @@ body {
     [data-open='fond'] .block-s { grid-area: 10 / 1 / 11 / 4; }
     [data-open='fond'] .block-t { grid-area: 11 / 1 / 12 / 4; }
     [data-open='fond'] .block-d { grid-area: 10 / 4 / 12 / 6; }
+
+    [data-open='menu'] .block-v { grid-area: 1 / 1 / 2 / 4; }
+    [data-open='menu'] .block-i { grid-area: 1 / 4 / 2 / 6; }
+    [data-open='menu'] .block-s { grid-area: 2 / 1 / 4 / 4; }
+    [data-open='menu'] .block-d { grid-area: 4 / 1 / 5 / 4; }
+    [data-open='menu'] .block-f { grid-area: 2 / 4 / 5 / 6; }
+    [data-open='menu'] .block-t { grid-area: 5 / 1 / 12 / 6; }
 
     [data-lift='veshi'] .block-v,
     [data-lift='istoriya'] .block-i,
@@ -1265,10 +1295,10 @@ body {
         animation: none;
     }
 
-    .menu,
-    .menu[data-open],
-    .menu-overlay,
-    .menu-overlay[data-open],
+    .menu-links li,
+    .menu-contacts,
+    .block-t[data-ready] .menu-links li,
+    .block-t[data-ready] .menu-contacts,
     .menu-links a,
     .btn,
     .chip {

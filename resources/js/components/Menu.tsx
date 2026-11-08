@@ -1,13 +1,14 @@
 import { Link } from '@inertiajs/react';
-import { useEffect, useRef, useState } from 'react';
-import { createPortal } from 'react-dom';
+import { useEffect, useRef } from 'react';
 import { LEGAL_LINKS } from '@/components/PageLayout';
+import { INVESTOR } from '@/content/investor';
 import type { BlockId } from '@/types';
 import { to } from '@/lib/url';
 
 type Props = {
-    siteName: string;
-    onGo: (id: BlockId) => void;
+    open: BlockId | null;
+    ready: BlockId | null;
+    onGo: (id: BlockId | null) => void;
 };
 
 const LINKS: { id: BlockId; label: string }[] = [
@@ -16,47 +17,33 @@ const LINKS: { id: BlockId; label: string }[] = [
     { id: 'fond', label: 'Фонд' },
 ];
 
-/** Бургер в бирюзовом блоке и панель меню, выезжающая слева на всю высоту экрана. */
-export function Menu({ siteName, onGo }: Props) {
-    const [open, setOpen] = useState(false);
-    const burger = useRef<HTMLButtonElement>(null);
-    const closeButton = useRef<HTMLButtonElement>(null);
+/**
+ * Меню как на dvc.ai: бирюзовый блок раскрывается в сетке так же, как остальные блоки (/?open=menu),
+ * бургер превращается в крестик, а ссылки проявляются, когда блок встал на место.
+ */
+export function Menu({ open, ready, onGo }: Props) {
+    const expanded = open === 'menu';
+    const isReady = ready === 'menu';
+    const nav = useRef<HTMLElement>(null);
 
     useEffect(() => {
-        if (!open) {
-            return;
+        if (isReady) {
+            nav.current?.focus({ preventScroll: true });
         }
+    }, [isReady]);
 
-        closeButton.current?.focus({ preventScroll: true });
-
-        // Перехват на фазе capture: Esc закрывает только меню, раскрытый блок сетки остаётся.
-        const onKey = (event: KeyboardEvent) => {
-            if (event.key === 'Escape') {
-                event.stopImmediatePropagation();
-                setOpen(false);
-                burger.current?.focus();
-            }
-        };
-
-        window.addEventListener('keydown', onKey, true);
-
-        return () => window.removeEventListener('keydown', onKey, true);
-    }, [open]);
-
-    const close = () => {
-        setOpen(false);
-        burger.current?.focus();
-    };
+    const links = [{ href: '/fond', label: 'Отчёты фонда' }, ...LEGAL_LINKS];
+    let index = 0;
 
     return (
         <>
             <button
-                ref={burger}
                 type="button"
                 className="menu-toggle"
-                aria-expanded={open}
+                aria-expanded={expanded}
                 aria-controls="menu"
-                onClick={() => setOpen(true)}
+                aria-label={expanded ? 'Закрыть меню' : 'Открыть меню'}
+                onClick={() => onGo(expanded ? null : 'menu')}
             >
                 <span className="menu-toggle-label">Меню</span>
                 <span className="burger" aria-hidden="true">
@@ -65,25 +52,14 @@ export function Menu({ siteName, onGo }: Props) {
                     <i />
                 </span>
             </button>
-            {/* Портал в body: блоки сетки обрезают содержимое и получают transform на время анимации. */}
-            {createPortal(
-                <>
-            <div className="menu-overlay" data-open={open || undefined} onClick={close} />
-            <nav id="menu" className="menu" aria-label="Меню" data-open={open || undefined} inert={!open}>
-                <div className="menu-head">
-                    <span>{siteName}</span>
-                    <button ref={closeButton} type="button" className="menu-close meta" onClick={close}>
-                        Закрыть
-                    </button>
-                </div>
+            <nav id="menu" ref={nav} className="menu-nav" aria-label="Меню" tabIndex={-1} hidden={!expanded}>
                 <ul className="menu-links">
                     {LINKS.map(({ id, label }) => (
-                        <li key={id}>
+                        <li key={id} style={{ '--i': index++ } as React.CSSProperties}>
                             <a
                                 href={to(`/?open=${id}`)}
                                 onClick={(event) => {
                                     event.preventDefault();
-                                    setOpen(false);
                                     onGo(id);
                                 }}
                             >
@@ -91,16 +67,19 @@ export function Menu({ siteName, onGo }: Props) {
                             </a>
                         </li>
                     ))}
-                    {[{ href: '/fond', label: 'Отчёты фонда' }, ...LEGAL_LINKS].map(({ href, label }) => (
-                        <li key={href}>
+                    {links.map(({ href, label }) => (
+                        <li key={href} style={{ '--i': index++ } as React.CSSProperties}>
                             <Link href={to(href)}>{label}</Link>
                         </li>
                     ))}
                 </ul>
+                <p className="menu-contacts meta" style={{ '--i': index } as React.CSSProperties}>
+                    <a href={`mailto:${INVESTOR.contact.email}`}>{INVESTOR.contact.email}</a>
+                    <a href={INVESTOR.contact.telegram} target="_blank" rel="noreferrer">
+                        Telegram
+                    </a>
+                </p>
             </nav>
-                </>,
-                document.body,
-            )}
         </>
     );
 }

@@ -61,4 +61,5 @@ export type SharedProps = {
     flash: { bid_placed: boolean };
 };
 
-export type BlockId = 'veshi' | 'istoriya' | 'fond';
+/** Раскрываемые блоки сетки; «menu» — бирюзовый блок с меню. */
+export type BlockId = 'veshi' | 'istoriya' | 'fond' | 'menu';
