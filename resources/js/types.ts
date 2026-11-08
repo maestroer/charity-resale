@@ -3,7 +3,18 @@ export type Project = {
     title: string;
 };
 
-// Публичные поля вещи. Базы и параметров формулы здесь нет и быть не должно.
+/** Аукцион: только суммы и сроки, без имён и контактов участников. */
+export type Auction = {
+    start_rub: number;
+    step_rub: number;
+    current_rub: number | null;
+    bids_count: number;
+    min_bid_rub: number;
+    ends_at: string | null;
+    open: boolean;
+};
+
+// Публичные поля вещи. Контактов покупателей и участников аукциона здесь нет и быть не должно.
 export type Item = {
     slug: string;
     title: string;
@@ -14,8 +25,11 @@ export type Item = {
     price_rub: number | null;
     fund_rub: number | null;
     sold: boolean;
+    reserved: boolean;
     draft: boolean;
     available: boolean;
+    sale_mode: 'fixed' | 'auction';
+    auction: Auction | null;
     photos: { url: string; thumb: string; full: string; alt: string }[];
 };
 
@@ -44,6 +58,7 @@ export type Site = {
 
 export type SharedProps = {
     site: Site;
+    flash: { bid_placed: boolean };
 };
 
 export type BlockId = 'veshi' | 'istoriya' | 'fond';

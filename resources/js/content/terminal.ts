@@ -21,7 +21,7 @@ const investShare = MONEY_SPLIT[2].share;
 // Заготовленные ответы терминала: без запросов к ИИ.
 export const TERMINAL_ANSWERS: Record<string, Answer> = {
     каталог: ({ items }) => {
-        const onSale = items.filter((item) => !item.draft && !item.sold && item.price_rub !== null);
+        const onSale = items.filter((item) => !item.draft && !item.sold && !item.reserved && item.price_rub !== null);
 
         if (onSale.length === 0) {
             return ['сейчас в продаже ничего нет. следите за следующим дропом.'];
@@ -29,7 +29,7 @@ export const TERMINAL_ANSWERS: Record<string, Answer> = {
 
         return [
             `в продаже ${onSale.length} ${plural(onSale.length, ['вещь', 'вещи', 'вещей'])}:`,
-            ...onSale.map((item) => `· ${item.title} — ${rub(item.price_rub ?? 0)}, в фонд ${rub(item.fund_rub ?? 0)}`),
+            ...onSale.map((item) => `· ${item.title} — ${item.auction ? 'аукцион, сейчас ' : ''}${rub(item.price_rub ?? 0)}, в фонд ${rub(item.fund_rub ?? 0)}`),
             'откройте блок «Вещи», чтобы посмотреть всё.',
         ];
     },

@@ -1,5 +1,6 @@
 import { Head, Link, router } from '@inertiajs/react';
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { AuctionBox } from '@/components/AuctionBox';
 import { rub } from '@/lib/format';
 import type { ItemDetail } from '@/types';
 import { to } from '@/lib/url';
@@ -14,7 +15,11 @@ function unavailableReason(item: ItemDetail): string {
         return 'Скоро в продаже.';
     }
 
-    return 'Вещь прямо сейчас оформляет другой покупатель. Если оплата не пройдёт, она вернётся в продажу через 15 минут.';
+    if (item.reserved) {
+        return 'По этой вещи уже оставили заявку. Если покупатель откажется, вещь вернётся в продажу.';
+    }
+
+    return 'Скоро в продаже.';
 }
 
 /** Карточка вещи: панель, выезжающая справа поверх сетки. */
@@ -134,6 +139,10 @@ export function ItemPanel({ item }: { item: ItemDetail | null }) {
                                 </dl>
                             )}
 
+                            {shown.auction ? (
+                                <AuctionBox slug={shown.slug} auction={shown.auction} fundRub={shown.fund_rub} sold={shown.sold} />
+                            ) : (
+                                <>
                             {shown.price_rub !== null && shown.fund_rub !== null && (
                                 <div className="item-buy">
                                     <p className="item-price">{rub(shown.price_rub)}</p>
@@ -143,10 +152,12 @@ export function ItemPanel({ item }: { item: ItemDetail | null }) {
 
                             {shown.available ? (
                                 <Link href={to(`/checkout?item=${shown.slug}`)} className="btn btn-primary">
-                                    Купить
+                                    Оставить заявку
                                 </Link>
                             ) : (
                                 <p className="item-unavailable">{unavailableReason(shown)}</p>
+                            )}
+                                </>
                             )}
                         </div>
                     </div>

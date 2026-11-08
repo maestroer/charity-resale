@@ -1,6 +1,6 @@
 /**
  * Статичное демо для GitHub Pages. Сервера нет, поэтому переходы Inertia перехватываются
- * и отдаются из pages.json — снимка страниц полной версии сайта с уже посчитанными ценами.
+ * и отдаются из pages.json — снимка страниц, сделанного командой `php artisan demo:export`.
  */
 import '../css/app.css';
 import { router } from '@inertiajs/react';
@@ -20,7 +20,7 @@ function snapshotFor(path: string): Snapshot {
     return snapshots[path] ?? snapshots[pathname] ?? snapshots['/'];
 }
 
-/** Оформленный заказ в демо: страница «Спасибо» в тестовом режиме, без сервера и без денег. */
+/** Заявка в демо: страница «Заявка принята» в тестовом режиме, без сервера. */
 function demoSuccess(form: Record<string, unknown>): Snapshot {
     const checkout = snapshots[`/checkout?item=${String(form.item)}`];
     const item = checkout?.props.item as Item | undefined;
@@ -35,7 +35,6 @@ function demoSuccess(form: Record<string, unknown>): Snapshot {
                 price_rub: item?.price_rub ?? 0,
                 fund_rub: item?.fund_rub ?? 0,
                 test: true,
-                state: 'paid',
             },
         },
     };

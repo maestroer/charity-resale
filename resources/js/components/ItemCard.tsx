@@ -27,12 +27,16 @@ export function ItemCard({ item, index }: { item: Item; index: number }) {
                     <span className="meta">{item.brand ?? 'фото скоро'}</span>
                 )}
                 {item.sold && <span className="card-sold meta">Продано</span>}
+                {!item.sold && item.auction && <span className="card-sold card-auction meta">Аукцион</span>}
             </div>
             <h3 className="card-title">{item.title}</h3>
             {details && <p className="card-details">{details}</p>}
             {item.price_rub !== null && item.fund_rub !== null ? (
                 <>
-                    <p className="card-price">{rub(item.price_rub)}</p>
+                    <p className="card-price">
+                        {item.auction && !item.sold ? (item.auction.current_rub === null ? 'старт ' : 'ставка ') : ''}
+                        {rub(item.price_rub)}
+                    </p>
                     <p className="card-fund">из них в фонд — {rub(item.fund_rub)}</p>
                 </>
             ) : (

@@ -1,5 +1,5 @@
-import { Link, router, usePage } from '@inertiajs/react';
-import { useEffect, useRef } from 'react';
+import { Link, usePage } from '@inertiajs/react';
+import { useEffect } from 'react';
 import { PageLayout } from '@/components/PageLayout';
 import { reachGoal } from '@/lib/metrika';
 import { rub } from '@/lib/format';
@@ -13,72 +13,31 @@ type Props = {
         price_rub: number;
         fund_rub: number;
         test: boolean;
-        state: 'pending' | 'paid' | 'cancelled';
     };
 };
 
-const MAX_CHECKS = 20;
-
+/** Заявка принята: дальше администратор звонит покупателю. */
 export default function CheckoutSuccess({ order }: Props) {
     const { site } = usePage<SharedProps>().props;
-    const checks = useRef(0);
-
-    // Подтверждение от ЮKassa может прийти на несколько секунд позже, чем покупатель вернётся на сайт.
-    useEffect(() => {
-        if (order.state !== 'pending') {
-            return;
-        }
-
-        const timer = setInterval(() => {
-            if (++checks.current > MAX_CHECKS) {
-                clearInterval(timer);
-
-                return;
-            }
-
-            router.reload({ only: ['order'] });
-        }, 3000);
-
-        return () => clearInterval(timer);
-    }, [order.state]);
 
     useEffect(() => {
-        if (order.state === 'paid' && !order.test) {
-            reachGoal('purchase', { order_price: order.price_rub });
+        if (!order.test) {
+            reachGoal('request', { order_price: order.price_rub });
         }
-    }, [order.state, order.test, order.price_rub]);
+    }, [order.test, order.price_rub]);
 
     return (
-        <PageLayout title="Спасибо">
-            {order.state === 'paid' && (
-                <>
-                    <h1 className="page-title">Спасибо!</h1>
-                    <p className="page-lead">
-                        {rub(order.fund_rub)} из вашей покупки уйдут в {site.fund_name}. Отчёт опубликуем после перевода.
-                    </p>
-                    {order.test && <p className="notice">Тестовый режим: оплата не подключена, деньги не списаны.</p>}
-                </>
-            )}
-
-            {order.state === 'pending' && (
-                <>
-                    <h1 className="page-title">Ждём подтверждение оплаты</h1>
-                    <p className="page-lead" role="status">
-                        Обычно это занимает несколько секунд. Страница обновится сама.
-                    </p>
-                </>
-            )}
-
-            {order.state === 'cancelled' && (
-                <>
-                    <h1 className="page-title">Оплата не прошла</h1>
-                    <p className="page-lead">Заказ отменён, деньги не списаны. Вещь снова доступна в каталоге.</p>
-                </>
-            )}
+        <PageLayout title="Заявка принята">
+            <h1 className="page-title">Заявка принята</h1>
+            <p className="page-lead">
+                Вещь закреплена за вами. Мы свяжемся с вами в течение дня, договоримся об оплате и отправим вещь СДЭК. После оплаты{' '}
+                {rub(order.fund_rub)} уйдут в {site.fund_name}, отчёт опубликуем после перевода.
+            </p>
+            {order.test && <p className="notice">Демо-режим: заявка тестовая, с вами никто не свяжется.</p>}
 
             <dl className="summary-rows summary-rows-wide">
                 <div>
-                    <dt>Заказ</dt>
+                    <dt>Заявка</dt>
                     <dd>{order.number}</dd>
                 </div>
                 <div>
@@ -88,11 +47,11 @@ export default function CheckoutSuccess({ order }: Props) {
             </dl>
 
             <div className="actions">
-                <Link href={to('/fond')} className="btn btn-primary">
-                    Отчёты фонда
-                </Link>
-                <Link href={to('/?open=veshi')} className="btn btn-secondary">
+                <Link href={to('/?open=veshi')} className="btn btn-primary">
                     В каталог
+                </Link>
+                <Link href={to('/fond')} className="btn btn-secondary">
+                    Отчёты фонда
                 </Link>
             </div>
         </PageLayout>

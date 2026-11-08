@@ -629,3 +629,60 @@
 .terminal-copy:hover {
     border-bottom-style: solid;
 }
+/* ---------- Аукцион в карточке вещи ---------- */
+
+.card-auction {
+    right: 0;
+    background: var(--color-yellow);
+    color: var(--color-ink);
+}
+
+.auction {
+    margin: 32px 0 16px;
+}
+
+.auction-rows {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 8px 24px;
+    align-items: end;
+    margin: 8px 0 6px;
+}
+
+.auction-rows dt {
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+.auction-rows dd {
+    font-size: 20px;
+    font-variant-numeric: tabular-nums;
+}
+
+.auction-rows dd.item-price {
+    font-size: clamp(28px, 3vw, 44px);
+}
+
+.auction .notice {
+    margin-top: 16px;
+}
+
+.auction-form {
+    display: grid;
+    gap: 14px;
+    margin-top: 20px;
+}
+
+.auction-form .btn {
+    justify-self: start;
+}
+
+@media (max-width: 480px) {
+    .auction-rows {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .auction-rows > div:first-child {
+        grid-column: 1 / -1;
+    }
+}

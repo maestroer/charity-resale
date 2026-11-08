@@ -7,7 +7,6 @@ import { to } from '@/lib/url';
 
 type Props = {
     item: Item;
-    test_mode: boolean;
 };
 
 type Fields = {
@@ -16,12 +15,12 @@ type Fields = {
     customer_email: string;
     customer_phone: string;
     delivery_address: string;
-    payment_method: 'card' | 'sbp';
     accept_offer: boolean;
     consent_pd: boolean;
 };
 
-export default function Checkout({ item, test_mode }: Props) {
+/** Заявка на покупку: оплаты на сайте нет, администратор связывается с покупателем сам. */
+export default function Checkout({ item }: Props) {
     const { site } = usePage<SharedProps>().props;
     const form = useForm<Fields>({
         item: item.slug,
@@ -29,7 +28,6 @@ export default function Checkout({ item, test_mode }: Props) {
         customer_email: '',
         customer_phone: '',
         delivery_address: '',
-        payment_method: 'card',
         accept_offer: false,
         consent_pd: false,
     });
@@ -61,8 +59,11 @@ export default function Checkout({ item, test_mode }: Props) {
     );
 
     return (
-        <PageLayout title="Оформление заказа">
-            <h1 className="page-title">Оформление заказа</h1>
+        <PageLayout title="Заявка на покупку">
+            <h1 className="page-title">Заявка на покупку</h1>
+            <p className="page-lead">
+                Оставьте контакты и адрес — мы свяжемся с вами в течение дня, договоримся об оплате и отправим вещь СДЭК.
+            </p>
 
             <div className="checkout">
                 <form className="checkout-form" onSubmit={submit} noValidate>
@@ -74,15 +75,15 @@ export default function Checkout({ item, test_mode }: Props) {
 
                     <fieldset>
                         <legend>Контакты</legend>
-                        {field('customer_name', 'Имя и фамилия', 'text', 'name')}
+                        {field('customer_name', 'ФИО', 'text', 'name')}
                         {field('customer_email', 'Email', 'email', 'email')}
                         {field('customer_phone', 'Телефон', 'tel', 'tel', '+7 900 000-00-00')}
                     </fieldset>
 
                     <fieldset>
-                        <legend>Доставка</legend>
+                        <legend>Доставка СДЭК</legend>
                         <label className="field">
-                            <span>Адрес</span>
+                            <span>Куда отправить</span>
                             <textarea
                                 name="delivery_address"
                                 rows={3}
@@ -92,35 +93,12 @@ export default function Checkout({ item, test_mode }: Props) {
                                     form.clearErrors('delivery_address');
                                 }}
                                 autoComplete="street-address"
-                                placeholder="Город, улица, дом, квартира, индекс"
+                                placeholder="Город и адрес пункта СДЭК или ваш адрес для курьера"
                                 aria-invalid={errors.delivery_address ? true : undefined}
                                 required
                             />
                             {errors.delivery_address && <span className="field-error">{errors.delivery_address}</span>}
                         </label>
-                    </fieldset>
-
-                    <fieldset>
-                        <legend>Оплата</legend>
-                        <div className="choice">
-                            {(
-                                [
-                                    ['card', 'Банковская карта'],
-                                    ['sbp', 'СБП'],
-                                ] as const
-                            ).map(([value, label]) => (
-                                <label key={value}>
-                                    <input
-                                        type="radio"
-                                        name="payment_method"
-                                        value={value}
-                                        checked={form.data.payment_method === value}
-                                        onChange={() => form.setData('payment_method', value)}
-                                    />
-                                    <span>{label}</span>
-                                </label>
-                            ))}
-                        </div>
                     </fieldset>
 
                     {/* Два отдельных согласия: согласие на обработку персональных данных по закону не объединяется с офертой. */}
@@ -158,16 +136,12 @@ export default function Checkout({ item, test_mode }: Props) {
                     </label>
                     {errors.consent_pd && <span className="field-error">{errors.consent_pd}</span>}
 
-                    {test_mode && (
-                        <p className="notice">Тестовый режим: оплата не подключена, деньги не списываются.</p>
-                    )}
-
                     <button type="submit" className="btn btn-primary" disabled={form.processing}>
-                        {form.processing ? 'Отправляем…' : `Оплатить ${item.price_rub !== null ? rub(item.price_rub) : ''}`}
+                        {form.processing ? 'Отправляем…' : 'Отправить заявку'}
                     </button>
                 </form>
 
-                <aside className="summary" aria-label="Ваш заказ">
+                <aside className="summary" aria-label="Ваша заявка">
                     <div className="card-photo">
                         {item.photos[0] ? <img src={item.photos[0].thumb} alt={item.photos[0].alt} /> : <span className="meta">{item.brand ?? 'фото скоро'}</span>}
                     </div>
@@ -185,7 +159,7 @@ export default function Checkout({ item, test_mode }: Props) {
                             </div>
                         </dl>
                     )}
-                    <p className="meta">Вещь будет закреплена за вами на 15 минут после нажатия «Оплатить».</p>
+                    <p className="meta">Вещь закрепляется за вами сразу после заявки. Оплата — после звонка, переводом или по СБП.</p>
                 </aside>
             </div>
         </PageLayout>
