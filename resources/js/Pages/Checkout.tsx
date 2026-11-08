@@ -32,6 +32,14 @@ export default function Checkout({ item }: Props) {
         consent_pd: false,
     });
     const errors = form.errors as Partial<Record<keyof Fields, string>>;
+    // По прямой ссылке можно попасть сюда и на недоступную вещь: тогда сразу объясняем, а не после заполнения формы.
+    const unavailable = item.sold
+        ? 'Эта вещь уже продана.'
+        : item.reserved
+          ? 'По этой вещи уже есть заявка. Если покупатель откажется, вещь вернётся в продажу.'
+          : item.sale_mode === 'auction'
+            ? 'Эта вещь продаётся на аукционе — сделайте ставку на странице вещи.'
+            : null;
 
     const submit = (event: FormEvent) => {
         event.preventDefault();
@@ -66,6 +74,23 @@ export default function Checkout({ item }: Props) {
             </p>
 
             <div className="checkout">
+                {unavailable ? (
+                    <div className="checkout-form">
+                        <p className="notice notice-error" role="alert">
+                            {unavailable}
+                        </p>
+                        <div className="actions">
+                            {item.sale_mode === 'auction' && !item.sold && (
+                                <Link href={to(`/veshi/${item.slug}`)} className="btn btn-primary">
+                                    К аукциону
+                                </Link>
+                            )}
+                            <Link href={to('/?open=veshi')} className="btn btn-secondary">
+                                В каталог
+                            </Link>
+                        </div>
+                    </div>
+                ) : (
                 <form className="checkout-form" onSubmit={submit} noValidate>
                     {errors.item && (
                         <p className="notice notice-error" role="alert">
@@ -140,6 +165,7 @@ export default function Checkout({ item }: Props) {
                         {form.processing ? 'Отправляем…' : 'Отправить заявку'}
                     </button>
                 </form>
+                )}
 
                 <aside className="summary" aria-label="Ваша заявка">
                     <div className="card-photo">
