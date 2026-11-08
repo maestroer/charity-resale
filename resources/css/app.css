@@ -22,7 +22,7 @@
 
 :root {
     --pad: clamp(16px, 2.8vw, 40px);
-    --letter: clamp(36px, 3.9vw, 56px);
+    --letter: clamp(44px, min(5.2vw, 9dvh), 80px);
 }
 
 html,
@@ -1013,22 +1013,27 @@ body {
     .block-t { grid-area: 9 / 1 / 12 / 4; }
     .block-d { grid-area: 10 / 4 / 12 / 6; }
 
-    /* Раскрытый блок забирает 7 рядов на всю ширину, соседи сжимаются в полосы и не оставляют щелей. */
-    [data-open='veshi'] .block-v { grid-area: 1 / 1 / 8 / 6; }
-    [data-open='veshi'] .block-i { grid-area: 8 / 1 / 9 / 4; }
-    [data-open='veshi'] .block-f { grid-area: 8 / 4 / 10 / 6; }
-    [data-open='veshi'] .block-s { grid-area: 9 / 1 / 10 / 4; }
+    /* Как на dvc.ai: раскрытый блок забирает 8 рядов на всю ширину, остальные сжимаются в полосы в один ряд. */
+    [data-open='veshi'] .block-v { grid-area: 1 / 1 / 9 / 6; }
+    [data-open='veshi'] .block-i { grid-area: 9 / 1 / 10 / 4; }
+    [data-open='veshi'] .block-f { grid-area: 9 / 4 / 10 / 6; }
+    [data-open='veshi'] .block-s { grid-area: 10 / 1 / 11 / 4; }
+    [data-open='veshi'] .block-t { grid-area: 11 / 1 / 12 / 4; }
+    [data-open='veshi'] .block-d { grid-area: 10 / 4 / 12 / 6; }
 
     [data-open='istoriya'] .block-v { grid-area: 1 / 1 / 2 / 6; }
-    [data-open='istoriya'] .block-i { grid-area: 2 / 1 / 9 / 6; }
-    [data-open='istoriya'] .block-s { grid-area: 9 / 1 / 10 / 4; }
-    [data-open='istoriya'] .block-f { grid-area: 9 / 4 / 10 / 6; }
+    [data-open='istoriya'] .block-i { grid-area: 2 / 1 / 10 / 6; }
+    [data-open='istoriya'] .block-s { grid-area: 10 / 1 / 11 / 4; }
+    [data-open='istoriya'] .block-f { grid-area: 10 / 4 / 11 / 6; }
+    [data-open='istoriya'] .block-t { grid-area: 11 / 1 / 12 / 4; }
+    [data-open='istoriya'] .block-d { grid-area: 11 / 4 / 12 / 6; }
 
     [data-open='fond'] .block-v { grid-area: 1 / 1 / 2 / 4; }
     [data-open='fond'] .block-i { grid-area: 1 / 4 / 2 / 6; }
-    [data-open='fond'] .block-f { grid-area: 2 / 1 / 9 / 6; }
-    [data-open='fond'] .block-s { grid-area: 9 / 1 / 10 / 4; }
-    [data-open='fond'] .block-d { grid-area: 9 / 4 / 12 / 6; }
+    [data-open='fond'] .block-f { grid-area: 2 / 1 / 10 / 6; }
+    [data-open='fond'] .block-s { grid-area: 10 / 1 / 11 / 4; }
+    [data-open='fond'] .block-t { grid-area: 11 / 1 / 12 / 4; }
+    [data-open='fond'] .block-d { grid-area: 10 / 4 / 12 / 6; }
 
     [data-lift='veshi'] .block-v,
     [data-lift='istoriya'] .block-i,
@@ -1040,8 +1045,17 @@ body {
         display: none;
     }
 
+    /* Буква на телефоне — крупная, но всегда влезает в полосу высотой в один ряд (100dvh / 11). */
+    :root {
+        --letter: clamp(32px, calc(9dvh - 22px), 52px);
+    }
+
     .stage:not([data-open='']) .block-head {
-        padding-block: 12px;
+        padding-block: 10px;
+    }
+
+    .block-head {
+        padding: 14px 16px;
     }
 
     .block[data-expanded] .block-head {
@@ -1218,6 +1232,16 @@ body {
 
     .slogan {
         font-size: 14px;
+    }
+
+    /* В полосе в один ряд слоган мельче, чтобы три строки поместились. */
+    [data-open='istoriya'] .block-d {
+        padding: 8px 14px;
+    }
+
+    [data-open='istoriya'] .slogan {
+        font-size: 11px;
+        line-height: 1.2;
     }
 }
 
