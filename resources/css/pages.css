@@ -547,3 +547,103 @@
     font-size: 14px;
     opacity: 0.75;
 }
+/* ---------- «Фонд»: вкладки «Фонд» и «Инвестору» ---------- */
+
+.fond-tabs {
+    position: absolute;
+    top: 16px;
+    left: var(--pad);
+    z-index: 2;
+    display: flex;
+    gap: 6px;
+}
+
+.fond-tabs .chip {
+    background: var(--color-paper);
+}
+
+.fond-tabs .chip[aria-selected='true'] {
+    background: var(--color-ink);
+    color: var(--color-paper);
+}
+
+.investor {
+    position: absolute;
+    inset: 60px var(--pad) var(--pad);
+    z-index: 1;
+    overflow-y: auto;
+    padding: 24px;
+    background: var(--color-paper);
+    box-shadow: 0 4px 0 rgb(29 37 62 / 0.15);
+    font-size: 15px;
+    line-height: 1.45;
+}
+
+.investor-title {
+    margin: 8px 0 10px;
+    font-size: 24px;
+    line-height: 1.15;
+}
+
+.investor-lead {
+    margin-bottom: 8px;
+}
+
+.investor section {
+    margin-top: 20px;
+}
+
+.investor h4 {
+    margin-bottom: 8px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.investor ul {
+    display: grid;
+    gap: 6px;
+    padding-left: 1.2em;
+    list-style: disc;
+}
+
+.investor-formats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.investor-format {
+    padding: 12px;
+    background: var(--color-mist);
+    font-size: 14px;
+}
+
+.investor-format-title {
+    margin-bottom: 4px;
+    font-size: 16px;
+}
+
+.investor .actions {
+    margin-top: 20px;
+}
+
+.investor-disclaimer {
+    margin-top: 18px;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+@media (max-width: 767px) {
+    .fond-tabs {
+        position: static;
+        padding: 16px 16px 0;
+    }
+
+    .investor {
+        position: static;
+        margin: 16px;
+    }
+}

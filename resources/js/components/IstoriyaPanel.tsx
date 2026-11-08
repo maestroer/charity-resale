@@ -1,16 +1,10 @@
 import { Link } from '@inertiajs/react';
 import type { CSSProperties } from 'react';
 import type { BlockId } from '@/types';
+import { MONEY_SPLIT } from '@/content/money';
 import { to } from '@/lib/url';
 
 const step = (i: number) => ({ '--i': i }) as CSSProperties;
-
-/** Как распределяется стоимость каждой проданной вещи. */
-const SPLIT = [
-    { share: '30%', text: 'в благотворительный фонд' },
-    { share: '40%', text: 'на существование проекта' },
-    { share: '30%', text: 'на специальный счёт, с которого проект будет инвестировать в фонды и стартапы' },
-];
 
 /** Блок «Инвестиции»: цели проекта и то, куда идут деньги от каждой покупки. */
 export function IstoriyaPanel({ onGo }: { onGo: (id: BlockId) => void }) {
@@ -45,7 +39,7 @@ export function IstoriyaPanel({ onGo }: { onGo: (id: BlockId) => void }) {
                 <section className="info-card">
                     <h3>Куда идут деньги</h3>
                     <dl className="split">
-                        {SPLIT.map(({ share, text }) => (
+                        {MONEY_SPLIT.map(({ share, text }) => (
                             <div key={text}>
                                 <dt>{share}</dt>
                                 <dd>{text}</dd>

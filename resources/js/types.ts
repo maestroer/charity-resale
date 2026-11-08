@@ -37,7 +37,6 @@ export type Stats = {
 
 export type Site = {
     name: string;
-    actress: string;
     fund_name: string;
     domain: string;
     drop_label: string;
