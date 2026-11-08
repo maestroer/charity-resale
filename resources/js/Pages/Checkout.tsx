@@ -17,7 +17,8 @@ type Fields = {
     customer_phone: string;
     delivery_address: string;
     payment_method: 'card' | 'sbp';
-    consent: boolean;
+    accept_offer: boolean;
+    consent_pd: boolean;
 };
 
 export default function Checkout({ item, test_mode }: Props) {
@@ -29,7 +30,8 @@ export default function Checkout({ item, test_mode }: Props) {
         customer_phone: '',
         delivery_address: '',
         payment_method: 'card',
-        consent: false,
+        accept_offer: false,
+        consent_pd: false,
     });
     const errors = form.errors as Partial<Record<keyof Fields, string>>;
 
@@ -121,22 +123,40 @@ export default function Checkout({ item, test_mode }: Props) {
                         </div>
                     </fieldset>
 
+                    {/* Два отдельных согласия: согласие на обработку персональных данных по закону не объединяется с офертой. */}
                     <label className="consent">
                         <input
                             type="checkbox"
-                            checked={form.data.consent}
+                            checked={form.data.accept_offer}
                             onChange={(event) => {
-                                form.setData('consent', event.target.checked);
-                                form.clearErrors('consent');
+                                form.setData('accept_offer', event.target.checked);
+                                form.clearErrors('accept_offer');
                             }}
-                            aria-invalid={errors.consent ? true : undefined}
+                            aria-invalid={errors.accept_offer ? true : undefined}
                         />
                         <span>
-                            Принимаю <Link href={to('/oferta')}>оферту</Link> и согласен на{' '}
-                            <Link href={to('/privacy')}>обработку персональных данных</Link>
+                            Принимаю условия <Link href={to('/oferta')}>публичной оферты</Link> и{' '}
+                            <Link href={to('/dostavka-i-vozvrat')}>доставки и возврата</Link>
                         </span>
                     </label>
-                    {errors.consent && <span className="field-error">{errors.consent}</span>}
+                    {errors.accept_offer && <span className="field-error">{errors.accept_offer}</span>}
+
+                    <label className="consent">
+                        <input
+                            type="checkbox"
+                            checked={form.data.consent_pd}
+                            onChange={(event) => {
+                                form.setData('consent_pd', event.target.checked);
+                                form.clearErrors('consent_pd');
+                            }}
+                            aria-invalid={errors.consent_pd ? true : undefined}
+                        />
+                        <span>
+                            Даю <Link href={to('/soglasie')}>согласие на обработку персональных данных</Link> на условиях{' '}
+                            <Link href={to('/privacy')}>политики</Link>
+                        </span>
+                    </label>
+                    {errors.consent_pd && <span className="field-error">{errors.consent_pd}</span>}
 
                     {test_mode && (
                         <p className="notice">Тестовый режим: оплата не подключена, деньги не списываются.</p>

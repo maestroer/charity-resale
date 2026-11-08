@@ -8,6 +8,7 @@ export const LEGAL_LINKS = [
     { href: '/dostavka-i-vozvrat', label: 'Доставка и возврат' },
     { href: '/oferta', label: 'Оферта' },
     { href: '/privacy', label: 'Персональные данные' },
+    { href: '/soglasie', label: 'Согласие на обработку данных' },
 ];
 
 /** Простая страница на белом: шапка с названием, содержимое, подвал со ссылками. */
