@@ -983,27 +983,147 @@ body {
     opacity: 1;
 }
 
-/* ---------- Мобильная стопка ---------- */
+/* ---------- Телефон: та же мозаика блоков на весь экран, сетка 5×11 ---------- */
 
 @media (max-width: 767px) {
-    .word span {
-        opacity: 1;
-        transform: none;
+    /* Страница не скроллится: прокручивается только содержимое раскрытого блока. */
+    body:has(.stage) {
+        overflow: hidden;
     }
 
-    .block[data-expanded] {
-        min-height: 60vh;
+    .stage {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        grid-template-rows: repeat(11, minmax(0, 1fr));
+        height: 100dvh;
+        min-height: 0;
+    }
+
+    .block {
+        min-height: 0;
+    }
+
+    .block-d { z-index: 3; }
+
+    /* grid-area: ряд / колонка / ряд-конец / колонка-конец */
+    .block-v { grid-area: 1 / 1 / 4 / 6; }
+    .block-s { grid-area: 4 / 1 / 9 / 4; }
+    .block-i { grid-area: 4 / 4 / 6 / 6; }
+    .block-f { grid-area: 6 / 4 / 10 / 6; }
+    .block-t { grid-area: 9 / 1 / 12 / 4; }
+    .block-d { grid-area: 10 / 4 / 12 / 6; }
+
+    /* Раскрытый блок забирает 7 рядов на всю ширину, соседи сжимаются в полосы и не оставляют щелей. */
+    [data-open='veshi'] .block-v { grid-area: 1 / 1 / 8 / 6; }
+    [data-open='veshi'] .block-i { grid-area: 8 / 1 / 9 / 4; }
+    [data-open='veshi'] .block-f { grid-area: 8 / 4 / 10 / 6; }
+    [data-open='veshi'] .block-s { grid-area: 9 / 1 / 10 / 4; }
+
+    [data-open='istoriya'] .block-v { grid-area: 1 / 1 / 2 / 6; }
+    [data-open='istoriya'] .block-i { grid-area: 2 / 1 / 9 / 6; }
+    [data-open='istoriya'] .block-s { grid-area: 9 / 1 / 10 / 4; }
+    [data-open='istoriya'] .block-f { grid-area: 9 / 4 / 10 / 6; }
+
+    [data-open='fond'] .block-v { grid-area: 1 / 1 / 2 / 4; }
+    [data-open='fond'] .block-i { grid-area: 1 / 4 / 2 / 6; }
+    [data-open='fond'] .block-f { grid-area: 2 / 1 / 9 / 6; }
+    [data-open='fond'] .block-s { grid-area: 9 / 1 / 10 / 4; }
+    [data-open='fond'] .block-d { grid-area: 9 / 4 / 12 / 6; }
+
+    [data-lift='veshi'] .block-v,
+    [data-lift='istoriya'] .block-i,
+    [data-lift='fond'] .block-f { z-index: 4; }
+
+    /* Свёрнутый блок — только буква, как на компьютере. Подписи остаются у крупного блока «Вещи». */
+    .block-i .block-meta,
+    .block-f .block-meta {
+        display: none;
+    }
+
+    .stage:not([data-open='']) .block-head {
+        padding-block: 12px;
+    }
+
+    .block[data-expanded] .block-head {
+        padding-bottom: 12px;
+    }
+
+    /* Терминал заполняет жёлтый блок; чипы — одна строка с прокруткой вбок. */
+    .terminal {
+        height: 100%;
+        padding: 14px;
+        font-size: 11px;
+    }
+
+    .terminal .meta {
+        display: none;
+    }
+
+    .terminal-log {
+        max-height: none;
+    }
+
+    .terminal .chips {
+        flex-wrap: nowrap;
+        margin-inline: -14px;
+        padding: 2px 14px 4px;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .terminal .chips li {
+        flex: none;
+    }
+
+    /* Когда раскрыт любой блок, от жёлтого остаётся полоса «Спросить»: она закрывает блок и открывает терминал. */
+    .stage:not([data-open='']) .terminal-body {
+        visibility: hidden;
+    }
+
+    .stage:not([data-open='']) .terminal-strip {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        padding: 0 14px;
+        cursor: pointer;
+    }
+
+    .terminal-strip::after {
+        content: ' →';
+    }
+
+    .menu-toggle {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px;
+    }
+
+    .stage:not([data-open='']) .menu-toggle {
+        flex-direction: row;
+        align-items: center;
+        padding-block: 8px;
+    }
+
+    .stage:not([data-open='']) .site-name {
+        display: none;
     }
 
     .block-aside {
-        margin-bottom: 16px;
+        margin-bottom: 12px;
     }
 
-    /* На телефоне мозаика — полоса сверху, карточки фонда и автора идут под ней. */
+    .ribbon-down {
+        display: none;
+    }
+
+    /* Мозаика — полоса сверху, карточки фонда и автора идут под ней; листается весь блок. */
     .panel-fond {
         display: flex;
         flex-direction: column;
         min-height: 0;
+        overflow-y: auto;
     }
 
     .panel-fond .mosaic {
@@ -1031,12 +1151,11 @@ body {
     }
 
     .block-d {
-        padding: 16px;
+        padding: 14px;
     }
 
     .slogan {
-        flex-direction: row;
-        gap: 12px;
+        font-size: 14px;
     }
 }
 
