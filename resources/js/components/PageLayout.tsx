@@ -1,6 +1,5 @@
 import { Head, Link, usePage } from '@inertiajs/react';
 import type { ReactNode } from 'react';
-import { DemoBadge } from '@/components/DemoBadge';
 import type { SharedProps } from '@/types';
 import { to } from '@/lib/url';
 
@@ -35,7 +34,6 @@ export function PageLayout({ title, children }: { title: string; children: React
                     </Link>
                 ))}
             </footer>
-            <DemoBadge />
         </div>
     );
 }

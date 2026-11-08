@@ -1,6 +1,5 @@
 import { Head, usePage } from '@inertiajs/react';
 import { useRef } from 'react';
-import { DemoBadge } from '@/components/DemoBadge';
 import { FondPanel } from '@/components/FondPanel';
 import { IstoriyaPanel } from '@/components/IstoriyaPanel';
 import { ItemPanel } from '@/components/ItemPanel';
@@ -113,7 +112,6 @@ export default function Home({ items, stats, item }: Props) {
                 </header>
             </main>
             <ItemPanel item={item} />
-            <DemoBadge />
         </>
     );
 }

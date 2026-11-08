@@ -125,8 +125,8 @@ export function useGridState(stageRef: RefObject<HTMLElement | null>) {
         });
     }, []);
 
-    // Клик по раскрытому блоку или по любому свёрнутому, пока что-то раскрыто, возвращает исходную сетку.
-    const toggle = useCallback((id: BlockId) => go(target === null ? id : null), [go, target]);
+    // Клик по раскрытому блоку возвращает исходную сетку, по свёрнутому — сразу раскрывает его, даже если открыт другой.
+    const toggle = useCallback((id: BlockId) => go(target === id ? null : id), [go, target]);
     const close = useCallback(() => target !== null && go(null), [go, target]);
 
     useEffect(() => {

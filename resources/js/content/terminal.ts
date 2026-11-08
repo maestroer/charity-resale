@@ -1,3 +1,7 @@
+import { FOUNDER } from '@/content/founder';
+import { INVESTMENTS } from '@/content/investments';
+import { INVESTOR } from '@/content/investor';
+import { MONEY_SPLIT } from '@/content/money';
 import { plural, rub } from '@/lib/format';
 import type { Item, Site, Stats } from '@/types';
 
@@ -7,9 +11,14 @@ export type TerminalContext = {
     site: Site;
 };
 
-type Answer = (context: TerminalContext) => string[];
+/** Строка ответа: обычный текст или текст, который копируется по клику. */
+export type AnswerLine = string | { text: string; copy: string };
 
-// Заготовленные ответы терминала: без запросов к ИИ. Исключение — «оценить»: её ведёт пошаговый диалог в Terminal.tsx.
+type Answer = (context: TerminalContext) => AnswerLine[];
+
+const investShare = MONEY_SPLIT[2].share;
+
+// Заготовленные ответы терминала: без запросов к ИИ.
 export const TERMINAL_ANSWERS: Record<string, Answer> = {
     каталог: ({ items }) => {
         const onSale = items.filter((item) => !item.draft && !item.sold && item.price_rub !== null);
@@ -24,10 +33,44 @@ export const TERMINAL_ANSWERS: Record<string, Answer> = {
             'откройте блок «Вещи», чтобы посмотреть всё.',
         ];
     },
-    оценить: () => [],
+    инвестиции: () => {
+        if (INVESTMENTS.length === 0) {
+            return [
+                `${investShare} с каждой продажи копится на специальном счёте, чтобы вкладывать в фонды и стартапы.`,
+                'вложений пока не было — первые проекты появятся здесь после первых продаж.',
+            ];
+        }
+
+        return [
+            `проекты, в которые мы вложили деньги (${INVESTMENTS.length}):`,
+            ...INVESTMENTS.map(({ name, what, amount_rub, year }) => `· ${name} — ${what}, ${rub(amount_rub)}, ${year}`),
+        ];
+    },
     фонд: ({ site, stats }) => [
         `30% стоимости каждой вещи уходит в фонд ${site.fund_name}.`,
         `уже собрано: ${rub(stats.fund_total_rub)}.`,
+    ],
+    команда: () => [
+        `${FOUNDER.name} — ${FOUNDER.heading.toLowerCase()}.`,
+        `${FOUNDER.role}, ${FOUNDER.background}.`,
+        ...FOUNDER.links.map(({ label, href }) => `· ${label}: ${href}`),
+    ],
+    участники: ({ items }) => {
+        const owners = [...new Set(items.map((item) => item.owner.name).filter((name): name is string => Boolean(name)))];
+
+        if (owners.length === 0) {
+            return [
+                'здесь будут известные люди, которые передали проекту свои вещи.',
+                'первые участники появятся с первым дропом.',
+            ];
+        }
+
+        return [`вещи проекту передали (${owners.length}):`, ...owners.map((name) => `· ${name}`)];
+    },
+    контакты: () => [
+        'почта — нажмите, чтобы скопировать:',
+        { text: INVESTOR.contact.email, copy: INVESTOR.contact.email },
+        `telegram: ${INVESTOR.contact.telegram}`,
     ],
     доставка: () => [
         'доставка — сдэк до пункта выдачи по россии, уже входит в цену.',
@@ -44,7 +87,7 @@ export const TERMINAL_ANSWERS: Record<string, Answer> = {
             ? 'продаж пока не было — первый отчёт появится после первого перевода.'
             : `продано ${stats.sold_count} ${plural(stats.sold_count, ['вещь', 'вещи', 'вещей'])}. все отчёты — на странице /fond.`,
     ],
-    помощь: () => ['темы: каталог, оценить, фонд, доставка, возврат, отчёты.', 'нажмите на тему или напишите её в строке ниже.'],
+    помощь: () => [`темы: ${TERMINAL_TOPICS.join(', ')}.`, 'нажмите на тему или напишите её в строке ниже.'],
 };
 
 export const TERMINAL_TOPICS = Object.keys(TERMINAL_ANSWERS);

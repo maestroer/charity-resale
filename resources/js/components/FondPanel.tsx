@@ -1,6 +1,5 @@
 import { Link } from '@inertiajs/react';
 import { FounderCard } from '@/components/FounderCard';
-import { InvestorPanel } from '@/components/InvestorPanel';
 import { useEffect, useRef, useState, type CSSProperties } from 'react';
 import { plural, rub } from '@/lib/format';
 import { useCountUp } from '@/lib/useCountUp';
@@ -23,8 +22,6 @@ export function FondPanel({ site, stats, active, photos = [] }: Props) {
     const mosaic = useRef<HTMLDivElement>(null);
     const [grid, setGrid] = useState({ cols: 0, rows: 0, visibleRows: 0 });
     const total = useCountUp(stats.fund_total_rub, active);
-    // Вкладки внутри «Фонда»: отчёты и руководитель проекта или информация для инвестора.
-    const [tab, setTab] = useState<'fund' | 'investor'>('fund');
 
     useEffect(() => {
         const element = mosaic.current;
@@ -101,29 +98,6 @@ export function FondPanel({ site, stats, active, photos = [] }: Props) {
                     </div>
                 )}
             </div>
-            <div className="fond-tabs" role="tablist" aria-label="Разделы фонда">
-                {(
-                    [
-                        ['fund', 'Фонд'],
-                        ['investor', 'Инвестору'],
-                    ] as const
-                ).map(([value, label]) => (
-                    <button
-                        key={value}
-                        type="button"
-                        role="tab"
-                        className="chip"
-                        aria-selected={tab === value}
-                        aria-pressed={tab === value}
-                        onClick={() => setTab(value)}
-                    >
-                        {label}
-                    </button>
-                ))}
-            </div>
-            {tab === 'investor' ? (
-                <InvestorPanel />
-            ) : (
             <div className="fund-cards">
             <div className="fund-card">
                 <p className="meta">{site.fund_name}</p>
@@ -138,7 +112,6 @@ export function FondPanel({ site, stats, active, photos = [] }: Props) {
             </div>
             <FounderCard />
             </div>
-            )}
         </>
     );
 }

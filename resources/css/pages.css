@@ -468,19 +468,6 @@
     }
 }
 
-/* ---------- Метка статичного демо ---------- */
-
-.demo-badge {
-    position: fixed;
-    right: 12px;
-    bottom: 12px;
-    z-index: 60;
-    padding: 6px 10px;
-    background: var(--color-ink);
-    color: var(--color-paper);
-    pointer-events: none;
-}
-
 /* Таблицы в юридических текстах */
 .prose table {
     width: 100%;
@@ -547,38 +534,31 @@
     font-size: 14px;
     opacity: 0.75;
 }
-/* ---------- «Фонд»: вкладки «Фонд» и «Инвестору» ---------- */
+/* ---------- «Инвестиции»: вкладки «О проекте» и «Инвестору» ---------- */
 
-.fond-tabs {
-    position: absolute;
-    top: 16px;
-    left: var(--pad);
-    z-index: 2;
+.invest-tabs {
     display: flex;
     gap: 6px;
+    margin-bottom: 16px;
 }
 
-.fond-tabs .chip {
+.invest-tabs .chip {
     background: var(--color-paper);
 }
 
-.fond-tabs .chip[aria-selected='true'] {
+.invest-tabs .chip[aria-selected='true'] {
     background: var(--color-ink);
     color: var(--color-paper);
 }
 
 .investor {
-    position: absolute;
-    inset: 60px var(--pad) var(--pad);
-    z-index: 1;
-    overflow-y: auto;
+    max-width: 760px;
     padding: 24px;
     background: var(--color-paper);
     box-shadow: 0 4px 0 rgb(29 37 62 / 0.15);
     font-size: 15px;
     line-height: 1.45;
 }
-
 .investor-title {
     margin: 8px 0 10px;
     font-size: 24px;
@@ -636,14 +616,16 @@
     opacity: 0.7;
 }
 
-@media (max-width: 767px) {
-    .fond-tabs {
-        position: static;
-        padding: 16px 16px 0;
-    }
+.terminal-copy {
+    padding: 0;
+    border: 0;
+    border-bottom: 1px dashed currentColor;
+    background: none;
+    color: inherit;
+    font: inherit;
+    cursor: copy;
+}
 
-    .investor {
-        position: static;
-        margin: 16px;
-    }
+.terminal-copy:hover {
+    border-bottom-style: solid;
 }
