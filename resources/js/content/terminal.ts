@@ -1,3 +1,4 @@
+import { DONATE } from '@/content/donate';
 import { FOUNDER } from '@/content/founder';
 import { INVESTMENTS } from '@/content/investments';
 import { INVESTOR } from '@/content/investor';
@@ -67,6 +68,14 @@ export const TERMINAL_ANSWERS: Record<string, Answer> = {
 
         return [`вещи проекту передали (${owners.length}):`, ...owners.map((name) => `· ${name}`)];
     },
+    донат: () => [
+        'поддержать проект — нажмите на реквизит, чтобы скопировать:',
+        ...[DONATE.card, ...DONATE.crypto].map((method) => ({
+            text: `· ${method.label}${method.network ? `, ${method.network}` : ''}: ${method.display ?? method.value}`,
+            copy: method.value,
+        })),
+        DONATE.warning.toLowerCase(),
+    ],
     контакты: () => [
         'почта — нажмите, чтобы скопировать:',
         { text: INVESTOR.contact.email, copy: INVESTOR.contact.email },
