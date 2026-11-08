@@ -65,14 +65,14 @@ export default function Home({ items, stats, item }: Props) {
 
                 <LetterBlock
                     id="istoriya"
-                    word="История"
+                    word="Инвестиции"
                     className="block-i"
                     open={open}
                     ready={ready}
                     onToggle={toggle}
                     meta={<span>30% стоимости каждой вещи — в фонд</span>}
                 >
-                    <IstoriyaPanel site={site} onGo={go} />
+                    <IstoriyaPanel onGo={go} />
                 </LetterBlock>
 
                 <section data-block="sprosit" className="block block-s" aria-label="Спросить о вещах">

@@ -12,7 +12,7 @@ type Props = {
 
 const LINKS: { id: BlockId; label: string }[] = [
     { id: 'veshi', label: 'Вещи' },
-    { id: 'istoriya', label: 'История' },
+    { id: 'istoriya', label: 'Инвестиции' },
     { id: 'fond', label: 'Фонд' },
 ];
 
