@@ -49,7 +49,8 @@ function useNow(active: boolean): number {
 
 /** Аукцион в карточке вещи: текущая ставка, таймер и форма ставки. */
 export function AuctionBox({ slug, auction, fundRub, sold }: { slug: string; auction: Auction; fundRub: number | null; sold: boolean }) {
-    const { flash } = usePage<SharedProps>().props;
+    const { flash, site } = usePage<SharedProps>().props;
+    const manager = site?.manager_telegram;
     const endsAt = auction.ends_at ? Date.parse(auction.ends_at) : null;
     const now = useNow(auction.open);
     const open = auction.open && endsAt !== null && endsAt > now;
@@ -140,7 +141,8 @@ export function AuctionBox({ slug, auction, fundRub, sold }: { slug: string; auc
                 </p>
             )}
 
-            {open && IS_DEMO && <p className="notice">В демо-версии ставки не принимаются.</p>}
+            {/* Если указан менеджер, в демо вместо ставок кнопка «Написать менеджеру» под блоком. */}
+            {open && IS_DEMO && !manager && <p className="notice">В демо-версии ставки не принимаются.</p>}
 
             {open && !IS_DEMO && (
                 <form className="auction-form" onSubmit={submit} noValidate>

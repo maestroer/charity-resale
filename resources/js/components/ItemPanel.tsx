@@ -5,7 +5,7 @@ import { rub } from '@/lib/format';
 import { reachGoal } from '@/lib/metrika';
 import { managerLink } from '@/lib/telegram';
 import type { ItemDetail, SharedProps } from '@/types';
-import { to } from '@/lib/url';
+import { IS_DEMO, to } from '@/lib/url';
 
 /** Почему вещь нельзя купить прямо сейчас. */
 function unavailableReason(item: ItemDetail): string {
@@ -31,6 +31,8 @@ export function ItemPanel({ item }: { item: ItemDetail | null }) {
     const [photoIndex, setPhotoIndex] = useState(0);
     const closeButton = useRef<HTMLButtonElement>(null);
     const manager = usePage<SharedProps>().props.site?.manager_telegram;
+    // В статичном демо заявки не принимаются: единственное действие — написать менеджеру.
+    const contactOnly = IS_DEMO && Boolean(manager);
     const open = item !== null;
 
     useEffect(() => {
@@ -154,9 +156,11 @@ export function ItemPanel({ item }: { item: ItemDetail | null }) {
                             )}
 
                             {shown.available ? (
-                                <Link href={to(`/checkout?item=${shown.slug}`)} className="btn btn-primary">
-                                    Оставить заявку
-                                </Link>
+                                !contactOnly && (
+                                    <Link href={to(`/checkout?item=${shown.slug}`)} className="btn btn-primary">
+                                        Оставить заявку
+                                    </Link>
+                                )
                             ) : (
                                 <p className="item-unavailable">{unavailableReason(shown)}</p>
                             )}
@@ -165,7 +169,7 @@ export function ItemPanel({ item }: { item: ItemDetail | null }) {
 
                             {manager && (
                                 <a
-                                    className="btn btn-secondary item-ask"
+                                    className={`btn ${contactOnly ? 'btn-primary' : 'btn-secondary'} item-ask`}
                                     href={managerLink(manager, shown)}
                                     target="_blank"
                                     rel="noopener noreferrer"
