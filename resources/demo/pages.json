@@ -15,116 +15,221 @@
             },
             "items": [
                 {
-                    "slug": "sumka-off-white",
-                    "title": "Сумка Off-White",
-                    "owner": {
-                        "name": null,
-                        "category": "bloggers",
-                        "category_label": "Блогеры"
-                    },
-                    "brand": "Off-White",
-                    "size": null,
-                    "project": null,
-                    "price_rub": 123400,
-                    "fund_rub": 37020,
-                    "sold": false,
-                    "reserved": false,
-                    "sale_mode": "fixed",
-                    "auction": null,
-                    "draft": false,
-                    "available": true,
-                    "photos": []
-                },
-                {
-                    "slug": "plate-namelazz-xs",
-                    "title": "Платье Namelazz",
-                    "owner": {
-                        "name": null,
-                        "category": "actors",
-                        "category_label": "Актёры"
-                    },
-                    "brand": "Namelazz",
-                    "size": "XS",
-                    "project": {
-                        "slug": "zhit-zhizn",
-                        "title": "«Жить жизнь»"
-                    },
-                    "price_rub": 43100,
-                    "fund_rub": 12930,
-                    "sold": false,
-                    "reserved": false,
-                    "sale_mode": "fixed",
-                    "auction": null,
-                    "draft": false,
-                    "available": true,
-                    "photos": []
-                },
-                {
-                    "slug": "veshch-03",
-                    "title": "Вещь певца",
+                    "slug": "chasy-repera",
+                    "title": "Часы рэпера",
                     "owner": {
                         "name": null,
                         "category": "singers",
                         "category_label": "Певцы"
                     },
-                    "brand": null,
+                    "brand": "Rolex",
                     "size": null,
                     "project": null,
-                    "price_rub": null,
-                    "fund_rub": null,
+                    "price_rub": 1870000,
+                    "fund_rub": 561000,
                     "sold": false,
                     "reserved": false,
                     "sale_mode": "fixed",
                     "auction": null,
-                    "draft": true,
-                    "available": false,
+                    "draft": false,
+                    "available": true,
                     "photos": []
                 },
                 {
-                    "slug": "veshch-04",
-                    "title": "Вещь инфлюенсера",
+                    "slug": "kurtka-blogera",
+                    "title": "Куртка блогера",
+                    "owner": {
+                        "name": null,
+                        "category": "bloggers",
+                        "category_label": "Блогеры"
+                    },
+                    "brand": "Stone Island",
+                    "size": "L",
+                    "project": null,
+                    "price_rub": 64500,
+                    "fund_rub": 19350,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "mashina-blogera",
+                    "title": "Машина блогера",
+                    "owner": {
+                        "name": null,
+                        "category": "bloggers",
+                        "category_label": "Блогеры"
+                    },
+                    "brand": "BMW M4",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 7450000,
+                    "fund_rub": 2235000,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "tsep-repera",
+                    "title": "Цепь рэпера",
+                    "owner": {
+                        "name": null,
+                        "category": "singers",
+                        "category_label": "Певцы"
+                    },
+                    "brand": "Золото 585",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 412000,
+                    "fund_rub": 123600,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "krossovki-aktera",
+                    "title": "Кроссовки актёра",
+                    "owner": {
+                        "name": null,
+                        "category": "actors",
+                        "category_label": "Актёры"
+                    },
+                    "brand": "Nike Air Jordan 1",
+                    "size": "43",
+                    "project": null,
+                    "price_rub": 38900,
+                    "fund_rub": 11670,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "plate-aktrisy",
+                    "title": "Платье актрисы",
+                    "owner": {
+                        "name": null,
+                        "category": "actors",
+                        "category_label": "Актёры"
+                    },
+                    "brand": "Valentino",
+                    "size": "S",
+                    "project": {
+                        "slug": "zhit-zhizn",
+                        "title": "«Жить жизнь»"
+                    },
+                    "price_rub": 186000,
+                    "fund_rub": 55800,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "gitara-pevtsa",
+                    "title": "Гитара певца",
+                    "owner": {
+                        "name": null,
+                        "category": "singers",
+                        "category_label": "Певцы"
+                    },
+                    "brand": "Fender Stratocaster",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 243000,
+                    "fund_rub": 72900,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "hudi-strimera",
+                    "title": "Худи стримера",
                     "owner": {
                         "name": null,
                         "category": "influencers",
                         "category_label": "Инфлюенсеры"
                     },
-                    "brand": null,
-                    "size": null,
+                    "brand": "Balenciaga",
+                    "size": "XL",
                     "project": null,
-                    "price_rub": null,
-                    "fund_rub": null,
+                    "price_rub": 52700,
+                    "fund_rub": 15810,
                     "sold": false,
                     "reserved": false,
                     "sale_mode": "fixed",
                     "auction": null,
-                    "draft": true,
-                    "available": false,
+                    "draft": false,
+                    "available": true,
                     "photos": []
                 },
                 {
-                    "slug": "veshch-05",
-                    "title": "Вещь артиста",
+                    "slug": "sumka-influensera",
+                    "title": "Сумка инфлюенсера",
+                    "owner": {
+                        "name": null,
+                        "category": "influencers",
+                        "category_label": "Инфлюенсеры"
+                    },
+                    "brand": "Louis Vuitton",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 318000,
+                    "fund_rub": 95400,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "pidzhak-artista",
+                    "title": "Пиджак комика",
                     "owner": {
                         "name": null,
                         "category": "artists",
                         "category_label": "Артисты"
                     },
-                    "brand": null,
-                    "size": null,
+                    "brand": "Gucci",
+                    "size": "50",
                     "project": null,
-                    "price_rub": null,
-                    "fund_rub": null,
+                    "price_rub": 97300,
+                    "fund_rub": 29190,
                     "sold": false,
                     "reserved": false,
                     "sale_mode": "fixed",
                     "auction": null,
-                    "draft": true,
-                    "available": false,
+                    "draft": false,
+                    "available": true,
                     "photos": []
                 }
             ],
             "stats": {
-                "items_count": 5,
+                "items_count": 10,
                 "sold_count": 0,
                 "fund_total_rub": 0
             },
@@ -222,7 +327,7 @@
             "html": "<p>Редакция от 8 ноября 2026 года.</p>\n<h2>Доставка</h2>\n<p><strong>Служба:</strong> СДЭК, до пункта выдачи в любом городе России, где он есть.</p>\n<p><strong>Стоимость:</strong> уже входит в цену вещи. Доплачивать за доставку до пункта выдачи не нужно.</p>\n<p><strong>Отправка:</strong> в течение 3 рабочих дней после оплаты. Каждая вещь отправляется в фирменной упаковке ВИФ.</p>\n<p><strong>Трек-номер:</strong> придёт на email, указанный в заказе, сразу после отправки. По нему можно следить за посылкой на сайте или в приложении СДЭК.</p>\n<p><strong>Срок в пути:</strong> зависит от города, обычно от 2 до 7 дней. Точный срок СДЭК показывает по трек-номеру.</p>\n<p><strong>Получение:</strong> в пункте выдачи нужен паспорт и код из сообщения СДЭК. Посылку можно вскрыть и осмотреть вещь до того, как вы её заберёте.</p>\n<p>Доставка за пределы России пока не выполняется.</p>\n<h2>Возврат</h2>\n<h3>Если вещь не подошла</h3>\n<p>Вы можете вернуть вещь в течение <strong>7 дней</strong> после получения, если:</p>\n<ul>\n<li>её не носили и не стирали;</li>\n<li>сохранены упаковка и бирки ВИФ;</li>\n<li>состояние такое же, как при получении.</li>\n</ul>\n<p>Обратную доставку в этом случае оплачиваете вы.</p>\n<h3>Если вещь не соответствует описанию</h3>\n<p>Если пришла другая вещь, не тот размер или у вещи есть недостатки, которые не указаны в описании, вы можете вернуть её в течение <strong>14 дней</strong> после получения. Обратную доставку оплачиваем мы.</p>\n<p>Вещи были в употреблении: следы носки, которые указаны в описании и видны на фото, не считаются недостатком.</p>\n<h3>Как вернуть</h3>\n<ol>\n<li>Напишите на <a href=\"mailto:northstrean@gmail.com\">northstrean@gmail.com</a> с адреса, указанного в заказе. Укажите номер заказа и причину возврата, приложите фото, если вещь не соответствует описанию.</li>\n<li>Мы ответим в течение 2 рабочих дней и пришлём адрес и порядок отправки через СДЭК.</li>\n<li>Отправьте вещь в той упаковке, в которой она пришла.</li>\n</ol>\n<h3>Когда вернутся деньги</h3>\n<p>В течение <strong>10 дней</strong> после того, как вещь вернётся к нам, — на ту же карту или счёт, с которых была оплата. Если возврат из-за того, что вещь не подошла, из суммы вычитается стоимость доставки до вас.</p>\n<h2>Вопросы</h2>\n<p><a href=\"mailto:northstrean@gmail.com\">northstrean@gmail.com</a> или Telegram @northstrean.</p>\n"
         }
     },
-    "/veshi/sumka-off-white": {
+    "/veshi/chasy-repera": {
         "component": "Home",
         "props": {
             "errors": [],
@@ -238,132 +343,237 @@
             },
             "items": [
                 {
-                    "slug": "sumka-off-white",
-                    "title": "Сумка Off-White",
-                    "owner": {
-                        "name": null,
-                        "category": "bloggers",
-                        "category_label": "Блогеры"
-                    },
-                    "brand": "Off-White",
-                    "size": null,
-                    "project": null,
-                    "price_rub": 123400,
-                    "fund_rub": 37020,
-                    "sold": false,
-                    "reserved": false,
-                    "sale_mode": "fixed",
-                    "auction": null,
-                    "draft": false,
-                    "available": true,
-                    "photos": []
-                },
-                {
-                    "slug": "plate-namelazz-xs",
-                    "title": "Платье Namelazz",
-                    "owner": {
-                        "name": null,
-                        "category": "actors",
-                        "category_label": "Актёры"
-                    },
-                    "brand": "Namelazz",
-                    "size": "XS",
-                    "project": {
-                        "slug": "zhit-zhizn",
-                        "title": "«Жить жизнь»"
-                    },
-                    "price_rub": 43100,
-                    "fund_rub": 12930,
-                    "sold": false,
-                    "reserved": false,
-                    "sale_mode": "fixed",
-                    "auction": null,
-                    "draft": false,
-                    "available": true,
-                    "photos": []
-                },
-                {
-                    "slug": "veshch-03",
-                    "title": "Вещь певца",
+                    "slug": "chasy-repera",
+                    "title": "Часы рэпера",
                     "owner": {
                         "name": null,
                         "category": "singers",
                         "category_label": "Певцы"
                     },
-                    "brand": null,
+                    "brand": "Rolex",
                     "size": null,
                     "project": null,
-                    "price_rub": null,
-                    "fund_rub": null,
+                    "price_rub": 1870000,
+                    "fund_rub": 561000,
                     "sold": false,
                     "reserved": false,
                     "sale_mode": "fixed",
                     "auction": null,
-                    "draft": true,
-                    "available": false,
+                    "draft": false,
+                    "available": true,
                     "photos": []
                 },
                 {
-                    "slug": "veshch-04",
-                    "title": "Вещь инфлюенсера",
+                    "slug": "kurtka-blogera",
+                    "title": "Куртка блогера",
+                    "owner": {
+                        "name": null,
+                        "category": "bloggers",
+                        "category_label": "Блогеры"
+                    },
+                    "brand": "Stone Island",
+                    "size": "L",
+                    "project": null,
+                    "price_rub": 64500,
+                    "fund_rub": 19350,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "mashina-blogera",
+                    "title": "Машина блогера",
+                    "owner": {
+                        "name": null,
+                        "category": "bloggers",
+                        "category_label": "Блогеры"
+                    },
+                    "brand": "BMW M4",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 7450000,
+                    "fund_rub": 2235000,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "tsep-repera",
+                    "title": "Цепь рэпера",
+                    "owner": {
+                        "name": null,
+                        "category": "singers",
+                        "category_label": "Певцы"
+                    },
+                    "brand": "Золото 585",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 412000,
+                    "fund_rub": 123600,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "krossovki-aktera",
+                    "title": "Кроссовки актёра",
+                    "owner": {
+                        "name": null,
+                        "category": "actors",
+                        "category_label": "Актёры"
+                    },
+                    "brand": "Nike Air Jordan 1",
+                    "size": "43",
+                    "project": null,
+                    "price_rub": 38900,
+                    "fund_rub": 11670,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "plate-aktrisy",
+                    "title": "Платье актрисы",
+                    "owner": {
+                        "name": null,
+                        "category": "actors",
+                        "category_label": "Актёры"
+                    },
+                    "brand": "Valentino",
+                    "size": "S",
+                    "project": {
+                        "slug": "zhit-zhizn",
+                        "title": "«Жить жизнь»"
+                    },
+                    "price_rub": 186000,
+                    "fund_rub": 55800,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "gitara-pevtsa",
+                    "title": "Гитара певца",
+                    "owner": {
+                        "name": null,
+                        "category": "singers",
+                        "category_label": "Певцы"
+                    },
+                    "brand": "Fender Stratocaster",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 243000,
+                    "fund_rub": 72900,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "hudi-strimera",
+                    "title": "Худи стримера",
                     "owner": {
                         "name": null,
                         "category": "influencers",
                         "category_label": "Инфлюенсеры"
                     },
-                    "brand": null,
-                    "size": null,
+                    "brand": "Balenciaga",
+                    "size": "XL",
                     "project": null,
-                    "price_rub": null,
-                    "fund_rub": null,
+                    "price_rub": 52700,
+                    "fund_rub": 15810,
                     "sold": false,
                     "reserved": false,
                     "sale_mode": "fixed",
                     "auction": null,
-                    "draft": true,
-                    "available": false,
+                    "draft": false,
+                    "available": true,
                     "photos": []
                 },
                 {
-                    "slug": "veshch-05",
-                    "title": "Вещь артиста",
+                    "slug": "sumka-influensera",
+                    "title": "Сумка инфлюенсера",
+                    "owner": {
+                        "name": null,
+                        "category": "influencers",
+                        "category_label": "Инфлюенсеры"
+                    },
+                    "brand": "Louis Vuitton",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 318000,
+                    "fund_rub": 95400,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "pidzhak-artista",
+                    "title": "Пиджак комика",
                     "owner": {
                         "name": null,
                         "category": "artists",
                         "category_label": "Артисты"
                     },
-                    "brand": null,
-                    "size": null,
+                    "brand": "Gucci",
+                    "size": "50",
                     "project": null,
-                    "price_rub": null,
-                    "fund_rub": null,
+                    "price_rub": 97300,
+                    "fund_rub": 29190,
                     "sold": false,
                     "reserved": false,
                     "sale_mode": "fixed",
                     "auction": null,
-                    "draft": true,
-                    "available": false,
+                    "draft": false,
+                    "available": true,
                     "photos": []
                 }
             ],
             "stats": {
-                "items_count": 5,
+                "items_count": 10,
                 "sold_count": 0,
                 "fund_total_rub": 0
             },
             "item": {
-                "slug": "sumka-off-white",
-                "title": "Сумка Off-White",
+                "slug": "chasy-repera",
+                "title": "Часы рэпера",
                 "owner": {
                     "name": null,
-                    "category": "bloggers",
-                    "category_label": "Блогеры"
+                    "category": "singers",
+                    "category_label": "Певцы"
                 },
-                "brand": "Off-White",
+                "brand": "Rolex",
                 "size": null,
                 "project": null,
-                "price_rub": 123400,
-                "fund_rub": 37020,
+                "price_rub": 1870000,
+                "fund_rub": 561000,
                 "sold": false,
                 "reserved": false,
                 "sale_mode": "fixed",
@@ -371,17 +581,17 @@
                 "draft": false,
                 "available": true,
                 "photos": [],
-                "item_type": "сумка",
+                "item_type": "часы",
                 "condition": null,
                 "measurements": null,
                 "scene": null,
                 "look": null,
-                "story": null,
+                "story": "Носил на съёмках клипа и на всех концертах тура. Полный комплект: коробка и документы.",
                 "video_url": null
             }
         }
     },
-    "/checkout?item=sumka-off-white": {
+    "/checkout?item=chasy-repera": {
         "component": "Checkout",
         "props": {
             "errors": [],
@@ -396,18 +606,18 @@
                 "bid_placed": false
             },
             "item": {
-                "slug": "sumka-off-white",
-                "title": "Сумка Off-White",
+                "slug": "chasy-repera",
+                "title": "Часы рэпера",
                 "owner": {
                     "name": null,
-                    "category": "bloggers",
-                    "category_label": "Блогеры"
+                    "category": "singers",
+                    "category_label": "Певцы"
                 },
-                "brand": "Off-White",
+                "brand": "Rolex",
                 "size": null,
                 "project": null,
-                "price_rub": 123400,
-                "fund_rub": 37020,
+                "price_rub": 1870000,
+                "fund_rub": 561000,
                 "sold": false,
                 "reserved": false,
                 "sale_mode": "fixed",
@@ -418,7 +628,7 @@
             }
         }
     },
-    "/veshi/plate-namelazz-xs": {
+    "/veshi/kurtka-blogera": {
         "component": "Home",
         "props": {
             "errors": [],
@@ -434,135 +644,1444 @@
             },
             "items": [
                 {
-                    "slug": "sumka-off-white",
-                    "title": "Сумка Off-White",
-                    "owner": {
-                        "name": null,
-                        "category": "bloggers",
-                        "category_label": "Блогеры"
-                    },
-                    "brand": "Off-White",
-                    "size": null,
-                    "project": null,
-                    "price_rub": 123400,
-                    "fund_rub": 37020,
-                    "sold": false,
-                    "reserved": false,
-                    "sale_mode": "fixed",
-                    "auction": null,
-                    "draft": false,
-                    "available": true,
-                    "photos": []
-                },
-                {
-                    "slug": "plate-namelazz-xs",
-                    "title": "Платье Namelazz",
-                    "owner": {
-                        "name": null,
-                        "category": "actors",
-                        "category_label": "Актёры"
-                    },
-                    "brand": "Namelazz",
-                    "size": "XS",
-                    "project": {
-                        "slug": "zhit-zhizn",
-                        "title": "«Жить жизнь»"
-                    },
-                    "price_rub": 43100,
-                    "fund_rub": 12930,
-                    "sold": false,
-                    "reserved": false,
-                    "sale_mode": "fixed",
-                    "auction": null,
-                    "draft": false,
-                    "available": true,
-                    "photos": []
-                },
-                {
-                    "slug": "veshch-03",
-                    "title": "Вещь певца",
+                    "slug": "chasy-repera",
+                    "title": "Часы рэпера",
                     "owner": {
                         "name": null,
                         "category": "singers",
                         "category_label": "Певцы"
                     },
-                    "brand": null,
+                    "brand": "Rolex",
                     "size": null,
                     "project": null,
-                    "price_rub": null,
-                    "fund_rub": null,
+                    "price_rub": 1870000,
+                    "fund_rub": 561000,
                     "sold": false,
                     "reserved": false,
                     "sale_mode": "fixed",
                     "auction": null,
-                    "draft": true,
-                    "available": false,
+                    "draft": false,
+                    "available": true,
                     "photos": []
                 },
                 {
-                    "slug": "veshch-04",
-                    "title": "Вещь инфлюенсера",
+                    "slug": "kurtka-blogera",
+                    "title": "Куртка блогера",
+                    "owner": {
+                        "name": null,
+                        "category": "bloggers",
+                        "category_label": "Блогеры"
+                    },
+                    "brand": "Stone Island",
+                    "size": "L",
+                    "project": null,
+                    "price_rub": 64500,
+                    "fund_rub": 19350,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "mashina-blogera",
+                    "title": "Машина блогера",
+                    "owner": {
+                        "name": null,
+                        "category": "bloggers",
+                        "category_label": "Блогеры"
+                    },
+                    "brand": "BMW M4",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 7450000,
+                    "fund_rub": 2235000,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "tsep-repera",
+                    "title": "Цепь рэпера",
+                    "owner": {
+                        "name": null,
+                        "category": "singers",
+                        "category_label": "Певцы"
+                    },
+                    "brand": "Золото 585",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 412000,
+                    "fund_rub": 123600,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "krossovki-aktera",
+                    "title": "Кроссовки актёра",
+                    "owner": {
+                        "name": null,
+                        "category": "actors",
+                        "category_label": "Актёры"
+                    },
+                    "brand": "Nike Air Jordan 1",
+                    "size": "43",
+                    "project": null,
+                    "price_rub": 38900,
+                    "fund_rub": 11670,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "plate-aktrisy",
+                    "title": "Платье актрисы",
+                    "owner": {
+                        "name": null,
+                        "category": "actors",
+                        "category_label": "Актёры"
+                    },
+                    "brand": "Valentino",
+                    "size": "S",
+                    "project": {
+                        "slug": "zhit-zhizn",
+                        "title": "«Жить жизнь»"
+                    },
+                    "price_rub": 186000,
+                    "fund_rub": 55800,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "gitara-pevtsa",
+                    "title": "Гитара певца",
+                    "owner": {
+                        "name": null,
+                        "category": "singers",
+                        "category_label": "Певцы"
+                    },
+                    "brand": "Fender Stratocaster",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 243000,
+                    "fund_rub": 72900,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "hudi-strimera",
+                    "title": "Худи стримера",
                     "owner": {
                         "name": null,
                         "category": "influencers",
                         "category_label": "Инфлюенсеры"
                     },
-                    "brand": null,
-                    "size": null,
+                    "brand": "Balenciaga",
+                    "size": "XL",
                     "project": null,
-                    "price_rub": null,
-                    "fund_rub": null,
+                    "price_rub": 52700,
+                    "fund_rub": 15810,
                     "sold": false,
                     "reserved": false,
                     "sale_mode": "fixed",
                     "auction": null,
-                    "draft": true,
-                    "available": false,
+                    "draft": false,
+                    "available": true,
                     "photos": []
                 },
                 {
-                    "slug": "veshch-05",
-                    "title": "Вещь артиста",
+                    "slug": "sumka-influensera",
+                    "title": "Сумка инфлюенсера",
+                    "owner": {
+                        "name": null,
+                        "category": "influencers",
+                        "category_label": "Инфлюенсеры"
+                    },
+                    "brand": "Louis Vuitton",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 318000,
+                    "fund_rub": 95400,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "pidzhak-artista",
+                    "title": "Пиджак комика",
                     "owner": {
                         "name": null,
                         "category": "artists",
                         "category_label": "Артисты"
                     },
-                    "brand": null,
-                    "size": null,
+                    "brand": "Gucci",
+                    "size": "50",
                     "project": null,
-                    "price_rub": null,
-                    "fund_rub": null,
+                    "price_rub": 97300,
+                    "fund_rub": 29190,
                     "sold": false,
                     "reserved": false,
                     "sale_mode": "fixed",
                     "auction": null,
-                    "draft": true,
-                    "available": false,
+                    "draft": false,
+                    "available": true,
                     "photos": []
                 }
             ],
             "stats": {
-                "items_count": 5,
+                "items_count": 10,
                 "sold_count": 0,
                 "fund_total_rub": 0
             },
             "item": {
-                "slug": "plate-namelazz-xs",
-                "title": "Платье Namelazz",
+                "slug": "kurtka-blogera",
+                "title": "Куртка блогера",
+                "owner": {
+                    "name": null,
+                    "category": "bloggers",
+                    "category_label": "Блогеры"
+                },
+                "brand": "Stone Island",
+                "size": "L",
+                "project": null,
+                "price_rub": 64500,
+                "fund_rub": 19350,
+                "sold": false,
+                "reserved": false,
+                "sale_mode": "fixed",
+                "auction": null,
+                "draft": false,
+                "available": true,
+                "photos": [],
+                "item_type": "куртка",
+                "condition": null,
+                "measurements": null,
+                "scene": null,
+                "look": null,
+                "story": "В ней снят зимний влог из Териберки — больше двух миллионов просмотров.",
+                "video_url": null
+            }
+        }
+    },
+    "/checkout?item=kurtka-blogera": {
+        "component": "Checkout",
+        "props": {
+            "errors": [],
+            "site": {
+                "name": "ВИФ",
+                "fund_name": "ВИФ",
+                "domain": "vif",
+                "drop_label": "ВСЕ ВЕЩИ ПРОЕКТА",
+                "manager_telegram": "northstrean"
+            },
+            "flash": {
+                "bid_placed": false
+            },
+            "item": {
+                "slug": "kurtka-blogera",
+                "title": "Куртка блогера",
+                "owner": {
+                    "name": null,
+                    "category": "bloggers",
+                    "category_label": "Блогеры"
+                },
+                "brand": "Stone Island",
+                "size": "L",
+                "project": null,
+                "price_rub": 64500,
+                "fund_rub": 19350,
+                "sold": false,
+                "reserved": false,
+                "sale_mode": "fixed",
+                "auction": null,
+                "draft": false,
+                "available": true,
+                "photos": []
+            }
+        }
+    },
+    "/veshi/mashina-blogera": {
+        "component": "Home",
+        "props": {
+            "errors": [],
+            "site": {
+                "name": "ВИФ",
+                "fund_name": "ВИФ",
+                "domain": "vif",
+                "drop_label": "ВСЕ ВЕЩИ ПРОЕКТА",
+                "manager_telegram": "northstrean"
+            },
+            "flash": {
+                "bid_placed": false
+            },
+            "items": [
+                {
+                    "slug": "chasy-repera",
+                    "title": "Часы рэпера",
+                    "owner": {
+                        "name": null,
+                        "category": "singers",
+                        "category_label": "Певцы"
+                    },
+                    "brand": "Rolex",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 1870000,
+                    "fund_rub": 561000,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "kurtka-blogera",
+                    "title": "Куртка блогера",
+                    "owner": {
+                        "name": null,
+                        "category": "bloggers",
+                        "category_label": "Блогеры"
+                    },
+                    "brand": "Stone Island",
+                    "size": "L",
+                    "project": null,
+                    "price_rub": 64500,
+                    "fund_rub": 19350,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "mashina-blogera",
+                    "title": "Машина блогера",
+                    "owner": {
+                        "name": null,
+                        "category": "bloggers",
+                        "category_label": "Блогеры"
+                    },
+                    "brand": "BMW M4",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 7450000,
+                    "fund_rub": 2235000,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "tsep-repera",
+                    "title": "Цепь рэпера",
+                    "owner": {
+                        "name": null,
+                        "category": "singers",
+                        "category_label": "Певцы"
+                    },
+                    "brand": "Золото 585",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 412000,
+                    "fund_rub": 123600,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "krossovki-aktera",
+                    "title": "Кроссовки актёра",
+                    "owner": {
+                        "name": null,
+                        "category": "actors",
+                        "category_label": "Актёры"
+                    },
+                    "brand": "Nike Air Jordan 1",
+                    "size": "43",
+                    "project": null,
+                    "price_rub": 38900,
+                    "fund_rub": 11670,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "plate-aktrisy",
+                    "title": "Платье актрисы",
+                    "owner": {
+                        "name": null,
+                        "category": "actors",
+                        "category_label": "Актёры"
+                    },
+                    "brand": "Valentino",
+                    "size": "S",
+                    "project": {
+                        "slug": "zhit-zhizn",
+                        "title": "«Жить жизнь»"
+                    },
+                    "price_rub": 186000,
+                    "fund_rub": 55800,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "gitara-pevtsa",
+                    "title": "Гитара певца",
+                    "owner": {
+                        "name": null,
+                        "category": "singers",
+                        "category_label": "Певцы"
+                    },
+                    "brand": "Fender Stratocaster",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 243000,
+                    "fund_rub": 72900,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "hudi-strimera",
+                    "title": "Худи стримера",
+                    "owner": {
+                        "name": null,
+                        "category": "influencers",
+                        "category_label": "Инфлюенсеры"
+                    },
+                    "brand": "Balenciaga",
+                    "size": "XL",
+                    "project": null,
+                    "price_rub": 52700,
+                    "fund_rub": 15810,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "sumka-influensera",
+                    "title": "Сумка инфлюенсера",
+                    "owner": {
+                        "name": null,
+                        "category": "influencers",
+                        "category_label": "Инфлюенсеры"
+                    },
+                    "brand": "Louis Vuitton",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 318000,
+                    "fund_rub": 95400,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "pidzhak-artista",
+                    "title": "Пиджак комика",
+                    "owner": {
+                        "name": null,
+                        "category": "artists",
+                        "category_label": "Артисты"
+                    },
+                    "brand": "Gucci",
+                    "size": "50",
+                    "project": null,
+                    "price_rub": 97300,
+                    "fund_rub": 29190,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                }
+            ],
+            "stats": {
+                "items_count": 10,
+                "sold_count": 0,
+                "fund_total_rub": 0
+            },
+            "item": {
+                "slug": "mashina-blogera",
+                "title": "Машина блогера",
+                "owner": {
+                    "name": null,
+                    "category": "bloggers",
+                    "category_label": "Блогеры"
+                },
+                "brand": "BMW M4",
+                "size": null,
+                "project": null,
+                "price_rub": 7450000,
+                "fund_rub": 2235000,
+                "sold": false,
+                "reserved": false,
+                "sale_mode": "fixed",
+                "auction": null,
+                "draft": false,
+                "available": true,
+                "photos": [],
+                "item_type": "автомобиль",
+                "condition": null,
+                "measurements": null,
+                "scene": null,
+                "look": null,
+                "story": "Та самая машина из рубрики «Еду и рассказываю». 2021 год, один владелец, пробег 38 000 км.",
+                "video_url": null
+            }
+        }
+    },
+    "/checkout?item=mashina-blogera": {
+        "component": "Checkout",
+        "props": {
+            "errors": [],
+            "site": {
+                "name": "ВИФ",
+                "fund_name": "ВИФ",
+                "domain": "vif",
+                "drop_label": "ВСЕ ВЕЩИ ПРОЕКТА",
+                "manager_telegram": "northstrean"
+            },
+            "flash": {
+                "bid_placed": false
+            },
+            "item": {
+                "slug": "mashina-blogera",
+                "title": "Машина блогера",
+                "owner": {
+                    "name": null,
+                    "category": "bloggers",
+                    "category_label": "Блогеры"
+                },
+                "brand": "BMW M4",
+                "size": null,
+                "project": null,
+                "price_rub": 7450000,
+                "fund_rub": 2235000,
+                "sold": false,
+                "reserved": false,
+                "sale_mode": "fixed",
+                "auction": null,
+                "draft": false,
+                "available": true,
+                "photos": []
+            }
+        }
+    },
+    "/veshi/tsep-repera": {
+        "component": "Home",
+        "props": {
+            "errors": [],
+            "site": {
+                "name": "ВИФ",
+                "fund_name": "ВИФ",
+                "domain": "vif",
+                "drop_label": "ВСЕ ВЕЩИ ПРОЕКТА",
+                "manager_telegram": "northstrean"
+            },
+            "flash": {
+                "bid_placed": false
+            },
+            "items": [
+                {
+                    "slug": "chasy-repera",
+                    "title": "Часы рэпера",
+                    "owner": {
+                        "name": null,
+                        "category": "singers",
+                        "category_label": "Певцы"
+                    },
+                    "brand": "Rolex",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 1870000,
+                    "fund_rub": 561000,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "kurtka-blogera",
+                    "title": "Куртка блогера",
+                    "owner": {
+                        "name": null,
+                        "category": "bloggers",
+                        "category_label": "Блогеры"
+                    },
+                    "brand": "Stone Island",
+                    "size": "L",
+                    "project": null,
+                    "price_rub": 64500,
+                    "fund_rub": 19350,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "mashina-blogera",
+                    "title": "Машина блогера",
+                    "owner": {
+                        "name": null,
+                        "category": "bloggers",
+                        "category_label": "Блогеры"
+                    },
+                    "brand": "BMW M4",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 7450000,
+                    "fund_rub": 2235000,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "tsep-repera",
+                    "title": "Цепь рэпера",
+                    "owner": {
+                        "name": null,
+                        "category": "singers",
+                        "category_label": "Певцы"
+                    },
+                    "brand": "Золото 585",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 412000,
+                    "fund_rub": 123600,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "krossovki-aktera",
+                    "title": "Кроссовки актёра",
+                    "owner": {
+                        "name": null,
+                        "category": "actors",
+                        "category_label": "Актёры"
+                    },
+                    "brand": "Nike Air Jordan 1",
+                    "size": "43",
+                    "project": null,
+                    "price_rub": 38900,
+                    "fund_rub": 11670,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "plate-aktrisy",
+                    "title": "Платье актрисы",
+                    "owner": {
+                        "name": null,
+                        "category": "actors",
+                        "category_label": "Актёры"
+                    },
+                    "brand": "Valentino",
+                    "size": "S",
+                    "project": {
+                        "slug": "zhit-zhizn",
+                        "title": "«Жить жизнь»"
+                    },
+                    "price_rub": 186000,
+                    "fund_rub": 55800,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "gitara-pevtsa",
+                    "title": "Гитара певца",
+                    "owner": {
+                        "name": null,
+                        "category": "singers",
+                        "category_label": "Певцы"
+                    },
+                    "brand": "Fender Stratocaster",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 243000,
+                    "fund_rub": 72900,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "hudi-strimera",
+                    "title": "Худи стримера",
+                    "owner": {
+                        "name": null,
+                        "category": "influencers",
+                        "category_label": "Инфлюенсеры"
+                    },
+                    "brand": "Balenciaga",
+                    "size": "XL",
+                    "project": null,
+                    "price_rub": 52700,
+                    "fund_rub": 15810,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "sumka-influensera",
+                    "title": "Сумка инфлюенсера",
+                    "owner": {
+                        "name": null,
+                        "category": "influencers",
+                        "category_label": "Инфлюенсеры"
+                    },
+                    "brand": "Louis Vuitton",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 318000,
+                    "fund_rub": 95400,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "pidzhak-artista",
+                    "title": "Пиджак комика",
+                    "owner": {
+                        "name": null,
+                        "category": "artists",
+                        "category_label": "Артисты"
+                    },
+                    "brand": "Gucci",
+                    "size": "50",
+                    "project": null,
+                    "price_rub": 97300,
+                    "fund_rub": 29190,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                }
+            ],
+            "stats": {
+                "items_count": 10,
+                "sold_count": 0,
+                "fund_total_rub": 0
+            },
+            "item": {
+                "slug": "tsep-repera",
+                "title": "Цепь рэпера",
+                "owner": {
+                    "name": null,
+                    "category": "singers",
+                    "category_label": "Певцы"
+                },
+                "brand": "Золото 585",
+                "size": null,
+                "project": null,
+                "price_rub": 412000,
+                "fund_rub": 123600,
+                "sold": false,
+                "reserved": false,
+                "sale_mode": "fixed",
+                "auction": null,
+                "draft": false,
+                "available": true,
+                "photos": [],
+                "item_type": "украшение",
+                "condition": null,
+                "measurements": null,
+                "scene": null,
+                "look": null,
+                "story": "Появлялась на обложке альбома и в каждом выпуске подкаста. Вес 96 граммов.",
+                "video_url": null
+            }
+        }
+    },
+    "/checkout?item=tsep-repera": {
+        "component": "Checkout",
+        "props": {
+            "errors": [],
+            "site": {
+                "name": "ВИФ",
+                "fund_name": "ВИФ",
+                "domain": "vif",
+                "drop_label": "ВСЕ ВЕЩИ ПРОЕКТА",
+                "manager_telegram": "northstrean"
+            },
+            "flash": {
+                "bid_placed": false
+            },
+            "item": {
+                "slug": "tsep-repera",
+                "title": "Цепь рэпера",
+                "owner": {
+                    "name": null,
+                    "category": "singers",
+                    "category_label": "Певцы"
+                },
+                "brand": "Золото 585",
+                "size": null,
+                "project": null,
+                "price_rub": 412000,
+                "fund_rub": 123600,
+                "sold": false,
+                "reserved": false,
+                "sale_mode": "fixed",
+                "auction": null,
+                "draft": false,
+                "available": true,
+                "photos": []
+            }
+        }
+    },
+    "/veshi/krossovki-aktera": {
+        "component": "Home",
+        "props": {
+            "errors": [],
+            "site": {
+                "name": "ВИФ",
+                "fund_name": "ВИФ",
+                "domain": "vif",
+                "drop_label": "ВСЕ ВЕЩИ ПРОЕКТА",
+                "manager_telegram": "northstrean"
+            },
+            "flash": {
+                "bid_placed": false
+            },
+            "items": [
+                {
+                    "slug": "chasy-repera",
+                    "title": "Часы рэпера",
+                    "owner": {
+                        "name": null,
+                        "category": "singers",
+                        "category_label": "Певцы"
+                    },
+                    "brand": "Rolex",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 1870000,
+                    "fund_rub": 561000,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "kurtka-blogera",
+                    "title": "Куртка блогера",
+                    "owner": {
+                        "name": null,
+                        "category": "bloggers",
+                        "category_label": "Блогеры"
+                    },
+                    "brand": "Stone Island",
+                    "size": "L",
+                    "project": null,
+                    "price_rub": 64500,
+                    "fund_rub": 19350,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "mashina-blogera",
+                    "title": "Машина блогера",
+                    "owner": {
+                        "name": null,
+                        "category": "bloggers",
+                        "category_label": "Блогеры"
+                    },
+                    "brand": "BMW M4",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 7450000,
+                    "fund_rub": 2235000,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "tsep-repera",
+                    "title": "Цепь рэпера",
+                    "owner": {
+                        "name": null,
+                        "category": "singers",
+                        "category_label": "Певцы"
+                    },
+                    "brand": "Золото 585",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 412000,
+                    "fund_rub": 123600,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "krossovki-aktera",
+                    "title": "Кроссовки актёра",
+                    "owner": {
+                        "name": null,
+                        "category": "actors",
+                        "category_label": "Актёры"
+                    },
+                    "brand": "Nike Air Jordan 1",
+                    "size": "43",
+                    "project": null,
+                    "price_rub": 38900,
+                    "fund_rub": 11670,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "plate-aktrisy",
+                    "title": "Платье актрисы",
+                    "owner": {
+                        "name": null,
+                        "category": "actors",
+                        "category_label": "Актёры"
+                    },
+                    "brand": "Valentino",
+                    "size": "S",
+                    "project": {
+                        "slug": "zhit-zhizn",
+                        "title": "«Жить жизнь»"
+                    },
+                    "price_rub": 186000,
+                    "fund_rub": 55800,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "gitara-pevtsa",
+                    "title": "Гитара певца",
+                    "owner": {
+                        "name": null,
+                        "category": "singers",
+                        "category_label": "Певцы"
+                    },
+                    "brand": "Fender Stratocaster",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 243000,
+                    "fund_rub": 72900,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "hudi-strimera",
+                    "title": "Худи стримера",
+                    "owner": {
+                        "name": null,
+                        "category": "influencers",
+                        "category_label": "Инфлюенсеры"
+                    },
+                    "brand": "Balenciaga",
+                    "size": "XL",
+                    "project": null,
+                    "price_rub": 52700,
+                    "fund_rub": 15810,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "sumka-influensera",
+                    "title": "Сумка инфлюенсера",
+                    "owner": {
+                        "name": null,
+                        "category": "influencers",
+                        "category_label": "Инфлюенсеры"
+                    },
+                    "brand": "Louis Vuitton",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 318000,
+                    "fund_rub": 95400,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "pidzhak-artista",
+                    "title": "Пиджак комика",
+                    "owner": {
+                        "name": null,
+                        "category": "artists",
+                        "category_label": "Артисты"
+                    },
+                    "brand": "Gucci",
+                    "size": "50",
+                    "project": null,
+                    "price_rub": 97300,
+                    "fund_rub": 29190,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                }
+            ],
+            "stats": {
+                "items_count": 10,
+                "sold_count": 0,
+                "fund_total_rub": 0
+            },
+            "item": {
+                "slug": "krossovki-aktera",
+                "title": "Кроссовки актёра",
                 "owner": {
                     "name": null,
                     "category": "actors",
                     "category_label": "Актёры"
                 },
-                "brand": "Namelazz",
-                "size": "XS",
+                "brand": "Nike Air Jordan 1",
+                "size": "43",
+                "project": null,
+                "price_rub": 38900,
+                "fund_rub": 11670,
+                "sold": false,
+                "reserved": false,
+                "sale_mode": "fixed",
+                "auction": null,
+                "draft": false,
+                "available": true,
+                "photos": [],
+                "item_type": "кроссовки",
+                "condition": null,
+                "measurements": null,
+                "scene": null,
+                "look": null,
+                "story": "В них актёр ходил на площадку весь сезон сериала. Автограф на язычке.",
+                "video_url": null
+            }
+        }
+    },
+    "/checkout?item=krossovki-aktera": {
+        "component": "Checkout",
+        "props": {
+            "errors": [],
+            "site": {
+                "name": "ВИФ",
+                "fund_name": "ВИФ",
+                "domain": "vif",
+                "drop_label": "ВСЕ ВЕЩИ ПРОЕКТА",
+                "manager_telegram": "northstrean"
+            },
+            "flash": {
+                "bid_placed": false
+            },
+            "item": {
+                "slug": "krossovki-aktera",
+                "title": "Кроссовки актёра",
+                "owner": {
+                    "name": null,
+                    "category": "actors",
+                    "category_label": "Актёры"
+                },
+                "brand": "Nike Air Jordan 1",
+                "size": "43",
+                "project": null,
+                "price_rub": 38900,
+                "fund_rub": 11670,
+                "sold": false,
+                "reserved": false,
+                "sale_mode": "fixed",
+                "auction": null,
+                "draft": false,
+                "available": true,
+                "photos": []
+            }
+        }
+    },
+    "/veshi/plate-aktrisy": {
+        "component": "Home",
+        "props": {
+            "errors": [],
+            "site": {
+                "name": "ВИФ",
+                "fund_name": "ВИФ",
+                "domain": "vif",
+                "drop_label": "ВСЕ ВЕЩИ ПРОЕКТА",
+                "manager_telegram": "northstrean"
+            },
+            "flash": {
+                "bid_placed": false
+            },
+            "items": [
+                {
+                    "slug": "chasy-repera",
+                    "title": "Часы рэпера",
+                    "owner": {
+                        "name": null,
+                        "category": "singers",
+                        "category_label": "Певцы"
+                    },
+                    "brand": "Rolex",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 1870000,
+                    "fund_rub": 561000,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "kurtka-blogera",
+                    "title": "Куртка блогера",
+                    "owner": {
+                        "name": null,
+                        "category": "bloggers",
+                        "category_label": "Блогеры"
+                    },
+                    "brand": "Stone Island",
+                    "size": "L",
+                    "project": null,
+                    "price_rub": 64500,
+                    "fund_rub": 19350,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "mashina-blogera",
+                    "title": "Машина блогера",
+                    "owner": {
+                        "name": null,
+                        "category": "bloggers",
+                        "category_label": "Блогеры"
+                    },
+                    "brand": "BMW M4",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 7450000,
+                    "fund_rub": 2235000,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "tsep-repera",
+                    "title": "Цепь рэпера",
+                    "owner": {
+                        "name": null,
+                        "category": "singers",
+                        "category_label": "Певцы"
+                    },
+                    "brand": "Золото 585",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 412000,
+                    "fund_rub": 123600,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "krossovki-aktera",
+                    "title": "Кроссовки актёра",
+                    "owner": {
+                        "name": null,
+                        "category": "actors",
+                        "category_label": "Актёры"
+                    },
+                    "brand": "Nike Air Jordan 1",
+                    "size": "43",
+                    "project": null,
+                    "price_rub": 38900,
+                    "fund_rub": 11670,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "plate-aktrisy",
+                    "title": "Платье актрисы",
+                    "owner": {
+                        "name": null,
+                        "category": "actors",
+                        "category_label": "Актёры"
+                    },
+                    "brand": "Valentino",
+                    "size": "S",
+                    "project": {
+                        "slug": "zhit-zhizn",
+                        "title": "«Жить жизнь»"
+                    },
+                    "price_rub": 186000,
+                    "fund_rub": 55800,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "gitara-pevtsa",
+                    "title": "Гитара певца",
+                    "owner": {
+                        "name": null,
+                        "category": "singers",
+                        "category_label": "Певцы"
+                    },
+                    "brand": "Fender Stratocaster",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 243000,
+                    "fund_rub": 72900,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "hudi-strimera",
+                    "title": "Худи стримера",
+                    "owner": {
+                        "name": null,
+                        "category": "influencers",
+                        "category_label": "Инфлюенсеры"
+                    },
+                    "brand": "Balenciaga",
+                    "size": "XL",
+                    "project": null,
+                    "price_rub": 52700,
+                    "fund_rub": 15810,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "sumka-influensera",
+                    "title": "Сумка инфлюенсера",
+                    "owner": {
+                        "name": null,
+                        "category": "influencers",
+                        "category_label": "Инфлюенсеры"
+                    },
+                    "brand": "Louis Vuitton",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 318000,
+                    "fund_rub": 95400,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "pidzhak-artista",
+                    "title": "Пиджак комика",
+                    "owner": {
+                        "name": null,
+                        "category": "artists",
+                        "category_label": "Артисты"
+                    },
+                    "brand": "Gucci",
+                    "size": "50",
+                    "project": null,
+                    "price_rub": 97300,
+                    "fund_rub": 29190,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                }
+            ],
+            "stats": {
+                "items_count": 10,
+                "sold_count": 0,
+                "fund_total_rub": 0
+            },
+            "item": {
+                "slug": "plate-aktrisy",
+                "title": "Платье актрисы",
+                "owner": {
+                    "name": null,
+                    "category": "actors",
+                    "category_label": "Актёры"
+                },
+                "brand": "Valentino",
+                "size": "S",
                 "project": {
                     "slug": "zhit-zhizn",
                     "title": "«Жить жизнь»"
                 },
-                "price_rub": 43100,
-                "fund_rub": 12930,
+                "price_rub": 186000,
+                "fund_rub": 55800,
                 "sold": false,
                 "reserved": false,
                 "sale_mode": "fixed",
@@ -575,12 +2094,12 @@
                 "measurements": null,
                 "scene": null,
                 "look": null,
-                "story": null,
+                "story": "Выход на красную дорожку премьеры фильма. После премьеры платье больше не надевали.",
                 "video_url": null
             }
         }
     },
-    "/checkout?item=plate-namelazz-xs": {
+    "/checkout?item=plate-aktrisy": {
         "component": "Checkout",
         "props": {
             "errors": [],
@@ -595,21 +2114,21 @@
                 "bid_placed": false
             },
             "item": {
-                "slug": "plate-namelazz-xs",
-                "title": "Платье Namelazz",
+                "slug": "plate-aktrisy",
+                "title": "Платье актрисы",
                 "owner": {
                     "name": null,
                     "category": "actors",
                     "category_label": "Актёры"
                 },
-                "brand": "Namelazz",
-                "size": "XS",
+                "brand": "Valentino",
+                "size": "S",
                 "project": {
                     "slug": "zhit-zhizn",
                     "title": "«Жить жизнь»"
                 },
-                "price_rub": 43100,
-                "fund_rub": 12930,
+                "price_rub": 186000,
+                "fund_rub": 55800,
                 "sold": false,
                 "reserved": false,
                 "sale_mode": "fixed",
@@ -620,7 +2139,7 @@
             }
         }
     },
-    "/veshi/veshch-03": {
+    "/veshi/gitara-pevtsa": {
         "component": "Home",
         "props": {
             "errors": [],
@@ -636,150 +2155,292 @@
             },
             "items": [
                 {
-                    "slug": "sumka-off-white",
-                    "title": "Сумка Off-White",
-                    "owner": {
-                        "name": null,
-                        "category": "bloggers",
-                        "category_label": "Блогеры"
-                    },
-                    "brand": "Off-White",
-                    "size": null,
-                    "project": null,
-                    "price_rub": 123400,
-                    "fund_rub": 37020,
-                    "sold": false,
-                    "reserved": false,
-                    "sale_mode": "fixed",
-                    "auction": null,
-                    "draft": false,
-                    "available": true,
-                    "photos": []
-                },
-                {
-                    "slug": "plate-namelazz-xs",
-                    "title": "Платье Namelazz",
-                    "owner": {
-                        "name": null,
-                        "category": "actors",
-                        "category_label": "Актёры"
-                    },
-                    "brand": "Namelazz",
-                    "size": "XS",
-                    "project": {
-                        "slug": "zhit-zhizn",
-                        "title": "«Жить жизнь»"
-                    },
-                    "price_rub": 43100,
-                    "fund_rub": 12930,
-                    "sold": false,
-                    "reserved": false,
-                    "sale_mode": "fixed",
-                    "auction": null,
-                    "draft": false,
-                    "available": true,
-                    "photos": []
-                },
-                {
-                    "slug": "veshch-03",
-                    "title": "Вещь певца",
+                    "slug": "chasy-repera",
+                    "title": "Часы рэпера",
                     "owner": {
                         "name": null,
                         "category": "singers",
                         "category_label": "Певцы"
                     },
-                    "brand": null,
+                    "brand": "Rolex",
                     "size": null,
                     "project": null,
-                    "price_rub": null,
-                    "fund_rub": null,
+                    "price_rub": 1870000,
+                    "fund_rub": 561000,
                     "sold": false,
                     "reserved": false,
                     "sale_mode": "fixed",
                     "auction": null,
-                    "draft": true,
-                    "available": false,
+                    "draft": false,
+                    "available": true,
                     "photos": []
                 },
                 {
-                    "slug": "veshch-04",
-                    "title": "Вещь инфлюенсера",
+                    "slug": "kurtka-blogera",
+                    "title": "Куртка блогера",
+                    "owner": {
+                        "name": null,
+                        "category": "bloggers",
+                        "category_label": "Блогеры"
+                    },
+                    "brand": "Stone Island",
+                    "size": "L",
+                    "project": null,
+                    "price_rub": 64500,
+                    "fund_rub": 19350,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "mashina-blogera",
+                    "title": "Машина блогера",
+                    "owner": {
+                        "name": null,
+                        "category": "bloggers",
+                        "category_label": "Блогеры"
+                    },
+                    "brand": "BMW M4",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 7450000,
+                    "fund_rub": 2235000,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "tsep-repera",
+                    "title": "Цепь рэпера",
+                    "owner": {
+                        "name": null,
+                        "category": "singers",
+                        "category_label": "Певцы"
+                    },
+                    "brand": "Золото 585",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 412000,
+                    "fund_rub": 123600,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "krossovki-aktera",
+                    "title": "Кроссовки актёра",
+                    "owner": {
+                        "name": null,
+                        "category": "actors",
+                        "category_label": "Актёры"
+                    },
+                    "brand": "Nike Air Jordan 1",
+                    "size": "43",
+                    "project": null,
+                    "price_rub": 38900,
+                    "fund_rub": 11670,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "plate-aktrisy",
+                    "title": "Платье актрисы",
+                    "owner": {
+                        "name": null,
+                        "category": "actors",
+                        "category_label": "Актёры"
+                    },
+                    "brand": "Valentino",
+                    "size": "S",
+                    "project": {
+                        "slug": "zhit-zhizn",
+                        "title": "«Жить жизнь»"
+                    },
+                    "price_rub": 186000,
+                    "fund_rub": 55800,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "gitara-pevtsa",
+                    "title": "Гитара певца",
+                    "owner": {
+                        "name": null,
+                        "category": "singers",
+                        "category_label": "Певцы"
+                    },
+                    "brand": "Fender Stratocaster",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 243000,
+                    "fund_rub": 72900,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "hudi-strimera",
+                    "title": "Худи стримера",
                     "owner": {
                         "name": null,
                         "category": "influencers",
                         "category_label": "Инфлюенсеры"
                     },
-                    "brand": null,
-                    "size": null,
+                    "brand": "Balenciaga",
+                    "size": "XL",
                     "project": null,
-                    "price_rub": null,
-                    "fund_rub": null,
+                    "price_rub": 52700,
+                    "fund_rub": 15810,
                     "sold": false,
                     "reserved": false,
                     "sale_mode": "fixed",
                     "auction": null,
-                    "draft": true,
-                    "available": false,
+                    "draft": false,
+                    "available": true,
                     "photos": []
                 },
                 {
-                    "slug": "veshch-05",
-                    "title": "Вещь артиста",
+                    "slug": "sumka-influensera",
+                    "title": "Сумка инфлюенсера",
+                    "owner": {
+                        "name": null,
+                        "category": "influencers",
+                        "category_label": "Инфлюенсеры"
+                    },
+                    "brand": "Louis Vuitton",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 318000,
+                    "fund_rub": 95400,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "pidzhak-artista",
+                    "title": "Пиджак комика",
                     "owner": {
                         "name": null,
                         "category": "artists",
                         "category_label": "Артисты"
                     },
-                    "brand": null,
-                    "size": null,
+                    "brand": "Gucci",
+                    "size": "50",
                     "project": null,
-                    "price_rub": null,
-                    "fund_rub": null,
+                    "price_rub": 97300,
+                    "fund_rub": 29190,
                     "sold": false,
                     "reserved": false,
                     "sale_mode": "fixed",
                     "auction": null,
-                    "draft": true,
-                    "available": false,
+                    "draft": false,
+                    "available": true,
                     "photos": []
                 }
             ],
             "stats": {
-                "items_count": 5,
+                "items_count": 10,
                 "sold_count": 0,
                 "fund_total_rub": 0
             },
             "item": {
-                "slug": "veshch-03",
-                "title": "Вещь певца",
+                "slug": "gitara-pevtsa",
+                "title": "Гитара певца",
                 "owner": {
                     "name": null,
                     "category": "singers",
                     "category_label": "Певцы"
                 },
-                "brand": null,
+                "brand": "Fender Stratocaster",
                 "size": null,
                 "project": null,
-                "price_rub": null,
-                "fund_rub": null,
+                "price_rub": 243000,
+                "fund_rub": 72900,
                 "sold": false,
                 "reserved": false,
                 "sale_mode": "fixed",
                 "auction": null,
-                "draft": true,
-                "available": false,
+                "draft": false,
+                "available": true,
                 "photos": [],
-                "item_type": null,
+                "item_type": "гитара",
                 "condition": null,
                 "measurements": null,
                 "scene": null,
                 "look": null,
-                "story": null,
+                "story": "На ней написаны три песни с последнего альбома. Струны и ремень — те же, что на сцене.",
                 "video_url": null
             }
         }
     },
-    "/veshi/veshch-04": {
+    "/checkout?item=gitara-pevtsa": {
+        "component": "Checkout",
+        "props": {
+            "errors": [],
+            "site": {
+                "name": "ВИФ",
+                "fund_name": "ВИФ",
+                "domain": "vif",
+                "drop_label": "ВСЕ ВЕЩИ ПРОЕКТА",
+                "manager_telegram": "northstrean"
+            },
+            "flash": {
+                "bid_placed": false
+            },
+            "item": {
+                "slug": "gitara-pevtsa",
+                "title": "Гитара певца",
+                "owner": {
+                    "name": null,
+                    "category": "singers",
+                    "category_label": "Певцы"
+                },
+                "brand": "Fender Stratocaster",
+                "size": null,
+                "project": null,
+                "price_rub": 243000,
+                "fund_rub": 72900,
+                "sold": false,
+                "reserved": false,
+                "sale_mode": "fixed",
+                "auction": null,
+                "draft": false,
+                "available": true,
+                "photos": []
+            }
+        }
+    },
+    "/veshi/hudi-strimera": {
         "component": "Home",
         "props": {
             "errors": [],
@@ -795,150 +2456,292 @@
             },
             "items": [
                 {
-                    "slug": "sumka-off-white",
-                    "title": "Сумка Off-White",
-                    "owner": {
-                        "name": null,
-                        "category": "bloggers",
-                        "category_label": "Блогеры"
-                    },
-                    "brand": "Off-White",
-                    "size": null,
-                    "project": null,
-                    "price_rub": 123400,
-                    "fund_rub": 37020,
-                    "sold": false,
-                    "reserved": false,
-                    "sale_mode": "fixed",
-                    "auction": null,
-                    "draft": false,
-                    "available": true,
-                    "photos": []
-                },
-                {
-                    "slug": "plate-namelazz-xs",
-                    "title": "Платье Namelazz",
-                    "owner": {
-                        "name": null,
-                        "category": "actors",
-                        "category_label": "Актёры"
-                    },
-                    "brand": "Namelazz",
-                    "size": "XS",
-                    "project": {
-                        "slug": "zhit-zhizn",
-                        "title": "«Жить жизнь»"
-                    },
-                    "price_rub": 43100,
-                    "fund_rub": 12930,
-                    "sold": false,
-                    "reserved": false,
-                    "sale_mode": "fixed",
-                    "auction": null,
-                    "draft": false,
-                    "available": true,
-                    "photos": []
-                },
-                {
-                    "slug": "veshch-03",
-                    "title": "Вещь певца",
+                    "slug": "chasy-repera",
+                    "title": "Часы рэпера",
                     "owner": {
                         "name": null,
                         "category": "singers",
                         "category_label": "Певцы"
                     },
-                    "brand": null,
+                    "brand": "Rolex",
                     "size": null,
                     "project": null,
-                    "price_rub": null,
-                    "fund_rub": null,
+                    "price_rub": 1870000,
+                    "fund_rub": 561000,
                     "sold": false,
                     "reserved": false,
                     "sale_mode": "fixed",
                     "auction": null,
-                    "draft": true,
-                    "available": false,
+                    "draft": false,
+                    "available": true,
                     "photos": []
                 },
                 {
-                    "slug": "veshch-04",
-                    "title": "Вещь инфлюенсера",
+                    "slug": "kurtka-blogera",
+                    "title": "Куртка блогера",
+                    "owner": {
+                        "name": null,
+                        "category": "bloggers",
+                        "category_label": "Блогеры"
+                    },
+                    "brand": "Stone Island",
+                    "size": "L",
+                    "project": null,
+                    "price_rub": 64500,
+                    "fund_rub": 19350,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "mashina-blogera",
+                    "title": "Машина блогера",
+                    "owner": {
+                        "name": null,
+                        "category": "bloggers",
+                        "category_label": "Блогеры"
+                    },
+                    "brand": "BMW M4",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 7450000,
+                    "fund_rub": 2235000,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "tsep-repera",
+                    "title": "Цепь рэпера",
+                    "owner": {
+                        "name": null,
+                        "category": "singers",
+                        "category_label": "Певцы"
+                    },
+                    "brand": "Золото 585",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 412000,
+                    "fund_rub": 123600,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "krossovki-aktera",
+                    "title": "Кроссовки актёра",
+                    "owner": {
+                        "name": null,
+                        "category": "actors",
+                        "category_label": "Актёры"
+                    },
+                    "brand": "Nike Air Jordan 1",
+                    "size": "43",
+                    "project": null,
+                    "price_rub": 38900,
+                    "fund_rub": 11670,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "plate-aktrisy",
+                    "title": "Платье актрисы",
+                    "owner": {
+                        "name": null,
+                        "category": "actors",
+                        "category_label": "Актёры"
+                    },
+                    "brand": "Valentino",
+                    "size": "S",
+                    "project": {
+                        "slug": "zhit-zhizn",
+                        "title": "«Жить жизнь»"
+                    },
+                    "price_rub": 186000,
+                    "fund_rub": 55800,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "gitara-pevtsa",
+                    "title": "Гитара певца",
+                    "owner": {
+                        "name": null,
+                        "category": "singers",
+                        "category_label": "Певцы"
+                    },
+                    "brand": "Fender Stratocaster",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 243000,
+                    "fund_rub": 72900,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "hudi-strimera",
+                    "title": "Худи стримера",
                     "owner": {
                         "name": null,
                         "category": "influencers",
                         "category_label": "Инфлюенсеры"
                     },
-                    "brand": null,
-                    "size": null,
+                    "brand": "Balenciaga",
+                    "size": "XL",
                     "project": null,
-                    "price_rub": null,
-                    "fund_rub": null,
+                    "price_rub": 52700,
+                    "fund_rub": 15810,
                     "sold": false,
                     "reserved": false,
                     "sale_mode": "fixed",
                     "auction": null,
-                    "draft": true,
-                    "available": false,
+                    "draft": false,
+                    "available": true,
                     "photos": []
                 },
                 {
-                    "slug": "veshch-05",
-                    "title": "Вещь артиста",
+                    "slug": "sumka-influensera",
+                    "title": "Сумка инфлюенсера",
+                    "owner": {
+                        "name": null,
+                        "category": "influencers",
+                        "category_label": "Инфлюенсеры"
+                    },
+                    "brand": "Louis Vuitton",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 318000,
+                    "fund_rub": 95400,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "pidzhak-artista",
+                    "title": "Пиджак комика",
                     "owner": {
                         "name": null,
                         "category": "artists",
                         "category_label": "Артисты"
                     },
-                    "brand": null,
-                    "size": null,
+                    "brand": "Gucci",
+                    "size": "50",
                     "project": null,
-                    "price_rub": null,
-                    "fund_rub": null,
+                    "price_rub": 97300,
+                    "fund_rub": 29190,
                     "sold": false,
                     "reserved": false,
                     "sale_mode": "fixed",
                     "auction": null,
-                    "draft": true,
-                    "available": false,
+                    "draft": false,
+                    "available": true,
                     "photos": []
                 }
             ],
             "stats": {
-                "items_count": 5,
+                "items_count": 10,
                 "sold_count": 0,
                 "fund_total_rub": 0
             },
             "item": {
-                "slug": "veshch-04",
-                "title": "Вещь инфлюенсера",
+                "slug": "hudi-strimera",
+                "title": "Худи стримера",
                 "owner": {
                     "name": null,
                     "category": "influencers",
                     "category_label": "Инфлюенсеры"
                 },
-                "brand": null,
-                "size": null,
+                "brand": "Balenciaga",
+                "size": "XL",
                 "project": null,
-                "price_rub": null,
-                "fund_rub": null,
+                "price_rub": 52700,
+                "fund_rub": 15810,
                 "sold": false,
                 "reserved": false,
                 "sale_mode": "fixed",
                 "auction": null,
-                "draft": true,
-                "available": false,
+                "draft": false,
+                "available": true,
                 "photos": [],
-                "item_type": null,
+                "item_type": "худи",
                 "condition": null,
                 "measurements": null,
                 "scene": null,
                 "look": null,
-                "story": null,
+                "story": "Сидел в нём на рекордном стриме — 26 часов в эфире.",
                 "video_url": null
             }
         }
     },
-    "/veshi/veshch-05": {
+    "/checkout?item=hudi-strimera": {
+        "component": "Checkout",
+        "props": {
+            "errors": [],
+            "site": {
+                "name": "ВИФ",
+                "fund_name": "ВИФ",
+                "domain": "vif",
+                "drop_label": "ВСЕ ВЕЩИ ПРОЕКТА",
+                "manager_telegram": "northstrean"
+            },
+            "flash": {
+                "bid_placed": false
+            },
+            "item": {
+                "slug": "hudi-strimera",
+                "title": "Худи стримера",
+                "owner": {
+                    "name": null,
+                    "category": "influencers",
+                    "category_label": "Инфлюенсеры"
+                },
+                "brand": "Balenciaga",
+                "size": "XL",
+                "project": null,
+                "price_rub": 52700,
+                "fund_rub": 15810,
+                "sold": false,
+                "reserved": false,
+                "sale_mode": "fixed",
+                "auction": null,
+                "draft": false,
+                "available": true,
+                "photos": []
+            }
+        }
+    },
+    "/veshi/sumka-influensera": {
         "component": "Home",
         "props": {
             "errors": [],
@@ -954,146 +2757,589 @@
             },
             "items": [
                 {
-                    "slug": "sumka-off-white",
-                    "title": "Сумка Off-White",
-                    "owner": {
-                        "name": null,
-                        "category": "bloggers",
-                        "category_label": "Блогеры"
-                    },
-                    "brand": "Off-White",
-                    "size": null,
-                    "project": null,
-                    "price_rub": 123400,
-                    "fund_rub": 37020,
-                    "sold": false,
-                    "reserved": false,
-                    "sale_mode": "fixed",
-                    "auction": null,
-                    "draft": false,
-                    "available": true,
-                    "photos": []
-                },
-                {
-                    "slug": "plate-namelazz-xs",
-                    "title": "Платье Namelazz",
-                    "owner": {
-                        "name": null,
-                        "category": "actors",
-                        "category_label": "Актёры"
-                    },
-                    "brand": "Namelazz",
-                    "size": "XS",
-                    "project": {
-                        "slug": "zhit-zhizn",
-                        "title": "«Жить жизнь»"
-                    },
-                    "price_rub": 43100,
-                    "fund_rub": 12930,
-                    "sold": false,
-                    "reserved": false,
-                    "sale_mode": "fixed",
-                    "auction": null,
-                    "draft": false,
-                    "available": true,
-                    "photos": []
-                },
-                {
-                    "slug": "veshch-03",
-                    "title": "Вещь певца",
+                    "slug": "chasy-repera",
+                    "title": "Часы рэпера",
                     "owner": {
                         "name": null,
                         "category": "singers",
                         "category_label": "Певцы"
                     },
-                    "brand": null,
+                    "brand": "Rolex",
                     "size": null,
                     "project": null,
-                    "price_rub": null,
-                    "fund_rub": null,
+                    "price_rub": 1870000,
+                    "fund_rub": 561000,
                     "sold": false,
                     "reserved": false,
                     "sale_mode": "fixed",
                     "auction": null,
-                    "draft": true,
-                    "available": false,
+                    "draft": false,
+                    "available": true,
                     "photos": []
                 },
                 {
-                    "slug": "veshch-04",
-                    "title": "Вещь инфлюенсера",
+                    "slug": "kurtka-blogera",
+                    "title": "Куртка блогера",
+                    "owner": {
+                        "name": null,
+                        "category": "bloggers",
+                        "category_label": "Блогеры"
+                    },
+                    "brand": "Stone Island",
+                    "size": "L",
+                    "project": null,
+                    "price_rub": 64500,
+                    "fund_rub": 19350,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "mashina-blogera",
+                    "title": "Машина блогера",
+                    "owner": {
+                        "name": null,
+                        "category": "bloggers",
+                        "category_label": "Блогеры"
+                    },
+                    "brand": "BMW M4",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 7450000,
+                    "fund_rub": 2235000,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "tsep-repera",
+                    "title": "Цепь рэпера",
+                    "owner": {
+                        "name": null,
+                        "category": "singers",
+                        "category_label": "Певцы"
+                    },
+                    "brand": "Золото 585",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 412000,
+                    "fund_rub": 123600,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "krossovki-aktera",
+                    "title": "Кроссовки актёра",
+                    "owner": {
+                        "name": null,
+                        "category": "actors",
+                        "category_label": "Актёры"
+                    },
+                    "brand": "Nike Air Jordan 1",
+                    "size": "43",
+                    "project": null,
+                    "price_rub": 38900,
+                    "fund_rub": 11670,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "plate-aktrisy",
+                    "title": "Платье актрисы",
+                    "owner": {
+                        "name": null,
+                        "category": "actors",
+                        "category_label": "Актёры"
+                    },
+                    "brand": "Valentino",
+                    "size": "S",
+                    "project": {
+                        "slug": "zhit-zhizn",
+                        "title": "«Жить жизнь»"
+                    },
+                    "price_rub": 186000,
+                    "fund_rub": 55800,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "gitara-pevtsa",
+                    "title": "Гитара певца",
+                    "owner": {
+                        "name": null,
+                        "category": "singers",
+                        "category_label": "Певцы"
+                    },
+                    "brand": "Fender Stratocaster",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 243000,
+                    "fund_rub": 72900,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "hudi-strimera",
+                    "title": "Худи стримера",
                     "owner": {
                         "name": null,
                         "category": "influencers",
                         "category_label": "Инфлюенсеры"
                     },
-                    "brand": null,
-                    "size": null,
+                    "brand": "Balenciaga",
+                    "size": "XL",
                     "project": null,
-                    "price_rub": null,
-                    "fund_rub": null,
+                    "price_rub": 52700,
+                    "fund_rub": 15810,
                     "sold": false,
                     "reserved": false,
                     "sale_mode": "fixed",
                     "auction": null,
-                    "draft": true,
-                    "available": false,
+                    "draft": false,
+                    "available": true,
                     "photos": []
                 },
                 {
-                    "slug": "veshch-05",
-                    "title": "Вещь артиста",
+                    "slug": "sumka-influensera",
+                    "title": "Сумка инфлюенсера",
+                    "owner": {
+                        "name": null,
+                        "category": "influencers",
+                        "category_label": "Инфлюенсеры"
+                    },
+                    "brand": "Louis Vuitton",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 318000,
+                    "fund_rub": 95400,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "pidzhak-artista",
+                    "title": "Пиджак комика",
                     "owner": {
                         "name": null,
                         "category": "artists",
                         "category_label": "Артисты"
                     },
-                    "brand": null,
-                    "size": null,
+                    "brand": "Gucci",
+                    "size": "50",
                     "project": null,
-                    "price_rub": null,
-                    "fund_rub": null,
+                    "price_rub": 97300,
+                    "fund_rub": 29190,
                     "sold": false,
                     "reserved": false,
                     "sale_mode": "fixed",
                     "auction": null,
-                    "draft": true,
-                    "available": false,
+                    "draft": false,
+                    "available": true,
                     "photos": []
                 }
             ],
             "stats": {
-                "items_count": 5,
+                "items_count": 10,
                 "sold_count": 0,
                 "fund_total_rub": 0
             },
             "item": {
-                "slug": "veshch-05",
-                "title": "Вещь артиста",
+                "slug": "sumka-influensera",
+                "title": "Сумка инфлюенсера",
+                "owner": {
+                    "name": null,
+                    "category": "influencers",
+                    "category_label": "Инфлюенсеры"
+                },
+                "brand": "Louis Vuitton",
+                "size": null,
+                "project": null,
+                "price_rub": 318000,
+                "fund_rub": 95400,
+                "sold": false,
+                "reserved": false,
+                "sale_mode": "fixed",
+                "auction": null,
+                "draft": false,
+                "available": true,
+                "photos": [],
+                "item_type": "сумка",
+                "condition": null,
+                "measurements": null,
+                "scene": null,
+                "look": null,
+                "story": "Главный аксессуар её путешествий: Париж, Токио, Бали. Есть чек и пыльник.",
+                "video_url": null
+            }
+        }
+    },
+    "/checkout?item=sumka-influensera": {
+        "component": "Checkout",
+        "props": {
+            "errors": [],
+            "site": {
+                "name": "ВИФ",
+                "fund_name": "ВИФ",
+                "domain": "vif",
+                "drop_label": "ВСЕ ВЕЩИ ПРОЕКТА",
+                "manager_telegram": "northstrean"
+            },
+            "flash": {
+                "bid_placed": false
+            },
+            "item": {
+                "slug": "sumka-influensera",
+                "title": "Сумка инфлюенсера",
+                "owner": {
+                    "name": null,
+                    "category": "influencers",
+                    "category_label": "Инфлюенсеры"
+                },
+                "brand": "Louis Vuitton",
+                "size": null,
+                "project": null,
+                "price_rub": 318000,
+                "fund_rub": 95400,
+                "sold": false,
+                "reserved": false,
+                "sale_mode": "fixed",
+                "auction": null,
+                "draft": false,
+                "available": true,
+                "photos": []
+            }
+        }
+    },
+    "/veshi/pidzhak-artista": {
+        "component": "Home",
+        "props": {
+            "errors": [],
+            "site": {
+                "name": "ВИФ",
+                "fund_name": "ВИФ",
+                "domain": "vif",
+                "drop_label": "ВСЕ ВЕЩИ ПРОЕКТА",
+                "manager_telegram": "northstrean"
+            },
+            "flash": {
+                "bid_placed": false
+            },
+            "items": [
+                {
+                    "slug": "chasy-repera",
+                    "title": "Часы рэпера",
+                    "owner": {
+                        "name": null,
+                        "category": "singers",
+                        "category_label": "Певцы"
+                    },
+                    "brand": "Rolex",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 1870000,
+                    "fund_rub": 561000,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "kurtka-blogera",
+                    "title": "Куртка блогера",
+                    "owner": {
+                        "name": null,
+                        "category": "bloggers",
+                        "category_label": "Блогеры"
+                    },
+                    "brand": "Stone Island",
+                    "size": "L",
+                    "project": null,
+                    "price_rub": 64500,
+                    "fund_rub": 19350,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "mashina-blogera",
+                    "title": "Машина блогера",
+                    "owner": {
+                        "name": null,
+                        "category": "bloggers",
+                        "category_label": "Блогеры"
+                    },
+                    "brand": "BMW M4",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 7450000,
+                    "fund_rub": 2235000,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "tsep-repera",
+                    "title": "Цепь рэпера",
+                    "owner": {
+                        "name": null,
+                        "category": "singers",
+                        "category_label": "Певцы"
+                    },
+                    "brand": "Золото 585",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 412000,
+                    "fund_rub": 123600,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "krossovki-aktera",
+                    "title": "Кроссовки актёра",
+                    "owner": {
+                        "name": null,
+                        "category": "actors",
+                        "category_label": "Актёры"
+                    },
+                    "brand": "Nike Air Jordan 1",
+                    "size": "43",
+                    "project": null,
+                    "price_rub": 38900,
+                    "fund_rub": 11670,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "plate-aktrisy",
+                    "title": "Платье актрисы",
+                    "owner": {
+                        "name": null,
+                        "category": "actors",
+                        "category_label": "Актёры"
+                    },
+                    "brand": "Valentino",
+                    "size": "S",
+                    "project": {
+                        "slug": "zhit-zhizn",
+                        "title": "«Жить жизнь»"
+                    },
+                    "price_rub": 186000,
+                    "fund_rub": 55800,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "gitara-pevtsa",
+                    "title": "Гитара певца",
+                    "owner": {
+                        "name": null,
+                        "category": "singers",
+                        "category_label": "Певцы"
+                    },
+                    "brand": "Fender Stratocaster",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 243000,
+                    "fund_rub": 72900,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "hudi-strimera",
+                    "title": "Худи стримера",
+                    "owner": {
+                        "name": null,
+                        "category": "influencers",
+                        "category_label": "Инфлюенсеры"
+                    },
+                    "brand": "Balenciaga",
+                    "size": "XL",
+                    "project": null,
+                    "price_rub": 52700,
+                    "fund_rub": 15810,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "sumka-influensera",
+                    "title": "Сумка инфлюенсера",
+                    "owner": {
+                        "name": null,
+                        "category": "influencers",
+                        "category_label": "Инфлюенсеры"
+                    },
+                    "brand": "Louis Vuitton",
+                    "size": null,
+                    "project": null,
+                    "price_rub": 318000,
+                    "fund_rub": 95400,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                },
+                {
+                    "slug": "pidzhak-artista",
+                    "title": "Пиджак комика",
+                    "owner": {
+                        "name": null,
+                        "category": "artists",
+                        "category_label": "Артисты"
+                    },
+                    "brand": "Gucci",
+                    "size": "50",
+                    "project": null,
+                    "price_rub": 97300,
+                    "fund_rub": 29190,
+                    "sold": false,
+                    "reserved": false,
+                    "sale_mode": "fixed",
+                    "auction": null,
+                    "draft": false,
+                    "available": true,
+                    "photos": []
+                }
+            ],
+            "stats": {
+                "items_count": 10,
+                "sold_count": 0,
+                "fund_total_rub": 0
+            },
+            "item": {
+                "slug": "pidzhak-artista",
+                "title": "Пиджак комика",
                 "owner": {
                     "name": null,
                     "category": "artists",
                     "category_label": "Артисты"
                 },
-                "brand": null,
-                "size": null,
+                "brand": "Gucci",
+                "size": "50",
                 "project": null,
-                "price_rub": null,
-                "fund_rub": null,
+                "price_rub": 97300,
+                "fund_rub": 29190,
                 "sold": false,
                 "reserved": false,
                 "sale_mode": "fixed",
                 "auction": null,
-                "draft": true,
-                "available": false,
+                "draft": false,
+                "available": true,
                 "photos": [],
-                "item_type": null,
+                "item_type": "пиджак",
                 "condition": null,
                 "measurements": null,
                 "scene": null,
                 "look": null,
-                "story": null,
+                "story": "В нём записан сольный стендап-концерт. В кармане до сих пор лежит сет-лист.",
                 "video_url": null
+            }
+        }
+    },
+    "/checkout?item=pidzhak-artista": {
+        "component": "Checkout",
+        "props": {
+            "errors": [],
+            "site": {
+                "name": "ВИФ",
+                "fund_name": "ВИФ",
+                "domain": "vif",
+                "drop_label": "ВСЕ ВЕЩИ ПРОЕКТА",
+                "manager_telegram": "northstrean"
+            },
+            "flash": {
+                "bid_placed": false
+            },
+            "item": {
+                "slug": "pidzhak-artista",
+                "title": "Пиджак комика",
+                "owner": {
+                    "name": null,
+                    "category": "artists",
+                    "category_label": "Артисты"
+                },
+                "brand": "Gucci",
+                "size": "50",
+                "project": null,
+                "price_rub": 97300,
+                "fund_rub": 29190,
+                "sold": false,
+                "reserved": false,
+                "sale_mode": "fixed",
+                "auction": null,
+                "draft": false,
+                "available": true,
+                "photos": []
             }
         }
     }
