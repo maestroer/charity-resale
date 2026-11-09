@@ -54,6 +54,8 @@ export type Site = {
     fund_name: string;
     domain: string;
     drop_label: string;
+    /** Логин менеджера в Telegram без @; null — кнопки «Написать менеджеру» нет. */
+    manager_telegram?: string | null;
 };
 
 export type SharedProps = {

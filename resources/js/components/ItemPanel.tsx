@@ -1,8 +1,10 @@
-import { Head, Link, router } from '@inertiajs/react';
+import { Head, Link, router, usePage } from '@inertiajs/react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { AuctionBox } from '@/components/AuctionBox';
 import { rub } from '@/lib/format';
-import type { ItemDetail } from '@/types';
+import { reachGoal } from '@/lib/metrika';
+import { managerLink } from '@/lib/telegram';
+import type { ItemDetail, SharedProps } from '@/types';
 import { to } from '@/lib/url';
 
 /** Почему вещь нельзя купить прямо сейчас. */
@@ -28,6 +30,7 @@ export function ItemPanel({ item }: { item: ItemDetail | null }) {
     const [shown, setShown] = useState(item);
     const [photoIndex, setPhotoIndex] = useState(0);
     const closeButton = useRef<HTMLButtonElement>(null);
+    const manager = usePage<SharedProps>().props.site?.manager_telegram;
     const open = item !== null;
 
     useEffect(() => {
@@ -158,6 +161,18 @@ export function ItemPanel({ item }: { item: ItemDetail | null }) {
                                 <p className="item-unavailable">{unavailableReason(shown)}</p>
                             )}
                                 </>
+                            )}
+
+                            {manager && (
+                                <a
+                                    className="btn btn-secondary item-ask"
+                                    href={managerLink(manager, shown)}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    onClick={() => reachGoal('telegram_manager', { item: shown.slug })}
+                                >
+                                    Написать менеджеру в Telegram
+                                </a>
                             )}
                         </div>
                     </div>
